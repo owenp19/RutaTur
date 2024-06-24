@@ -30,7 +30,7 @@ rutatur-backend/
 
 
 ## <span style=" font-family: 'Poppins', sans-serif; font-size:23px; color: #5B8C5A; font-weight: 700 font-size:23px;">**Aviso sobre Derechos de Autor**</span>
-Todos los materiales multimedia utilizados en el desarrollo de este proyecto, como imágenes, vídeos y otros recursos visuales, pertenecen a sus respectivos propietarios y fueron utilizados únicamente con fines ilustrativos y educativos en el contexto de RutaTur. En ningún caso se pretende infringir los derechos de autor de dichos materiales, y se hace referencia a ellos con el único propósito de enriquecer la experiencia del usuario y promover las actividades turísticas en el departamento del Atlántico.
+Todos los materiales multimedia utilizados en el desarrollo de este proyecto, como imágenes, vídeos y otros recursos visuales, pertenecen a sus respectivos propietarios y fueron utilizados únicamente con fines ilustrativos y educativos en el contexto de RutaTur. En ningún caso se pretende infringir los derechos de autor de dichos materiales, y se hace referencia a ellos con el único propósito de enriquecer el contenido de este proyecto.
 
 ## <span style=" font-family: 'Poppins', sans-serif; font-size:23px; color: #5B8C5A; font-weight: 700 font-size:23px;">**Más información**</span>
 Licencia y crédito en el footer del sitio web de RutaTur.
