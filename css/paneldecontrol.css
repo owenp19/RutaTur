@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --fd-color:#F2F2F2;
+    --texto-color:#202030;
+    --secundo-color:#5B8C5A;
+    --principal-color:#596157;
+    --grande-fuente: 6rem;
+    --h2-fuente:3rem;
+    --p-fuente: 1.1rem;
+}
+
+/* Aqui inicia la sesión de precarga */
+#precarga {
+    background: #202030a6 url(/gifs/precarga.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+body {
+    display: flex;
+}
+
+/* Aqui inicia el codigo CSS de la sesión de menu lateral*/
+.barra-lateral {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+}
+.barra-lateral:hover {
+    width: 280px;
+    transition: 0.5s;
+}
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover, 
+.activo{
+    background: #e0e0e058;
+}
+.menu a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span {
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.cerrar-sesión {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Aqui inicia el codigo CSS del contenido del dasboard*/
+.contenedor-principal {
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+.encabezado-alineacion img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.imagen-container {
+    position: relative;
+    margin-left: 10px; 
+}
+.gif-notificacion {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transform: translate(50%, -50%); 
+}
+.encabezado-alineacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.encabezado-titulo {
+    color: var(--secundo-color);
+    font-weight: 400;
+}
+.encabezado-titulo h2 {
+    font-size: 25px;
+    font-weight: 800;
+}
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.caja-busqueda {
+    background: rgb(237, 237, 237);
+    border-radius: 7px;
+    color: rgb(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.caja-busqueda input {
+    background: transparent;
+    padding: 10px;
+}
+.caja-busqueda i {
+    color: var(--secundo-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.caja-busqueda i:hover {
+    transform: scale(1.2);
+}
+
+/* Aqui inicia el codigo CSS del contenido de las tarjetas*/
+.contenedor-tarjeta {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.titulo-principal {
+    color: var(--secundo-color);
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.tarjeta-alineacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.tarjeta-pago {
+    background: radial-gradient(circle, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
+    border-radius: 9px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.tarjeta-pago:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.tarjeta-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.monto {
+    display: flex;
+    flex-direction: column;
+}
+.titulo {
+    font-size: 13px;
+    font-weight: 200;
+    color: var(--fd-color);
+}
+.valor-monto {
+    color: var(--fd-color);
+    font-size: 21px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.icon {
+    color: var(--fd-color);
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 60%;
+    font-size: 1.5rem;
+    background: var(--texto-color)
+}
+.icon img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+.tarjeta-detalle {
+    font-size: 15px;
+    font-family: 300;
+    color: var(--fd-color);
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* tabular seccion*/
+.alineacion-tabular {
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.contenedor-tabla {
+    width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    color: var(--fd-color);
+}
+th {
+    padding: 15px;
+    text-align: left;
+}
+tbody {
+    background: #f2f2f2;
+}
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+tr:nth-child(even) {
+    background: #fff;
+}
+tfoot {
+    background: rgb(113, 99, 186, 255);
+    font-weight: bold;
+    color: #fff;
+}
+tfoot td {
+    padding: 15px;
+}
+.contenedor-tabla button {
+    color: var(--secundo-color);
+    background: none;
+    cursor: pointer;
+}
+
+/* panel resposivo*/
+@media (max-width: 768px) {
+    .barra-lateral {
+        display: none;
+    }
+    .contenedor-principal {
+        padding: 1rem;
+    }
+    .encabezado-alineacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .usuario-info {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .imagen-container {
+        position: absolute;
+        top: 33px;
+        right: 39px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .imagen-container img {
+        max-width: 50px; 
+        margin-bottom: 5px;
+    }
+    .gif-notificacion {
+        max-width: 23px; 
+    }
+    .caja-busqueda {
+        width: 100%;
+    }
+    .contenedor-tarjeta {
+        padding: 1rem;
+    }
+    .tarjeta-alineacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .tarjeta-pago {
+        width: 100%;
+        height: auto;
+    }
+    .alineacion-tabular {
+        padding: 1rem;
+    }
+    .contenedor-tabla {
+        overflow-x: auto;
+    }
+    .alineacion-tabular {
+        padding: 1rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table th, table td {
+        padding: 21px;
+        text-align: left;
+        white-space: nowrap;
+    }
+    table thead {
+        display: none;
+    }
+    table tbody, table tr {
+        display: block;
+        width: 100%;
+    }
+    table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .encabezado-alineacion {
+        padding: 0.5rem;
+    }
+    .usuario-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .caja-busqueda input {
+        width: 100%;
+    }
+    .contenedor-tarjeta {
+        padding: 0.5rem;
+    }
+    .alineacion-tabular {
+        padding: 0.5rem;
+    }
+    table th, table td {
+        padding: 10px;
+    }
+    .tarjeta-pago {
+        padding: 0.5rem;
+    }
+    .alineacion-tabular {
+        padding: 0.5rem;
+    }
+
+    table td {
+        padding: 8px;
+    }
+}

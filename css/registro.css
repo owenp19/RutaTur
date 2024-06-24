@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --fd-color:#F2F2F2;
+    --texto-color:#202030;
+    --secundo-color:#5B8C5A;
+    --principal-color:#596157;
+}
+body {
+    display: flex;
+    height: 100vh;
+    background: url(/imgs/fd-formulario-registro.png);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Diseño de scroll bar */
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Aqui inicia la sesión de precarga */
+#precarga {
+    background: #202030a6 url(/gifs/precarga.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Aquí inicia el código CSS del formulario de registro */
+.contenedor-registro {
+    max-width: 700px; 
+    width: 100%;
+    background: var(--fd-color); 
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin: 50px auto; 
+    max-height: 90vh; 
+    overflow-y: hidden;
+}
+.contenedor-registro .titulo {
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+}
+.contenedor-registro .titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+}
+form .usuario-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .usuario-info .input-caja {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.input-caja .detalles {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.input-caja input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-bottom-width: 2px;
+}
+.usuario-info .input-caja input:focus,
+.usuario-info .input-caja input:valid {
+    border-color: var(--principal-color);
+}
+form .genero-detalles .genero-titulo {
+    font-size: 21px;
+    font-weight: 500;
+}
+form .genero-detalles .categoria {
+    display: flex;
+    width: 80%;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+.genero-detalles .categoria label {
+    display: flex;
+    align-items: center;
+}
+.genero-detalles .categoria .punto {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 11px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#punto-1:checked ~ .categoria label .uno, 
+#punto-2:checked ~ .categoria label .dos,
+#punto-3:checked ~ .categoria label .tres {
+    border-color: #d9d9d9;
+    background: var(--secundo-color);
+}
+form input[type="radio"] {
+    display: none;
+}
+/* Estilo para el botón */
+.boton {
+    height: 45px;
+    margin: 35px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton .boton-enlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: var(--fd-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.boton .boton-enlace:hover {
+    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
+}
+
+/* Estilos responsivos */
+@media (max-width: 584px) {
+    body {
+        background: var(--fd-color)
+    }
+    .contenedor-registro {
+        max-width: 100%;
+        overflow-y: hidden;
+    }
+    form .usuario-info .input-caja {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .boton .boton-enlace {
+        margin: 25px 0;
+        display: block; 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form .genero-detalles .categoria {
+        width: 100%;
+    }
+    .contenedor-registro form .usuario-info {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .usuario-info::-webkit-scrollbar {
+        width: 0;
+    }
+    .categoria {
+        display: flex;
+        flex-direction: column;
+    }
+    .categoria label {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        background: var(--fd-color);
+    }
+    .contenedor-registro {
+        max-width: 100%;
+        overflow-y: hidden;
+    }
+    form .usuario-info .input-caja {
+        margin-bottom: 10px; 
+        width: 100%;
+    }
+    .boton .boton-enlace {
+        margin: -10px 0; 
+        padding: 8px; 
+        font-weight: 600;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    form .genero-detalles .categoria {
+        width: 100%;
+    }
+    .contenedor-registro form .usuario-info {
+        max-height: 250px; 
+        overflow-y: scroll;
+    }
+    .usuario-info::-webkit-scrollbar {
+        width: 0;
+    }
+    .categoria {
+        display: flex;
+        flex-direction: column;
+    }
+    .categoria label {
+        margin-bottom: 8px; 
+    }
+}
+
+

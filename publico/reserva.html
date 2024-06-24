@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Rutatur</title>
+
+     <!-- Estilo css-->
+     <link rel="stylesheet" type="text/css" href="/css/reserva.css"> 
+
+     <!-- Remixicons-->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+ 
+     <!-- Google fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+ 
+     <!-- Favicon-->
+     <link rel="icon" href="/imgs/favicon.ico">
+</head>
+<body>
+
+    <!-- precarga -->
+    <div id="precarga"></div>
+    
+    <!-- sección formulario de reservas -->
+    <section>
+        <div class="contenedor-reservas">
+            <div class="titulo">Reservas Rutatur</div>
+            <form action="/api/reservas" method="post">
+                <div class="usuario-info">
+                    <div class="input-caja">
+                        <span class="detalles">Nombre Completo</span>
+                        <input type="text" name="nombreCompleto" placeholder="Introducir Nombre" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Teléfono Celular</span>
+                        <input type="text" name="telefonoCelular" placeholder="Introducir Numero" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Correo Electrónico</span>
+                        <input type="email" name="correoElectronico" placeholder="Introducir Correo" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Ruta Turística</span>
+                        <select name="rutaTuristica" required>
+                            <option value="" disabled selected>Selecciona una ruta</option>
+                            <option value="ruta1">Ruta de la ciruela</option>
+                            <option value="ruta2">Ruta de la yuca</option>
+                            <option value="ruta3">Ruta de la mazamorra</option>
+                            <option value="ruta4">Ruta juan jose nieto</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Número de Personas</span>
+                        <input type="number" name="numeroDePersonas" placeholder="Número de Personas" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Fecha de Reserva</span>
+                        <input type="date" name="fechaDeReserva" placeholder="Fecha de Reserva" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Preferencias de Alimentación</span>
+                        <select name="preferenciasDeAlimentacion" required>
+                            <option value="" disabled selected>Seleccionar Preferencia</option>
+                            <option value="vegano">Vegano</option>
+                            <option value="sinGluten">Sin Gluten</option>
+                            <option value="kosher">Kosher</option>
+                            <option value="halal">Halal</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Enfermedades</span>
+                        <input type="text" name="enfermedades" placeholder="Enfermedades" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Contacto de Emergencia</span>
+                        <input type="text" name="contactoDeEmergencia" placeholder="Contacto de Emergencia" required>
+                    </div>
+    
+                    <div class="input-caja">
+                        <span class="detalles">Tipo de Pago</span>
+                        <select name="tipoDePago" required>
+                            <option value="" disabled selected>Seleccionar forma de pago</option>
+                            <option value="nequi">Nequi</option>
+                            <option value="debito">Tarjeta de Débito</option>
+                            <option value="credito">Tarjeta de Crédito</option>
+                            <option value="transferencia">Transferencia Bancaria</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="boton">
+                    <a href="mensajeReserva.html" class="boton-enlace">Confirmar Reserva</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- script precarga js -->
+    <script>
+        var loader = document.getElementById("precarga");
+
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
