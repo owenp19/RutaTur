@@ -280,8 +280,7 @@ tfoot td {
     background: none;
     cursor: pointer;
 }
-
-/* panel resposivo*/
+/* Estilos CSS para dispositivos móviles */
 @media (max-width: 768px) {
     .barra-lateral {
         display: none;

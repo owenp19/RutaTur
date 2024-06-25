@@ -151,12 +151,10 @@ form input[type="radio"] {
     text-decoration: none;
     box-sizing: border-box;
 }
-
 .boton .boton-enlace:hover {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
 }
-
-/* Estilos responsivos */
+/* Responsivo para tabletas y móviles */
 @media (max-width: 584px) {
     body {
         background: var(--fd-color)
@@ -195,7 +193,6 @@ form input[type="radio"] {
         margin-bottom: 10px;
     }
 }
-
 @media (max-width: 400px) {
     body {
         background: var(--fd-color);

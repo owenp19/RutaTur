@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta de la Ciruela</title>
+
+    <!-- Estilo css-->
+    <link rel="stylesheet" type="text/css" href="/css/rutadelaciruela.css"> 
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Remixicons-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.ico">
+</head>
+<body>
+    
+     <!-- precarga -->
+     <div id="precarga"></div>
+
+    <!-- sección barra de navegación -->
+    <header>
+        <a href="#inicio" class="logo"><img src="/imgs/rutatur-logo.png"></a>
+
+        <ul class="menuNav">
+            <li><a href="inicio.html" class="activo"><i class="ri-home-6-line"></i>Inicio</a></li>
+            <li><a href="#experiencias"><i class="ri-compass-line"></i>Experiencias</a></li>
+            <li><a href="#galeria"><i class="ri-image-2-line"></i>Galería</a></li>
+            <li><a href="#testimonios"><i class="ri-chat-smile-3-line"></i>Testimonios</a></li>
+            <li><a href="#blog"><i class="ri-news-line"></i>Blog</a></li>
+            <li><a href="#contacto"><i class="ri-phone-line"></i>Contacto</a></li>
+        </ul>
+         
+        <!-- icono cuenta iniciar sesion -->
+        <div class="principal">
+            <a href="#" class="usuario"><i class='bx bxs-user-circle'></i><span class="cuenta-texto">Cuenta</span></a>
+            <div class="contenido-desplegable">
+                <a href="sesion.html">Usuario</a>
+                <a href="proveedor.html">Proveedor</a>
+                <a href="admin.html">Administrador</a>
+            </div>
+        </div>
+    
+        <!-- icono menu de hamburgesa -->
+        <div class="bx bx-menu" id="menu-icon"></div>               
+    </header>
+
+    <!-- sección de portada -->
+    <section class="inicio" id="inicio">
+        <div class="carrusel">
+            <div class="carrusel-interno">
+                <div class="carrusel-item activo">
+                    <img src="/imgs/ruta-de-la-ciruela-1.png">
+                </div>
+                <div class="carrusel-item">
+                    <img src="/imgs/ruta-de-la-ciruela-2.png">
+                </div>
+                <div class="carrusel-item">
+                    <img src="/imgs/ruta-de-la-ciruela-3.png">
+                </div>
+            </div>
+        </div>
+        <div class="superposicion"></div>
+        <div class="texto-inicio">
+            <h1>Ruta de la Ciruela</h1>
+        </div>
+    </section>
+
+    <!-- Sección de descripción -->
+    <section class="descripcion">
+        <div class="contenido">
+            <h2>Descripción</h2>
+            <p>La Ruta de la Ciruela en Campeche, Atlántico, es una experiencia única que te invita a descubrir la riqueza cultural y natural de esta hermosa región colombiana. Este recorrido te llevará a través de paisajes exuberantes y encantadores, donde la protagonista indiscutible es la ciruela, una fruta emblemática de la zona.</p>
+            <p>Durante la ruta, no solo disfrutarás de la belleza natural, sino que también podrás deleitar tu paladar con una variedad de productos derivados de la ciruela. Desde mermeladas y conservas hasta licores artesanales, cada producto cuenta una historia de tradición y dedicación. Además, tendrás la oportunidad de participar en talleres interactivos donde aprenderás a preparar recetas tradicionales utilizando esta deliciosa fruta.</p>
+            <p>La Ruta de la Ciruela también incluye visitas a puntos históricos y culturales de Campeche. Podrás explorar antiguos caseríos, iglesias coloniales y mercados locales, donde la ciruela es un ingrediente esencial en muchas recetas típicas. La hospitalidad de los campechanos te hará sentir como en casa, y su entusiasmo por compartir su cultura y tradiciones enriquecerá tu experiencia.</p>
+        </div>
+        <div class="linea-divisora"></div> 
+    </section>
+
+    <!-- Sección de actividades -->
+    <section class="actividades">
+        <h2>Actividades</h2>
+        <div class="contenedor">
+            <div class="lista-actividades">
+                <h3>Lo que harás:</h3>
+                <div class="actividad">
+                    <p><i class="fas fa-hiking"></i> Senderismo por los paisajes de la región</p>
+                    <p><i class="fas fa-utensils"></i> Degustación de productos derivados de la ciruela</p>
+                    <p><i class="fas fa-hand-sparkles"></i> Talleres interactivos de cocina</p>
+                    <p><i class="fas fa-landmark"></i> Visitas a puntos históricos</p>
+                    <p><i class="fas fa-church"></i> Exploración de iglesias coloniales</p>
+                    <p><i class="fas fa-shopping-basket"></i> Recorridos por mercados locales</p>
+                    <p><i class="fas fa-users"></i> Interacción con la comunidad local</p>
+                </div>
+            </div>
+            <div class="actividad-imagen">
+                <img src="/gifs/Collage-de-Fotos ruta-de-la-ciruela.gif">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de incluido y no incluido -->
+    <section class="incluido-no-incluido">
+        <h2>Lo Que Está Incluido / No Incluido</h2>
+        <div class="contenedor">
+            <div class="incluye">
+                <h3>Incluye</h3>
+                <div class="lista-incluye">
+                    <p><i class="fas fa-utensils"></i> Comida típica</p>
+                    <p><i class="fas fa-bus"></i> Transporte</p>
+                    <p><i class="fas fa-map"></i> Guía turístico</p>
+                    <p><i class="fas fa-camera"></i> Sesión de fotos</p>
+                    <p><i class="fas fa-first-aid"></i> Seguro de viaje</p>
+                </div>
+            </div>
+            <div class="no-incluye">
+                <h3>No Incluye</h3>
+                <div class="lista-no-incluye">
+                    <p><i class="fas fa-bed"></i> Alojamiento</p>
+                    <p><i class="fas fa-cocktail"></i> Bebidas alcohólicas</p>
+                    <p><i class="fas fa-gift"></i> Souvenirs</p>
+                    <p><i class="fas fa-car"></i> Transporte privado</p>
+                    <p><i class="fas fa-concierge-bell"></i> Propinas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de recomendaciones -->
+    <section class="recomendaciones">
+        <h2>Recomendaciones</h2>
+        <div class="contenedor">
+            <div class="lista-recomendaciones">
+                <h3>Medidas importantes a considerar durante tu visita:</h3>
+                <div class="recomendacion">
+                    <p><i class="fas fa-shield-alt"></i> Usa protector solar y ropa adecuada para el clima.</p>
+                    <p><i class="fas fa-hiking"></i> Mantén siempre un mapa actualizado y sigue las rutas establecidas.</p>
+                    <p><i class="fas fa-first-aid"></i> Lleva un botiquín básico de primeros auxilios.</p>
+                    <p><i class="fas fa-exclamation-triangle"></i> Respeta las normativas locales y los avisos de seguridad.</p>
+                    <p><i class="fas fa-user-check"></i> Informa a alguien sobre tu itinerario y mantén contacto en caso de emergencia.</p>
+                </div>
+            </div>
+            <div class="recomendacion-imagen">
+                <img src="/imgs/Collage-de-Fotos.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Detalles -->
+    <section class="detalles">
+        <h2>Detalles</h2>
+        <div class="contenedor-detalles">
+            <div class="detalle">
+                <h3>Idioma</h3>
+                <p><i class="fas fa-language"></i>Español</p>
+                <p><i class="fas fa-language"></i>Inglés</p>
+            </div>
+            <div class="detalle">
+                <h3> Duración</h3>
+                <p><i class="fas fa-clock"></i>4 horas</p>
+            </div>
+            <div class="detalle">
+                <h3>Número de personas</h3>
+                <p><i class="fas fa-users"></i>30 personas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de dirección de encuentro -->
+    <section class="direccion-encuentro">
+        <h2>Dirección de Encuentro</h2>
+        <p class="descripcion-direccion">
+            Nos encontraremos en la Plaza Principal de Campeche, ubicada en el centro del corregimiento. Este es un punto de referencia fácilmente accesible y conocido por todos. Desde allí, comenzaremos nuestra emocionante Ruta de la Ciruela.
+        </p>
+        <div class="mapa">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15680.323435756489!2d-74.92349275152719!3d10.728246780680028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d91cd44de39b%3A0x3258a4d6ed53b216!2sCampeche%2C%20Baranoa%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1721178941981!5m2!1ses-419!2sco" width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe> 
+        
+
+        </div>
+    </section>
+
+    <!-- Sección pie de página -->
+    <section id="contactonos">
+        <div class="pie-pag">
+            <div class="lista">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Experiencias</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h4>Soporte</h4>
+                <ul>
+                    <li><a href="#"><i class="ri-question-line"></i>(FAQ)</a></li>
+                    <li><a href="#"><i class="ri-close-circle-line"></i>Política de Cancelación</a></li>
+                    <li><a href="#"><i class="ri-git-repository-private-line"></i>Política de Privacidad</a></li>
+                    <li><a href="#"><i class="ri-customer-service-2-line"></i>Asistencia en Línea</a></li>
+                    <li><a href="#"><i class="ri-file-damage-line"></i>Reportar un Problema</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="#"><i class="ri-mail-send-line"></i>rutatur@gmail.com</a></li>
+                    <li><a href="#"><i class="ri-map-pin-line"></i>Sabanalarga, Atlántico</a></li>
+                    <li><a href="#"><i class="ri-whatsapp-line"></i>(57) + 3026485497</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h4>Síguenos en</h4>
+                <div class="social">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="texto-final">
+            <p>&#169; RutaTur 2024, todos los derechos reservados.</p>
+        </div>
+    </section>
+
+
+    
+    
+
+    <!-- Enlance a js -->
+    <script type="text/javascript" src="/js/script.js"></script>
+
+    <!-- script precarga js -->
+    <script>
+        var loader = document.getElementById("precarga");
+ 
+         window.addEventListener("load", function() {
+             setTimeout(function(){
+                 loader.style.display = "none";
+             }, 1500);
+         });
+    </script>
+    
+</body>
+</html>

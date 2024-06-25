@@ -66,12 +66,12 @@
         </div>
         <div class="contenedor-busqueda">
             <input type="text" class="barra-busqueda" placeholder="Buscar ruta turistica" >
-            <button class="boton-buscar">Buscar Ruta</button>
+            <button class="boton-buscar">Buscar</button>
         </div>
     </section>
     
     <!-- sección tipos de rutas turisticas -->
-    <section class="contenedor-rutastipos">
+    <section class="rutas-tipos">
         <div class="texto">
             <h2>Ven y explora el<br>atlántico con nosotros</h2>
         </div>
@@ -112,113 +112,158 @@
     </section>
 
     <!-- sección de experiencias -->
-    <section class="contenedor-fd-experiencias" id="experiencias">
+    <section class="experiencias" id="experiencias">
         <div class="titulo">
-            <h2>Descubre nuestras<br> inolvidables experiencias </h2>
+            <h2>Descubre nuestras<br>experiencias inolvidables</h2>
         </div>
-        <div class="experiencias-contenido">
-            <div class="caja">
-                <div class="miniatura">
-                    <a href="reserva.html">
-                        <img src="/imgs/ruta-de-la-ciruela.png">
-                    </a>
-                    <img src="/gifs/medalla.gif" class="gif">
-                    <h3>$90.000</h3>
+        <div class="contenido-experiencias">
+            <div class="caja-experiencia">
+                <div class="contenedor-valoracion">
+                    <span class="estrella">★</span>
+                    <span class="valoracion">4.5</span>
                 </div>
-                <div class="experiencia-detalles">
-                    <div class="nombre-experiencia">
-                        <h4>Ruta de la ciruela</h4>
-                        <p><i class="ri-time-line"></i>4h a 6h</p>
-                        <p><i class="ri-road-map-line"></i>Campeche, Baranoa</p>
+                <img src="/imgs/ruta-de-la-ciruela.png">
+                <div class="contenedor-corazon">
+                    <span class="corazon" onclick="toggleHeart(this)">❤</span>
+                </div>
+                <h3>Ruta de la ciruela</h3>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
+                <p><i class="ri-time-line"></i>4h a 6h</p>
+                <p><i class="ri-road-map-line"></i>Campeche, Atlántico</p>
+                <p><i class="ri-flag-2-line"></i>Dificultad, Facil</p>
+                <div class="caja-principal">
+                    <div class="caja-texto">
+                        <h5>$90.000</h5>
                     </div>
-                    <div class="estrellas">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
+                    <div class="caja-btn">
+                        <a href="rutadelacieruela.html" class="bxx-btn">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="caja-experiencia">
+                <div class="contenedor-valoracion">
+                    <span class="estrella">★</span>
+                    <span class="valoracion">4.5</span>
+                </div>
+                <img src="/imgs/ruta-de-la-yuca.png">
+                <div class="contenedor-corazon">
+                    <span class="corazon" onclick="toggleHeart(this)">❤</span>
+                </div>
+                <h3>Ruta de la yuca</h3>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
+                <p><i class="ri-time-line"></i>6h a 7h</p>
+                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <p><i class="ri-flag-2-line"></i>Dificultad, Media</p>
+                <div class="caja-principal">
+                    <div class="caja-texto">
+                        <h5>$155.000</h5>
+                    </div>
+                    <div class="caja-btn">
+                        <a href="#" class="bxx-btn">Ver detalles</a>
                     </div>
                 </div>
             </div>
 
-            <div class="caja">
-                <div class="miniatura">
-                    <a href="reserva.html">
-                        <img src="/imgs/ruta-de-la-yuca.png">
-                    </a>
-                    <img src="/gifs/medalla.gif" class="gif">
-                    <h3>$105.000</h3>
+            <div class="caja-experiencia">
+                <div class="contenedor-valoracion">
+                    <span class="estrella">★</span>
+                    <span class="valoracion">4.5</span>
                 </div>
-                <div class="experiencia-detalles">
-                    <div class="nombre-experiencia">
-                        <h4>Ruta de la yuca</h4>
-                        <p><i class="ri-time-line"></i>4h a 6h</p>
-                        <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
-                    </div>
-                    <div class="estrellas">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                    </div>
+                <img src="/imgs/ruta-de-la-mazamorra.png">
+                <div class="contenedor-corazon">
+                    <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
-            </div>
-
-            <div class="caja">
-                <div class="miniatura">
-                    <a href="reserva.html">
-                        <img src="/imgs/ruta-de-la-mazamorra.png">
-                    </a>
-                    <img src="/gifs/medalla.gif" class="gif">
-                    <h3>$70.000</h3>
-                </div>
-                <div class="experiencia-detalles">
-                    <div class="nombre-experiencia">
-                        <h4>Ruta de la mazamorra</h4>
-                        <p><i class="ri-time-line"></i>3h a 4h</p>
-                        <p><i class="ri-road-map-line"></i>Rotine, Atlántico</p>
+                <h3>Ruta de la mazamorra</h3>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
+                <p><i class="ri-time-line"></i>3h a 4h</p>
+                <p><i class="ri-road-map-line"></i>Rotine, Atlántico</p>
+                <p><i class="ri-flag-2-line"></i>Dificultad, Media</p>
+                <div class="caja-principal">
+                    <div class="caja-texto">
+                        <h5>$70.000</h5>
                     </div>
-                    <div class="estrellas">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
+                    <div class="caja-btn">
+                        <a href="#" class="bxx-btn">Ver detalles</a>
                     </div>
                 </div>
             </div>
 
-            <div class="caja">
-                <div class="miniatura">
-                    <a href="reserva.html">
-                        <img src="/imgs/ruta-de-juan-jose-nieto.png">
-                    </a>
-                    <img src="/gifs/medalla.gif" class="gif">
-                    <h3>$112.000</h3>
+            <div class="caja-experiencia">
+                <div class="contenedor-valoracion">
+                    <span class="estrella">★</span>
+                    <span class="valoracion">4.5</span>
                 </div>
-                <div class="experiencia-detalles">
-                    <div class="nombre-experiencia">
-                        <h4>Ruta juan jose nieto</h4>
-                        <p><i class="ri-time-line"></i>6h a 7h</p>
-                        <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <img src="/imgs/ruta-de-juan-jose-nieto.png">
+                <div class="contenedor-corazon">
+                    <span class="corazon" onclick="toggleHeart(this)">❤</span>
+                </div>
+                <h3>Ruta juan jose nieto</h3>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
+                <p><i class="ri-time-line"></i>6h a 7h</p>
+                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <p><i class="ri-flag-2-line"></i>Dificultad, Media</p>
+                <div class="caja-principal">
+                    <div class="caja-texto">
+                        <h5>$112.000</h5>
                     </div>
-                    <div class="estrellas">
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-fill"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
-                        <a href="#"><i class="ri-star-half-line"></i></a>
+                    <div class="caja-btn">
+                        <a href="#" class="bxx-btn">Ver detalles</a>
                     </div>
                 </div>
-            </div>  
+            </div>
+    
+            <div class="caja-experiencia">
+                <div class="contenedor-valoracion">
+                    <span class="estrella">★</span>
+                    <span class="valoracion">4.5</span>
+                </div>
+                <img src="/imgs/Rectangle 91.png">
+                <div class="contenedor-corazon">
+                    <span class="corazon" onclick="toggleHeart(this)">❤</span>
+                </div>
+                <h3>Lorem ipsum dolor sit.</h3>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
+                <p><i class="ri-time-line"></i>6h a 7h</p>
+                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <div class="caja-principal">
+                    <div class="caja-texto">
+                        <h5>$155.000</h5>
+                    </div>
+                    <div class="caja-btn">
+                        <a href="#" class="bxx-btn">Lorem, ipsum.</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="caja-experiencia">
+                <div class="contenedor-valoracion">
+                    <span class="estrella">★</span>
+                    <span class="valoracion">4.5</span>
+                </div>
+                <img src="/imgs/Rectangle 91.png">
+                <div class="contenedor-corazon">
+                    <span class="corazon" onclick="toggleHeart(this)">❤</span>
+                </div>
+                <h3>Lorem ipsum dolor sit.</h3>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
+                <p><i class="ri-time-line"></i>6h a 7h</p>
+                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <div class="caja-principal">
+                    <div class="caja-texto">
+                        <h5>$155.000</h5>
+                    </div>
+                    <div class="caja-btn">
+                        <a href="#" class="bxx-btn">Lorem, ipsum.</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
+    
     <!-- sección de galería -->
-    <section class="contenedor-fd-galeria" id="galeria">
+    <section class="galeria" id="galeria">
         <div class="titulo">
-            <img src="/gifs/cultural.gif" class="gif-galeria">
             <h2>Imágenes que Inspiran<br><span>Aventuras</span></h2>
         </div>
         <div class="contenedor-galeria">
@@ -252,7 +297,7 @@
     </section>
 
     <!-- sección de testimonios -->
-     <section class="contenedor-fd-testimonio" id="testimonios">
+     <section class="testimonio" id="testimonios">
         <div class="contenedor-testimonio">
             <div class="sub-contenedor">
                 <div class="titulo">
@@ -261,7 +306,7 @@
 
                 <div class="testimonios">
                     <div class="persona">
-                        <img src="/imgs/avatar-1.png">
+                        <img src="/imgs/Miguel T..png">
                         <div class="nombre">Miguel T.</div>
                         <div class="valoracion">
                             <i class="ri-star-fill"></i>
@@ -276,7 +321,7 @@
                     </div>
 
                     <div class="persona">
-                        <img src="/imgs/avatar-2.png">
+                        <img src="/imgs/Sofía L..png">
                         <div class="nombre">Sofía L.</div>
                         <div class="valoracion">
                             <i class="ri-star-fill"></i>
@@ -291,7 +336,7 @@
                     </div>
 
                     <div class="persona">
-                        <img src="/imgs/avatar-3.png">
+                        <img src="/imgs/Luis R..png">
                         <div class="nombre">Luis R.</div>
                         <div class="valoracion">
                             <i class="ri-star-fill"></i>
@@ -323,13 +368,12 @@
              <!--Blog 1-->
             <div class="blog-caja">
                 <div class="blog-img">
-                    <img src="/imgs/reserva-natural.png" alt="blog">
-
+                    <img src="/imgs/reserva-natural.png">
                     <div class="blog-texto">
-                        <a href="#" class="blog-titulo">Ecoaventura</a>
-                        <span>14 Enero 2024 / Rutatur</span>
+                        <a href="postecoaventrua.html" class="blog-titulo">Ecoaventura</a>
+                        <span>14 Julio 2024 / Rutatur</span>
                         <p>Embárcate en emocionantes excursiones por la naturaleza salvaje del departamento...</p>
-                        <a href="#" class="blog-boton">Leer Más</a>
+                        <a href="postecoaventrua.html" class="blog-boton">Leer Más</a>
                     </div>
                 </div>
             </div>
@@ -337,13 +381,13 @@
                <!--Blog 2-->
             <div class="blog-caja">
                 <div class="blog-img">
-                    <img src="/imgs/festival-del-dulce.png" alt="blog">
+                    <img src="/imgs/festival-del-dulce.png">
 
                     <div class="blog-texto">
-                        <a href="#" class="blog-titulo">Gastronomía Costeña</a>
-                        <span>14 Abril 2024 / Rutatur</span>
+                        <a href="postgastronomíacosteña.html" class="blog-titulo">Gastronomía Costeña</a>
+                        <span>14 Julio 2024 / Rutatur</span>
                         <p>Descubre los sabores auténticos de la región, desde platos tradicionales hasta creaciones innovadoras...</p>
-                        <a href="#" class="blog-boton">Leer Más</a>
+                        <a href="postgastronomíacosteña.html" class="blog-boton">Leer Más</a>
                     </div>
                 </div>
             </div>
@@ -351,7 +395,7 @@
                <!--Blog 3-->
             <div class="blog-caja">
                 <div class="blog-img">
-                    <img src="/imgs/arte-en-murales.png" alt="blog">
+                    <img src="/imgs/arte-en-murales.png">
 
                     <div class="blog-texto">
                         <a href="#" class="blog-titulo">Arte y Cultura</a>
@@ -415,7 +459,7 @@
                 <div class="lista">
                     <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#"><i class="ri-mail-send-line"></i>rutatur@gmail.com</a></li>
+                        <li><a href="#"><i class="ri-mail-line"></i>rutatur@gmail.com</a></li>
                         <li><a href="#"><i class="ri-map-pin-line"></i>Sabanalarga, Atlantico</a></li>
                         <li><a href="#"><i class="ri-whatsapp-line"></i>(57) + 3026485497</a></li>
                     </ul>

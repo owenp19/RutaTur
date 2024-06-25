@@ -122,13 +122,10 @@ form .usuario-info .input-caja {
     text-decoration: none;
     box-sizing: border-box;
 }
-
 .boton .boton-enlace:hover {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
 }
-
-
-/* Estilos responsivos para tabletas */
+/* Responsivo para tabletas y móviles */
 @media (max-width: 768px) {
     body {
         background: var(--fd-color)
@@ -141,8 +138,6 @@ form .usuario-info .input-caja {
         width: calc(100% / 2 - 10px);
     }
 }
-
-/* Estilos responsivos para móviles */
 @media (max-width: 480px) {
     body {
         background: var(--fd-color)
