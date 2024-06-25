@@ -373,35 +373,4 @@ tfoot td {
 }
 
 
-@media (max-width: 480px) {
-    .encabezado-alineacion {
-        padding: 0.5rem;
-    }
-    .usuario-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-    .caja-busqueda input {
-        width: 100%;
-    }
-    .contenedor-tarjeta {
-        padding: 0.5rem;
-    }
-    .alineacion-tabular {
-        padding: 0.5rem;
-    }
-    table th, table td {
-        padding: 10px;
-    }
-    .tarjeta-pago {
-        padding: 0.5rem;
-    }
-    .alineacion-tabular {
-        padding: 0.5rem;
-    }
 
-    table td {
-        padding: 8px;
-    }
-}

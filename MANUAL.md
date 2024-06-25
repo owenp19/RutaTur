@@ -1,3 +1,5 @@
+![Rutatur](/imgs/rutatur-logo.png)
+
 ![Portada Rutatur](/imgs/portada%20.png)
 
 ## <span style="font-family: 'Poppins', sans-serif; font-size:33px; color: #5B8C5A; font-weight: 700font-size:23px;">**Manual Técnico**</span>
@@ -30,16 +32,16 @@ El manual técnico proporciona información detallada sobre la estructura, dise�
 - **Base de Datos:** Utiliza MongoDB para el almacenamiento de datos.
 
 ## Uso del Software
-- Los usuarios pueden registrarse, ver detalles de las rutas y realizar reservas entre otras cosas.
+- Los usuarios pueden registrarse, ver datos de las rutas y realizar reservas entre otras cosas.
 
 ## Mantenimiento
 - Se recomienda realizar copias de seguridad periódicas de la base de datos.
 
 ## Solución de Problemas
-- Si se experimentan problemas de conexión con la base de datos, verificar la configuración de conexión en los archivos.
+- Si se experimentan problemas de conexión con la base de datos, verificar la configuración de conexión con los archivos existentes.
 
 ## Actualizaciones Futuras
-- Se planea agregar funcionalidades como integrar y  permitir la reservas de otros servicios turisticos como restaurantes, transporte, y excursiones.
+- Se planea agregar funcionalidades como integrar y permitir la reserva de otros servicios turisticos como restaurantes, transporte, y excursiones.
 
 ## Problema con el CSS en Hosting
 
