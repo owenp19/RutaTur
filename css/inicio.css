@@ -726,10 +726,12 @@ h2::after {
     min-height: 150px;
 }
 .contacto-boton {
+    display: inline-block;
     width: 100%;
     padding: 15px 25px;
     font-weight: 600;
     font-size: 1.1rem;
+    text-align: center;
     color: var(--fd-color);
     border-radius: 5px;
     background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
@@ -737,6 +739,7 @@ h2::after {
     outline: none;
     border: none;  
     transition: .3s;
+    text-decoration: none;
 }
 .contacto-boton:hover {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);

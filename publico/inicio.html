@@ -372,13 +372,15 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31371.038702589158!2d-74.94173415674577!3d10.627571008672954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5dfcab9b9670b%3A0x3eb4eb264c9fee44!2sSabanalarga%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1719261681257!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="derecho">
-                    <h2>Contactanos</h2>
-                    <input type="text" class="contacto-fila" placeholder="Introduce tu nombre">
-                    <input type="email" class="contacto-fila" placeholder="Introduce tu correo">
-                    <input type="text" class="contacto-fila" placeholder="Introduce tu numero">
-                    <textarea class="contacto-fila area" placeholder="Mensaje"></textarea>
-                    <button class="contacto-boton">Enviar</button>
-                </div>
+                    <h2>Contáctanos</h2>
+                    <form action="#/api/contacto" method="post">
+                        <input type="text" class="contacto-fila" name="nombre" placeholder="Introduce tu nombre" required>
+                        <input type="email" class="contacto-fila" name="correo" placeholder="Introduce tu correo" required>
+                        <input type="text" class="contacto-fila" name="telefono" placeholder="Introduce tu número" required>
+                        <textarea class="contacto-fila area" name="mensaje" placeholder="Mensaje" required></textarea>
+                        <a href="#" class="contacto-boton">Enviar</a>
+                    </form>
+                </div>                
             </div>
         </div>
      </section>
