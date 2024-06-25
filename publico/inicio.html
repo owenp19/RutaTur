@@ -373,12 +373,12 @@
                 </div>
                 <div class="derecho">
                     <h2>Contáctanos</h2>
-                    <form action="#/api/contacto" method="post">
+                    <form action="http://localhost:5000/api/contacto" method="post">
                         <input type="text" class="contacto-fila" name="nombre" placeholder="Introduce tu nombre" required>
                         <input type="email" class="contacto-fila" name="correo" placeholder="Introduce tu correo" required>
                         <input type="text" class="contacto-fila" name="telefono" placeholder="Introduce tu número" required>
                         <textarea class="contacto-fila area" name="mensaje" placeholder="Mensaje" required></textarea>
-                        <a href="#" class="contacto-boton">Enviar</a>
+                        <button type="submit" class="contacto-boton">Enviar</button>
                     </form>
                 </div>                
             </div>

@@ -34,18 +34,18 @@
                 </div>
                 <div class="formulario-contenido">
                     <h2>Iniciar Sesión</h2>
-                    <form action="">
+                    <form action="http://localhost:5000/api/admin" method="get">
                         <div class="casilla-input">
-                            <input type="text" required>
+                            <input type="text" name="usuario" required>
                             <label>Usuario</label>
                         </div>
                         <div class="casilla-input">
-                            <input type="password" required>
+                            <input type="password" name="contraseña" required>
                             <label>Contraseña</label>
                         </div>
                         <a href="#" class="contraseña-olvidada">¿Olvidaste Tu Contraseña?</a>
                         <div class="boton">
-                            <a href="#" class="boton-inicio">Iniciar Sesión</a>
+                            <button type="submit" class="boton-inicio">Ingresar</button>
                         </div>
                     </form>
                 </div>

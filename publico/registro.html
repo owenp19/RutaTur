@@ -28,7 +28,7 @@
     <section>
         <div class="contenedor-registro">
             <div class="titulo">Registro Usuario</div>
-            <form action="/api/registros" method="post">
+            <form action="http://localhost:5000/api/registros" method="post">
                 <div class="usuario-info">
                     <div class="input-caja">
                         <span class="detalles">Nombre Completo</span>
@@ -82,14 +82,13 @@
                         </label>
                     </div>
                 </div>
-
                 <div class="boton">
-                    <a href="mensajeRegistro.html" class="boton-enlace">Registrarse</a>
+                    <button type="submit" class="boton-registro">Registrarse</button>
                 </div>
             </form>
         </div>
     </section>
-
+    
     <!-- script precarga js -->
     <script>
         var loader = document.getElementById("precarga");

@@ -12,7 +12,7 @@
 }
 body {
     display: flex;
-    height: 100vh;
+    height: auto;
     background: url(/imgs/fd-formulario-registro.png);
     background-repeat: no-repeat;
     justify-content: center;
@@ -123,6 +123,7 @@ form .genero-detalles .categoria {
 form input[type="radio"] {
     display: none;
 }
+
 /* Estilo para el botón */
 .boton {
     height: 45px;
@@ -131,8 +132,7 @@ form input[type="radio"] {
     justify-content: center;
     align-items: center;
 }
-
-.boton .boton-enlace {
+.boton .boton-registro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,8 +151,7 @@ form input[type="radio"] {
     text-decoration: none;
     box-sizing: border-box;
 }
-
-.boton .boton-enlace:hover {
+.boton .boton-registro:hover {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
 }
 

@@ -18,4 +18,15 @@ window.onscroll = () => {
     navbar.classList.remove('open');
 }
 
+// Aqui inicia el codigo js
+function mostrarMensaje() {
+    // Mostrar el mensaje
+    document.querySelector('.mensaje-registro').style.display = 'block';
+
+    // Opcional: Ocultar el mensaje después de unos segundos
+    setTimeout(function() {
+        document.querySelector('.mensaje-registro').style.display = 'none';
+    }, 3000); // 3000 milisegundos = 3 segundos
+}
+
 
