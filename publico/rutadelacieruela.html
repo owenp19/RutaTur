@@ -32,13 +32,13 @@
 
     <!-- sección barra de navegación -->
     <header>
-        <a href="#inicio" class="logo"><img src="/imgs/rutatur-logo.png"></a>
+        <a href="inicio.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
 
         <ul class="menuNav">
-            <li><a href="#inicio" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
-            <li><a href="#experiencias"><i class="fas fa-map"></i>Experiencias</a></li>
-            <li><a href="#galeria"><i class="fas fa-images"></i>Galería</a></li>
+            <li><a href="inicio.html" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
             <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
+            <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
             <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
             <li><a href="#contacto"><i class="fas fa-phone"></i>Contacto</a></li>
         </ul>
@@ -250,8 +250,6 @@
             allowfullscreen="" 
             loading="lazy">
         </iframe> 
-        
-
         </div>
     </section>
 
@@ -271,14 +269,16 @@
             </div>
     
             <div class="lista">
-                <h4>Soporte</h4>
-                <ul>
-                    <li><a href="#"><i class="ri-question-line"></i>(FAQ)</a></li>
-                    <li><a href="#"><i class="ri-close-circle-line"></i>Política de Cancelación</a></li>
-                    <li><a href="#"><i class="ri-git-repository-private-line"></i>Política de Privacidad</a></li>
-                    <li><a href="#"><i class="ri-customer-service-2-line"></i>Asistencia en Línea</a></li>
-                    <li><a href="#"><i class="ri-file-damage-line"></i>Reportar un Problema</a></li>
-                </ul>
+                <h3>Idioma</h3>
+                <select id="idioma-select" onchange="cambiarIdioma()">
+                    <option value="es">Español (LAT)</option>
+                    <option value="en">English (US)</option>
+                </select>
+                <h3>Moneda</h3>
+                <select id="moneda-select" onchange="cambiarMoneda()">
+                    <option value="usd">(COP)</option>
+                    <option value="eur">(USD)</option>
+                </select>
             </div>
     
             <div class="lista">
@@ -302,7 +302,7 @@
         </div>
     
         <div class="texto-final">
-            <p>&#169; RutaTur 2024, todos los derechos reservados.</p>
+            <p>&#169; RutaTur 2024, todos los derechos reservados. Diseñado por Owen Pusey</p>
         </div>
     </section>
 

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutatur Atlántico</title>
+    <title>rutas turísticas</title>
 
     <!-- Estilo css-->
-    <link rel="stylesheet" type="text/css" href="/css/inicio.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/experiencias.css"> 
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,11 +29,11 @@
 
     <!-- sección barra de navegación -->
     <header>
-        <a href="#inicio" class="logo"><img src="/imgs/rutatur-logo.png"></a>
+        <a href="inicio.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
 
         <ul class="menuNav">
-            <li><a href="#inicio" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
-            <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
+            <li><a href="inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="#" class="activo"><i class="fas fa-map"></i>Experiencias</a></li>
             <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
             <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
             <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
@@ -57,24 +57,26 @@
         <div class="bx bx-menu" id="menu-icon"></div>             
     </header>
 
-    <!-- sección de portada -->
+    <!-- sección de carrusel nosotros -->
     <section class="inicio" id="inicio">
-        <video autoplay loop class="fondo-video" muted plays-inline>
-            <source src="/video/rutatur-portada.mp4" type="video/mp4">
-        </video>
-        <div class="video-superposicion"></div>
-        <div class="inicio-texto">
-            <h1>Explora y<br>Disfruta</h1>
-            <p>Rutatur te invita a descubrir paisajes,<br>cultura y aventuras únicas en el Atlántico</p>
+        <div class="carrusel">
+            <div class="carrusel-interno">
+                <div class="carrusel-item activo">
+                    <img src="/imgs/ruta-de-la-ciruela-1.png">
+                </div>
+                <div class="carrusel-item">
+                    <img src="/imgs/ruta-de-la-ciruela-2.png">
+                </div>
+                <div class="carrusel-item">
+                    <img src="/imgs/ruta-de-la-ciruela-3.png">
+                </div>
+            </div>
         </div>
-        <div class="contenedor-busqueda">
-            <form id="form-busqueda" action="http://localhost:5000/api/rutasTuristicas" method="get">
-                <input type="text" name="nombre" class="barra-busqueda" placeholder="Buscar ruta turística">
-                <button type="submit" class="boton-buscar">Buscar</button>
-            </form>
+        <div class="superposicion"></div>
+        <div class="texto-inicio">
+            <h1>Descubre Nuevas Experiencias</h1>
+            <p>Explora nuestras rutas más recomendadas y populares. Cada una ofrece vistas espectaculares, actividades inolvidables y la oportunidad de crear recuerdos memorables.</p>
         </div>
-        
-        <div id="resultados-busqueda"></div>
     </section>
 
     <!-- Botón flotante de WhatsApp -->
@@ -89,50 +91,9 @@
         <i class="fas fa-route"></i>
         <span class="insignia" id="contadorRutas">0</span>
     </div>
-    
-    <!-- sección tipos de rutas turisticas -->
-    <section class="rutas-tipos">
-        <div class="texto">
-            <h2>Ven y explora el<br>atlántico con<span> nosotros</span></h2>
-        </div>
-
-        <div class="fila-items">
-            <div class="contenedor-caj">
-                <div class="contenedor-gif">
-                    <img src="/gifs/gastronomia.gif">
-                </div>
-                <h4>Rutas Gastronómicas</h4>
-                <p>9 Rutas</p>
-            </div>
-
-            <div class="contenedor-caj">
-                <div class="contenedor-gif">
-                    <img src="/gifs/naturaleza.gif">
-                </div>
-                <h4>Rutas Ecoturisticas</h4>
-                <p>13 Rutas</p>
-            </div>
-
-            <div class="contenedor-caj">
-                <div class="contenedor-gif">
-                    <img src="/gifs/rural.gif">
-                </div>
-                <h4>Rutas Rurales</h4>
-                <p> 12 Rutas</p>
-            </div>
-
-            <div class="contenedor-caj">
-                <div class="contenedor-gif">
-                    <img src="/gifs/aventura.gif">
-                </div>
-                <h4>Rutas De Aventura</h4>
-                <p>15 Rutas</p>
-            </div>
-        </div>
-    </section>
 
     <!-- sección de experiencias -->
-    <section class="experiencias" id="experiencias">
+    <section class="experiencias">
         <div class="titulo">
             <h2>Descubre nuestras<br>experiencias<span> inolvidables</span></h2>
         </div>
@@ -272,7 +233,7 @@
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
                 <h3>Ruta de las Artes del Mar</h3>
-                <h6>Explora la artesanía local inspirada en la vida marina y las tradiciones pesqueras.</h6>
+                <h6>Explora la artesanía local inspirada en la vida marina y las tradiciones pesqueras de puerto colombia.</h6>
                 <p><i class="fas fa-clock"></i>4h a 5h</p>
                 <p><i class="fas fa-map-marker-alt"></i>Puerto colombia, Atlántico</p>
                 <p><i class="fas fa-flag"></i>Dificultad, Fácil</p>
@@ -288,44 +249,9 @@
             </div>
         </div>
     </section>
-    
-    <!-- sección de galería -->
-    <section class="galeria" id="galeria">
-        <div class="titulo">
-            <h2>Imágenes que Inspiran<br><span>Aventuras</span></h2>
-        </div>
-        <div class="contenedor-galeria">
-            <div class="contenedor-imagen">
-                <div class="imagen">
-                    <img src="/imgs/Escapada.png">
-                </div>
-                <div class="imagen">
-                    <img src="/imgs/Experiencia.png">
-                </div>
-                <div class="imagen">
-                    <img src="/imgs/Descubre.png">
-                </div>
-                <div class="imagen">
-                    <img src="/imgs/Viaje.png">
-                </div>
-                <div class="imagen">
-                    <img src="/imgs/Explora.png">
-                </div>
-                <div class="imagen">
-                    <img src="/imgs/Encanto.png">
-                </div>
-                
-            </div>
-
-            <div class="popup-imagen">
-                <span>&times;</span>
-                <img src="/imgs/Escapada.png">
-            </div>
-        </div>    
-    </section>
 
     <!-- sección de testimonios -->
-    <section class="testimonio" id="testimonios">
+    <section class="testimonio">
         <div class="contenedor-testimonio">
             <div class="sub-contenedor">
                 <div class="titulo">
@@ -382,51 +308,8 @@
         </div>
     </section>
 
-    <!--Desiño de sesión de nosotros-->
-    <section class="sobre-nosotros">
-        <div class="contenedor">
-            <div class="imagen-contenedor">
-                <img src="/imgs/bienvenidos-a-rutatur.jpg">
-            </div>
-            <div class="contenido">
-                <h2>Nosotros en <span>Rutatur</span></h2>
-                <h3>Tu Puerta a Experiencias Turísticas Únicas</h3>
-                <p>
-                    Rutatur está dedicado a facilitar experiencias turisticas extraordinarias en el departamento del Atlantico. Nuestro compromiso es conectar viajeros con rutas turísticas excepcionales que destacan por su belleza natural, cultura auténtica y hospitalidad local incomparable.
-                </p>
-                <div class="destacados">
-                    <div class="destacado">
-                        <h4 class="contador" data-objetivo="3">0</h4>
-                        <p>Años en servicio</p>
-                    </div>
-                    <div class="destacado">
-                        <h4 class="contador" data-objetivo="800">0</h4>
-                        <p>Clientes felices</p>
-                    </div>
-                    <div class="destacado">
-                        <h4 class="contador" data-objetivo="15">0</h4>
-                        <p>Tipos de rutas turisticas</p>
-                    </div>
-                    <div class="destacado">
-                        <h4 class="contador" data-objetivo="10">0</h4>
-                        <p>Guías profesionales</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Desiño de sesión de descuentos-->
-    <section class="ofertas-especiales">
-        <div class="contenedor-ofertas">
-            <h2>Gana con Nosotros</h2>
-            <p>¡Aprovecha descuentos especiales respondiendo preguntas de turismo! Sumérgete en nuestras experiencias únicas con precios reducidos. ¡No te lo pierdas!</p>
-            <button class="btn-contacto">Jugar Ahora</button>
-        </div>
-    </section>
-
     <!--Desiño de sesión de blog-->
-    <section class="contenedor-fd-blog" id="blog">
+    <section class="blog">
         <div class="titulo">
             <img src="/gifs/pajaro.gif" class="gif-blog">
             <h2>Explora el <span>Atlántico</span></h2>
@@ -479,78 +362,56 @@
         </div>
     </section>
 
-    <!-- seccion de contacto -->
-    <section class="contenedor-fd-contacto" id="contacto">
-        <div class="contenedor-contacto">
-            <div class="contacto-caja">
-                <div class="izquierdo">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31371.038702589158!2d-74.94173415674577!3d10.627571008672954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5dfcab9b9670b%3A0x3eb4eb264c9fee44!2sSabanalarga%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1719261681257!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     <!-- Sección pie de página -->
+     <section id="contactonos">
+        <div class="pie-pag">
+            <div class="lista">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Experiencias</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h3>Idioma</h3>
+                <select id="idioma-select" onchange="cambiarIdioma()">
+                    <option value="es">Español (LAT)</option>
+                    <option value="en">English (US)</option>
+                </select>
+                <h3>Moneda</h3>
+                <select id="moneda-select" onchange="cambiarMoneda()">
+                    <option value="usd">(COP)</option>
+                    <option value="eur">(USD)</option>
+                </select>
+            </div>
+    
+            <div class="lista">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:rutatur@gmail.com"><i class="fas fa-envelope"></i>rutatur@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Sabanalarga, Atlántico</a></li>
+                    <li><a href="tel:+573026485497"><i class="fas fa-phone"></i>(57) + 3026485497</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h4>Síguenos en</h4>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
-                <div class="derecho">
-                    <h2>Contáctanos</h2>
-                    <form action="http://localhost:5000/api/contacto" method="post">
-                        <input type="text" class="contacto-fila" name="nombre" placeholder="Introduce tu nombre" required>
-                        <input type="email" class="contacto-fila" name="correo" placeholder="Introduce tu correo" required>
-                        <input type="text" class="contacto-fila" name="telefono" placeholder="Introduce tu número" required>
-                        <textarea class="contacto-fila area" name="mensaje" placeholder="Mensaje" required></textarea>
-                        <button type="submit" class="contacto-boton">Enviar</button>
-                    </form>
-                </div>                
             </div>
         </div>
-     </section>
-
-    <!-- seccion pie de página  -->
-    <section id="contactonos">
-        <div class="pie-pag">
-            <div class="principal">
-                <div class="lista">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Experiencias</a></li>
-                        <li><a href="#">Galería</a></li>
-                        <li><a href="#">Testimonios</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
     
-                <div class="lista">
-                    <h3>Idioma</h3>
-                    <select id="idioma-select" onchange="cambiarIdioma()">
-                        <option value="es">Español (LAT)</option>
-                        <option value="en">English (US)</option>
-                    </select>
-                    <h3>Moneda</h3>
-                    <select id="moneda-select" onchange="cambiarMoneda()">
-                        <option value="usd">(COP)</option>
-                        <option value="eur">(USD)</option>
-                    </select>
-                </div>
-    
-                <div class="lista">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><a href="mailto:rutatur@gmail.com"><i class="fas fa-envelope"></i>rutatur@gmail.com</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Sabanalarga, Atlántico</a></li>
-                        <li><a href="tel:+573026485497"><i class="fas fa-phone"></i>(57) + 3026485497</a></li>
-                    </ul>
-                </div>
-    
-                <div class="lista">
-                    <h4>Síguenos en</h4>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="texto-final">
-                <p>&#169; RutaTur 2024, todos los derechos reservados. Diseñado por Owen Pusey.</p>
-            </div>
+        <div class="texto-final">
+            <p>&#169; RutaTur 2024, todos los derechos reservados. Diseñado por Owen Pusey</p>
         </div>
     </section>
     
@@ -566,19 +427,6 @@
                 loader.style.display = "none";
             }, 1500);
         });
-    </script>
-
-    <!-- script galeria js -->
-    <script>
-        document.querySelectorAll('.contenedor-imagen img').forEach(image => {
-            image.onclick = () => {
-                document.querySelector('.popup-imagen').style.display = 'block';
-                document.querySelector('.popup-imagen img').src = image.getAttribute('src');
-            }
-        });
-        document.querySelector('.popup-imagen span').onclick = () => {
-            document.querySelector('.popup-imagen').style.display = 'none';
-            }
     </script>
 
     <!-- script añadir ruta js -->
@@ -615,6 +463,6 @@
             }, 3000);
         }
     </script>
-
+    
 </body>
 </html>
