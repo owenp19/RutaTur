@@ -11,8 +11,8 @@
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Remixicons-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,19 +32,22 @@
         <a href="#inicio" class="logo"><img src="/imgs/rutatur-logo.png"></a>
 
         <ul class="menuNav">
-            <li><a href="#inicio" class="activo"><i class="ri-home-6-line"></i>Inicio</a></li>
-            <li><a href="#experiencias"><i class="ri-compass-line"></i>Experiencias</a></li>
-            <li><a href="#galeria"><i class="ri-image-2-line"></i>Galería</a></li>
-            <li><a href="#testimonios"><i class="ri-chat-smile-3-line"></i>Testimonios</a></li>
-            <li><a href="#blog"><i class="ri-news-line"></i>Blog</a></li>
-            <li><a href="#contacto"><i class="ri-phone-line"></i>Contacto</a></li>
-        </ul>
+            <li><a href="#inicio" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="#experiencias"><i class="fas fa-map"></i>Experiencias</a></li>
+            <li><a href="#galeria"><i class="fas fa-images"></i>Galería</a></li>
+            <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
+            <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
+            <li><a href="#contacto"><i class="fas fa-phone"></i>Contacto</a></li>
+        </ul>                           
          
         <!-- icono cuenta iniciar sesion -->
         <div class="principal">
-            <a href="#" class="usuario"><i class='bx bxs-user-circle'></i><span class="cuenta-texto">Cuenta</span></a>
+            <a href="#" class="usuario">
+                <i class="fas fa-user-circle"></i>
+                <span class="cuenta-texto">Cuenta</span>
+            </a>              
             <div class="contenido-desplegable">
-                <a href="sesion.html">Usuario</a>
+                <a href="iniciarsesion.html">Usuario</a>
                 <a href="proveedor.html">Proveedor</a>
                 <a href="admin.html">Administrador</a>
             </div>
@@ -65,9 +68,13 @@
             <p>Rutatur te invita a descubrir paisajes,<br>cultura y aventuras únicas en el Atlántico</p>
         </div>
         <div class="contenedor-busqueda">
-            <input type="text" class="barra-busqueda" placeholder="Buscar ruta turistica" >
-            <button class="boton-buscar">Buscar</button>
+            <form id="form-busqueda" action="http://localhost:5000/api/rutasTuristicas" method="get">
+                <input type="text" name="nombre" class="barra-busqueda" placeholder="Buscar ruta turística">
+                <button type="submit" class="boton-buscar">Buscar</button>
+            </form>
         </div>
+        
+        <div id="resultados-busqueda"></div>
     </section>
     
     <!-- sección tipos de rutas turisticas -->
@@ -127,10 +134,10 @@
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
                 <h3>Ruta de la ciruela</h3>
-                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
-                <p><i class="ri-time-line"></i>4h a 6h</p>
-                <p><i class="ri-road-map-line"></i>Campeche, Atlántico</p>
-                <p><i class="ri-flag-2-line"></i>Dificultad, Facil</p>
+                <h6>Descubre el sabor tradicional de la ciruela en paisajes pintorescos del Atlántico, una experiencia única.</h6>
+                <p><i class="fas fa-clock"></i>4h a 6h</p>
+                <p><i class="fas fa-map-marker-alt"></i>Campeche, Atlántico</p>
+                <p><i class="fas fa-flag"></i>Dificultad, Fácil</p>
                 <div class="caja-principal">
                     <div class="caja-texto">
                         <h5>$90.000</h5>
@@ -151,10 +158,10 @@
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
                 <h3>Ruta de la yuca</h3>
-                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
-                <p><i class="ri-time-line"></i>6h a 7h</p>
-                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
-                <p><i class="ri-flag-2-line"></i>Dificultad, Media</p>
+                <h6>Explora el cultivo de yuca, su historia y deliciosos platos típicos en un recorrido fascinante.</h6>
+                <p><i class="fas fa-clock"></i>4h a 6h</p>
+                <p><i class="fas fa-map-marker-alt"></i>Campeche, Atlántico</p>
+                <p><i class="fas fa-flag"></i>Dificultad, Fácil</p>
                 <div class="caja-principal">
                     <div class="caja-texto">
                         <h5>$155.000</h5>
@@ -175,10 +182,10 @@
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
                 <h3>Ruta de la mazamorra</h3>
-                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
-                <p><i class="ri-time-line"></i>3h a 4h</p>
-                <p><i class="ri-road-map-line"></i>Rotine, Atlántico</p>
-                <p><i class="ri-flag-2-line"></i>Dificultad, Media</p>
+                <h6>Saborea la auténtica mazamorra mientras recorres hermosos paisajes rurales y tradiciones del Atlántico.</h6>
+                <p><i class="fas fa-clock"></i>4h a 6h</p>
+                <p><i class="fas fa-map-marker-alt"></i>Rotine, Atlántico</p>
+                <p><i class="fas fa-flag"></i>Dificultad, Fácil</p>
                 <div class="caja-principal">
                     <div class="caja-texto">
                         <h5>$70.000</h5>
@@ -199,10 +206,10 @@
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
                 <h3>Ruta juan jose nieto</h3>
-                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
-                <p><i class="ri-time-line"></i>6h a 7h</p>
-                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
-                <p><i class="ri-flag-2-line"></i>Dificultad, Media</p>
+                <h6>Conoce la vida y legado de Juan José Nieto en una ruta histórica por el Atlántico.</h6>
+                <p><i class="fas fa-clock"></i>6h a 7h</p>
+                <p><i class="fas fa-map-marker-alt"></i>Galapa, Atlántico</p>
+                <p><i class="fas fa-flag"></i>Dificultad, Media</p>
                 <div class="caja-principal">
                     <div class="caja-texto">
                         <h5>$112.000</h5>
@@ -218,20 +225,21 @@
                     <span class="estrella">★</span>
                     <span class="valoracion">4.5</span>
                 </div>
-                <img src="/imgs/Rectangle 91.png">
+                <img src="/imgs/ruta-sabores-de mi-pueblo.png">
                 <div class="contenedor-corazon">
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
-                <h3>Lorem ipsum dolor sit.</h3>
-                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
-                <p><i class="ri-time-line"></i>6h a 7h</p>
-                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <h3>Ruta sabores de mi pueblo</h3>
+                <h6>Vive la Ruta Sabores de Pueblo en Campeche Atlántico Experiencia culinaria en el corazón rural.</h6>
+                <p><i class="fas fa-clock"></i>5h a 6h</p>
+                <p><i class="fas fa-map-marker-alt"></i>Campeche, Atlántico</p>
+                <p><i class="fas fa-flag"></i>Dificultad, Fácil</p>
                 <div class="caja-principal">
                     <div class="caja-texto">
-                        <h5>$155.000</h5>
+                        <h5>$115.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Lorem, ipsum.</a>
+                        <a href="#" class="bxx-btn">Ver detalles</a>
                     </div>
                 </div>
             </div>
@@ -241,20 +249,21 @@
                     <span class="estrella">★</span>
                     <span class="valoracion">4.5</span>
                 </div>
-                <img src="/imgs/Rectangle 91.png">
+                <img src="/imgs/Ruta-de-las-artes-del-mar.png">
                 <div class="contenedor-corazon">
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
-                <h3>Lorem ipsum dolor sit.</h3>
-                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut.</h6>
-                <p><i class="ri-time-line"></i>6h a 7h</p>
-                <p><i class="ri-road-map-line"></i>Galapa, Atlántico</p>
+                <h3>Ruta de las Artes del Mar</h3>
+                <h6>Explora la artesanía local inspirada en la vida marina y las tradiciones pesqueras.</h6>
+                <p><i class="fas fa-clock"></i>4h a 5h</p>
+                <p><i class="fas fa-map-marker-alt"></i>Puerto colombia, Atlántico</p>
+                <p><i class="fas fa-flag"></i>Dificultad, Fácil</p>
                 <div class="caja-principal">
                     <div class="caja-texto">
                         <h5>$155.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Lorem, ipsum.</a>
+                        <a href="#" class="bxx-btn">Ver detalles</a>
                     </div>
                 </div>
             </div>
@@ -269,39 +278,39 @@
         <div class="contenedor-galeria">
             <div class="contenedor-imagen">
                 <div class="imagen">
-                    <img src="/imgs/galeria-1.png">
+                    <img src="/imgs/Escapada.png">
                 </div>
                 <div class="imagen">
-                    <img src="/imgs/galeria-2.png">
+                    <img src="/imgs/Experiencia.png">
                 </div>
                 <div class="imagen">
-                    <img src="/imgs/galeria-3.png">
+                    <img src="/imgs/Descubre.png">
                 </div>
                 <div class="imagen">
-                    <img src="/imgs/galeria-4.png">
+                    <img src="/imgs/Viaje.png">
                 </div>
                 <div class="imagen">
-                    <img src="/imgs/galeria-5.png">
+                    <img src="/imgs/Explora.png">
                 </div>
                 <div class="imagen">
-                    <img src="/imgs/galeria-6.png">
+                    <img src="/imgs/Encanto.png">
                 </div>
                 
             </div>
 
             <div class="popup-imagen">
                 <span>&times;</span>
-                <img src="/imgs/galería-1.png">
+                <img src="/imgs/Escapada.png">
             </div>
         </div>    
     </section>
 
     <!-- sección de testimonios -->
-     <section class="testimonio" id="testimonios">
+    <section class="testimonio" id="testimonios">
         <div class="contenedor-testimonio">
             <div class="sub-contenedor">
                 <div class="titulo">
-                    <h2>Relatos de Experiencias <br> Positivas</h2>
+                    <h2>Relatos de Experiencias<br><span>Positivas</span></h2>
                 </div>
 
                 <div class="testimonios">
@@ -309,11 +318,11 @@
                         <img src="/imgs/Miguel T..png">
                         <div class="nombre">Miguel T.</div>
                         <div class="valoracion">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="descripcion">
                             <p>Explorar con RutaTur fue la mejor decisión. Rutas bien organizadas y guías apasionados. ¡Recomendado!</p>
@@ -324,11 +333,11 @@
                         <img src="/imgs/Sofía L..png">
                         <div class="nombre">Sofía L.</div>
                         <div class="valoracion">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="descripcion">
                             <p>RutaTur ofrece aventuras únicas. Disfrutamos cada momento de nuestra ruta turística. ¡Gracias!</p>
@@ -339,11 +348,11 @@
                         <img src="/imgs/Luis R..png">
                         <div class="nombre">Luis R.</div>
                         <div class="valoracion">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="descripcion">
                             <p>Gracias a RutaTur, vivimos aventuras inolvidables. Guías expertos y rutas fantásticas. ¡Muy satisfechos!</p>
@@ -352,7 +361,50 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
+
+    <!--Desiño de sesión de nosotros-->
+    <section class="sobre-nosotros">
+        <div class="contenedor">
+            <div class="imagen-contenedor">
+                <img src="/imgs/bienvenidos-a-rutatur.jpg">
+            </div>
+            <div class="contenido">
+                <h2>Nosotros en <span>Rutatur</span></h2>
+                <h3>Tu Puerta a Experiencias Turísticas Únicas</h3>
+                <p>
+                    Rutatur está dedicado a facilitar experiencias turisticas extraordinarias en el departamento del Atlantico. Nuestro compromiso es conectar viajeros con rutas turísticas excepcionales que destacan por su belleza natural, cultura auténtica y hospitalidad local incomparable.
+                </p>
+                <div class="destacados">
+                    <div class="destacado">
+                        <h4 class="contador" data-objetivo="3">0</h4>
+                        <p>Años en servicio</p>
+                    </div>
+                    <div class="destacado">
+                        <h4 class="contador" data-objetivo="800">0</h4>
+                        <p>Clientes felices</p>
+                    </div>
+                    <div class="destacado">
+                        <h4 class="contador" data-objetivo="15">0</h4>
+                        <p>Tipos de rutas turisticas</p>
+                    </div>
+                    <div class="destacado">
+                        <h4 class="contador" data-objetivo="10">0</h4>
+                        <p>Guías profesionales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Desiño de sesión de descuentos-->
+    <section class="ofertas-especiales">
+        <div class="contenedor-ofertas">
+            <h2>Gana con Nosotros</h2>
+            <p>¡Aprovecha descuentos especiales respondiendo preguntas de turismo! Sumérgete en nuestras experiencias únicas con precios reducidos. ¡No te lo pierdas!</p>
+            <button class="btn-contacto">Jugar Ahora</button>
+        </div>
+    </section>
 
     <!--Desiño de sesión de blog-->
     <section class="contenedor-fd-blog" id="blog">
@@ -409,7 +461,7 @@
     </section>
 
     <!-- seccion de contacto -->
-     <section class="contenedor-fd-contacto" id="contacto">
+    <section class="contenedor-fd-contacto" id="contacto">
         <div class="contenedor-contacto">
             <div class="contacto-caja">
                 <div class="izquierdo">
@@ -434,7 +486,7 @@
         <div class="pie-pag">
             <div class="principal">
                 <div class="lista">
-                    <h4>Enlances Rapidos</h4>
+                    <h4>Enlaces Rápidos</h4>
                     <ul>
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Experiencias</a></li>
@@ -444,44 +496,45 @@
                         <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="lista">
-                    <h4>Soporte</h4>
-                    <ul>
-                        <li><a href="#"><i class="ri-question-line"></i>(FAQ)</a></li>
-                        <li><a href="#"><i class="ri-close-circle-line"></i>Política de Cancelación</a></li>
-                        <li><a href="#"><i class="ri-git-repository-private-line"></i>Política de Privacidad</a></li>
-                        <li><a href="#"><i class="ri-customer-service-2-line"></i>Asistencia en Línea</a></li>
-                        <li><a href="#"><i class="ri-file-damage-line"></i>Reportar un Problema</a></li>
-                    </ul>
+                    <h3>Idioma</h3>
+                    <select id="idioma-select" onchange="cambiarIdioma()">
+                        <option value="es">Español (LAT)</option>
+                        <option value="en">English (US)</option>
+                    </select>
+                    <h3>Moneda</h3>
+                    <select id="moneda-select" onchange="cambiarMoneda()">
+                        <option value="usd">(COP)</option>
+                        <option value="eur">(USD)</option>
+                    </select>
                 </div>
-
+    
                 <div class="lista">
                     <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#"><i class="ri-mail-line"></i>rutatur@gmail.com</a></li>
-                        <li><a href="#"><i class="ri-map-pin-line"></i>Sabanalarga, Atlantico</a></li>
-                        <li><a href="#"><i class="ri-whatsapp-line"></i>(57) + 3026485497</a></li>
+                        <li><a href="mailto:rutatur@gmail.com"><i class="fas fa-envelope"></i>rutatur@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Sabanalarga, Atlántico</a></li>
+                        <li><a href="tel:+573026485497"><i class="fas fa-phone"></i>(57) + 3026485497</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="lista">
-                    <h4>Siguenos en</h4>
+                    <h4>Síguenos en</h4>
                     <div class="social">
-                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-line"></i></a>
-                        <a href="#"><i class="ri-twitter-x-fill"></i></i></a>
-                        <a href="#"><i class="ri-youtube-line"></i></a>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="texto-final">
-            <p>&#169; Rutatur 2024, todos los derechos reservados.</p>
+            <div class="texto-final">
+                <p>&#169; Rutatur 2024, todos los derechos reservados.</p>
+            </div>
         </div>
     </section>
-
+    
     <!-- Enlance a js -->
     <script type="text/javascript" src="/js/script.js"></script>
 

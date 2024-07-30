@@ -37,6 +37,30 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(mostrarSiguienteImagen, 5000);
 });
 
+// Aqui inicia el codigo del contador nosotros js
+document.addEventListener("DOMContentLoaded", () => {
+    const contadores = document.querySelectorAll('.contador');
+    const velocidad = 200; // Ajusta la velocidad de la animación
+
+    contadores.forEach(contador => {
+        const actualizarContador = () => {
+            const objetivo = +contador.getAttribute('data-objetivo');
+            const contadorActual = +contador.innerText;
+
+            const incremento = objetivo / velocidad;
+
+            if (contadorActual < objetivo) {
+                contador.innerText = Math.ceil(contadorActual + incremento);
+                setTimeout(actualizarContador, 1);
+            } else {
+                contador.innerText = objetivo;
+            }
+        };
+
+        actualizarContador();
+    });
+});
+
 
 
 

@@ -119,6 +119,76 @@ header.sticky {
     z-index: 10001;
     display: none;
 }
+/* sección de portada y menu de navegacion Breakpoint*/
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .menuNav a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;  
+        margin-right: 23px;
+        z-index: 10001;
+    }
+    .menuNav {
+        position: absolute;
+        top: 100%;
+        padding: 15px;
+        right: -100%;
+        width: 270px;
+        height: 45vh;
+        background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 11px;
+        transition: all .50s ease;
+    }
+    .menuNav a {
+        display: block;
+        margin: 9px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .menuNav a:hover {
+        color: var(--fd-color);
+        transform: translateY(5px);
+    }
+    .menuNav a.activo {
+        color: var(--fd-color);
+    }
+    .menuNav li a i {
+        display: inline-block; 
+        font-size: 17px;
+        align-items: center;
+        margin-right: 5px;
+    }
+    .registro {
+        display: none;
+    }
+    .menuNav.open {
+        right: 2%;
+    }
+    header.sticky {
+        padding: 10px 3%;
+        transition: .2s;
+    }
+    .logo img {
+        font-size: 29px; 
+        margin-left: 35px; 
+    }
+    :root {
+        --grande-fuente: 3.1rem;
+        --h2-fuente:2rem;
+        --p-fuente: 1rem;
+    }
+}
 
 /* Aqui inicia la sesión de opcion desplegable*/
 .principal {
@@ -170,6 +240,31 @@ header.sticky {
 }
 .principal:hover .contenido-desplegable {
     display: block;
+}
+/* sección de cuenta breakpoint*/
+@media (max-width: 600px) {
+    .principal .usuario a {
+        font-size: 5px;
+    }
+    .cuenta-texto {
+        display: none;
+    }
+    .usuario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contenido-desplegable {
+        display: none;
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        box-shadow: none;
+        
+    }
+    .contenido-desplegable a {
+        padding: 10px;
+        border-top: 1px solid #ddd;
+    }
 }
 
 /* Aqui inicia la sesión de portada*/
@@ -228,6 +323,22 @@ section {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
     transform: scale(1.1);
 }
+/* sección de barra de busqueda breakpoint*/
+@media (max-width: 768px) {
+    .busqueda-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .barra-busqueda {
+        margin-bottom: 3px;
+        width: 100%;
+        font-size: 11px;
+    }
+    .boton-buscar {
+        width: 100%;
+        font-size: 13px;
+    }
+}
 .fondo-video {
     position: absolute;
     right: 0;
@@ -247,10 +358,23 @@ section {
     background-color: rgba(0, 0, 0, 0.295); 
     z-index: -1;
 }
+/* Video breakpoints*/
+@media(min-aspect-ratio:16/9) {
+    .fondo-video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9) {
+    .fondo-video {
+        width: auto;
+        height: 100%;
+    }
+}
 
 /* Aqui inicia la sesión de tipos de rutas turisticas*/
 .rutas-tipos {
-    height: 90vh;
+    margin-top: 55px;
     align-items: center;
     background: url(/imgs/fd-hojas.png);
     background-repeat: no-repeat;
@@ -303,11 +427,21 @@ section {
     border: 1px solid transparent;
     transform: translateY(-3px);
 }
+/* sección de barra de tipos de rutas breakpoint*/
+@media (max-width: 768px) { 
+    .fila-items {
+        grid-template-columns: 1fr;
+    }
+    .contenedor-caj {
+        padding: 20px; 
+        max-width: none; 
+    }
+}
 
 /* Aqui inicia la sesión de experiencias*/
 .experiencias {
     align-items: center;
-    background: var(--fd-color);
+    background: url(/imgs/fd-hojas.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -318,6 +452,7 @@ section {
     margin-bottom: 35px;
 }
 .titulo h2 {
+    font-family: 'Paytone One', sans-serif;
     font-size: var(--h2-fuente);
     line-height: 1.2;
 }
@@ -331,9 +466,11 @@ section {
 .caja-experiencia {
     position: relative;
     padding: 20px;
-    border: 2px solid var(--secundo-color);
     border-radius: 11px;
     transition: all ease .50s;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 .caja-experiencia img {
     width: 100%;
@@ -416,13 +553,11 @@ section {
 .corazon.rojo {
     color: red;
 }
-p i.ri-time-line,
-p i.ri-road-map-line,
-p i.ri-flag-2-line {
+p i.fas {
     color: var(--secundo-color);
-    font-size: 19px;
+    font-size: 17px;
     margin-right: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
 }
 p {
     font-size: 15px;
@@ -437,6 +572,13 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
+}
+.titulo span {
+    font-family: 'Paytone One', sans-serif;
+    text-align: center;
+    font-size: var(--h2-fuente);
+    line-height: 1.1;
+    color: var(--secundo-color);
 }
 .contenedor-galeria {
     position: relative;
@@ -496,6 +638,27 @@ p {
     width: 750px;
     object-fit: cover;
 }
+/* sección de galeria Breakpoint*/
+@media (max-width: 768px) {
+    .contenedor-galeria .contenedor-imagen {
+        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+    }
+
+    .contenedor-galeria .contenedor-imagen .imagen {
+        height: auto;
+        width: 100%;
+    }
+    .popup-imagen img {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .popup-imagen span {
+        font-size: 19px;
+        top: -20px;
+        right: 20px;
+    }
+}
 
 /* Aqui inicia la sesión de testimonios*/
 .testimonio {
@@ -550,10 +713,192 @@ p {
 }
 .persona .descripcion p {
     text-align: center;
-    padding: 25px;
+    padding: 23px;
     color: var(--texto-color);
     font-size: 17px;
     line-height: 30px;
+}
+/* sección de testimonios breakpoint*/
+@media screen and (max-width:980px) {
+    .persona {
+        max-width: 45%;
+    }
+}
+@media screen and (max-width:660px) {
+    .persona {
+        max-width: 100%;
+    }
+}
+
+/* Aqui inicia la sesión de nosotros breakpoint*/
+.sobre-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.contenedor {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.imagen-contenedor {
+    flex: 1;
+    text-align: center;
+}
+.imagen-contenedor img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.contenido {
+    flex: 2;
+    padding-left: 50px;
+}
+.contenido h2 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: var(--h2-fuente);
+    margin-bottom: 10px;
+}
+.contenido span {
+    font-family: 'Paytone One', sans-serif;
+    font-size: var(--h2-fuente);
+    margin-bottom: 10px;
+}
+.contenido h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.contenido p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.destacados {
+    display: flex;
+    justify-content: space-around;
+}
+.destacado {
+    text-align: center;
+}
+.destacado h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secundo-color);
+    margin-bottom: 5px;
+}
+.destacado p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+/* sección de nosotros breakpoint*/
+@media (max-width: 1024px) {
+    .contenedor {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .contenido {
+        padding-left: 0;
+    }
+    .destacados {
+        flex-direction: column;
+    }
+    .destacado {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 0 15px;
+    }
+    .contenido p {
+        font-size: 17px;
+    }
+    .destacado h4 {
+        font-size: 23px;
+    }
+}
+
+/* sección de descuentos y ofertas especiales*/
+.ofertas-especiales {
+    height: 70vh;
+    background:var(--secundo-color);
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-ofertas {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 33px 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 20px;
+}
+.contenedor-ofertas h2 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 33px;
+    margin-bottom: 20px;
+}
+.contenedor-ofertas p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.btn-contacto {
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    color: var(--fd-color);
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+.btn-contacto:hover {
+    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
+    transform: scale(1.1);
+}
+/* sección de descuentos y ofertas breakpoint*/
+@media (max-width: 768px) {
+    .contenedor-ofertas {
+        padding: 15px 20px;
+    }
+    .contenedor-ofertas h2 {
+        font-size: 21px;
+    }
+    .contenedor-ofertas p {
+        font-size: 19px;
+    }
+    .btn-contacto {
+        font-size: 19px;
+    }
+}
+@media (max-width: 480px) {
+    .contenedor-ofertas {
+        padding: 21px 15px;
+    }
+    .contenedor-ofertas h2 {
+        font-size: 27px;
+    }
+    .contenedor-ofertas p {
+        font-size: 17px;
+    }
+    .btn-contacto {
+        font-size: 15px;
+        padding: 9px 13px;
+    }
 }
 
 /* Aqui inicia la sesión de blog*/
@@ -569,8 +914,10 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 55px;
     padding: 40px;
     border-bottom: 1px solid rgb(0, 0, 0, 0.05);
+
 }
 .blog-encabezado {
     display: flex;
@@ -590,6 +937,7 @@ p {
     font-weight: 500;
 }
 .titulo h3 span {
+    font-size: 25px;
     font-weight: 800;
     color: var(--secundo-color);
 }
@@ -644,7 +992,6 @@ p {
     text-align: left;
     color: var(--texto-color);
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -780,6 +1127,16 @@ h2::after {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
     transform: scale(1.1);
 }
+/* sección de contacto breakpoint*/
+@media screen and (max-width:880px) {
+    .contacto-caja {
+        grid-template-columns: 1fr;
+    }
+    .izquierdo {
+        height: 200px;
+        border-radius: 5px;
+    }
+}
 
 /*Aqui inicia la sesión footer*/
 #contactonos {
@@ -795,14 +1152,15 @@ h2::after {
 }
 .lista {
     width: 25%;
+    margin-bottom: 20px; /* Added margin for spacing */
 }
-.lista h4 {
+.lista h4, .lista h3 {
     font-size: 19px;
     color: var(--fd-color);
     margin-bottom: 31px;
     position: relative;
 }
-.lista h4::before {
+.lista h4::before, .lista h3::before {
     content: '';
     position: absolute;
     height: 2px;
@@ -815,8 +1173,8 @@ h2::after {
     margin-bottom: 17px;
 }
 .lista ul li {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 .lista ul li a {
     color: var(--fd-color);
@@ -830,14 +1188,14 @@ h2::after {
     transform: translateX(15px);
 }
 .lista ul li i {
-    color: var(--fd-color); 
+    color: var(--fd-color);
     font-size: 19px;
-    transition: color 0.3s; 
-    margin-right: 3px;
+    transition: color 0.3s;
+    margin-right: 5px;
 }
 .lista .social a {
-    height: 40px;
-    width: 40px;
+    height: 37px;
+    width: 37px;
     background: var(--fd-color);
     color: var(--principal-color);
     display: inline-flex;
@@ -846,7 +1204,7 @@ h2::after {
     font-size: 19px;
     border-radius: 23px;
     transition: 0.3s;
-    margin-right: 9px;
+    margin-right: 5px;
 }
 .lista .social a:hover {
     transform: scale(1.1);
@@ -859,199 +1217,29 @@ h2::after {
     color: var(--fd-color);
     font-size: 15px;
     letter-spacing: 2px;
+    text-align: center;
 }
-
-/* sección de portada y menu de navegacion Breakpoint*/
-@media (max-width: 1280px) {
-    header {
-        padding: 14px 2%;
-        transition: .2s;
-    }
-    .menuNav a {
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-}
-@media (max-width: 1090px) {
-    #menu-icon {
-        display: block;  
-        margin-right: 23px;
-        z-index: 10001;
-    }
-    .menuNav {
-        position: absolute;
-        top: 100%;
-        padding: 15px;
-        right: -100%;
-        width: 270px;
-        height: 45vh;
-        background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border-radius: 11px;
-        transition: all .50s ease;
-    }
-    .menuNav a {
-        display: block;
-        margin: 9px 0;
-        padding: 0px 25px;
-        transition: all .50s ease;
-    }
-    .menuNav a:hover {
-        color: var(--fd-color);
-        transform: translateY(5px);
-    }
-    .menuNav a.activo {
-        color: var(--fd-color);
-    }
-    .menuNav li a i {
-        display: inline-block; 
-        font-size: 17px;
-        align-items: center;
-        margin-right: 5px;
-    }
-    .registro {
-        display: none;
-    }
-    .menuNav.open {
-        right: 2%;
-    }
-    header.sticky {
-        padding: 10px 3%;
-        transition: .2s;
-    }
-    .logo img {
-        font-size: 29px; 
-        margin-left: 35px; 
-    }
-    :root {
-        --grande-fuente: 3.1rem;
-        --h2-fuente:2rem;
-        --p-fuente: 1rem;
-    }
-    /* sección de tipos rutas turisticas Breakpoint*/
-    .texto h2 {
-        text-align: center;
-    }
-    .fila-items {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* sección de barra de busqueda Breakpoint*/
-@media (max-width: 768px) {
-    .busqueda-container {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .barra-busqueda {
-        width: 100%;
-        font-size: 11px;
-    }
-
-    .boton-buscar {
-        width: 100%;
-        font-size: 13px;
-    }
-}
-
-/* sección de cuenta Breakpoint*/
-@media (max-width: 600px) {
-    .principal .usuario a {
-        font-size: 5px;
-    }
-    .cuenta-texto {
-        display: none;
-    }
-    .usuario {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .contenido-desplegable {
-        display: none;
-        position: absolute;
-        left: -100%;
-        width: 100%;
-        box-shadow: none;
-        
-    }
-    .contenido-desplegable a {
-        padding: 10px;
-        border-top: 1px solid #ddd;
-    }
-}
-
-/* sección de galeria Breakpoint*/
-@media (max-width: 768px) {
-    .contenedor-galeria .contenedor-imagen {
-        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
-    }
-
-    .contenedor-galeria .contenedor-imagen .imagen {
-        height: auto;
-        width: 100%;
-    }
-    .popup-imagen img {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .popup-imagen span {
-        font-size: 19px;
-        top: -20px;
-        right: 20px;
-    }
-}
-
-/* sección de testimonios Breakpoint*/
-@media screen and (max-width:980px) {
-    .persona {
-        max-width: 45%;
-    }
-}
-@media screen and (max-width:660px) {
-    .persona {
-        max-width: 100%;
-    }
-}
-
-/* Video breakpoints*/
-@media(min-aspect-ratio:16/9) {
-    .fondo-video {
-        width: 100%;
-        height: auto;
-    }
-}
-@media(max-aspect-ratio:16/9) {
-    .fondo-video {
-        width: auto;
-        height: 100%;
-    }
-}
-
-/* sección de contacto Breakpoint*/
-@media screen and (max-width:880px) {
-    .contacto-caja {
-        grid-template-columns: 1fr;
-    }
-    .izquierdo {
-        height: 200px;
-        border-radius: 5px;
-    }
-}
-
-/* sección de footer Breakpoint*/
+/* sección de footer reakpoint*/
 @media (max-width: 575px) {
-    html, 
+    html,
     body {
         width: 100%;
-        overflow-x: hidden ;
+        overflow-x: hidden;
     }
     .lista {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 

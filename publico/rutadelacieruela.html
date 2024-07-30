@@ -35,17 +35,17 @@
         <a href="#inicio" class="logo"><img src="/imgs/rutatur-logo.png"></a>
 
         <ul class="menuNav">
-            <li><a href="inicio.html" class="activo"><i class="ri-home-6-line"></i>Inicio</a></li>
-            <li><a href="#experiencias"><i class="ri-compass-line"></i>Experiencias</a></li>
-            <li><a href="#galeria"><i class="ri-image-2-line"></i>Galería</a></li>
-            <li><a href="#testimonios"><i class="ri-chat-smile-3-line"></i>Testimonios</a></li>
-            <li><a href="#blog"><i class="ri-news-line"></i>Blog</a></li>
-            <li><a href="#contacto"><i class="ri-phone-line"></i>Contacto</a></li>
+            <li><a href="#inicio" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="#experiencias"><i class="fas fa-map"></i>Experiencias</a></li>
+            <li><a href="#galeria"><i class="fas fa-images"></i>Galería</a></li>
+            <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
+            <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
+            <li><a href="#contacto"><i class="fas fa-phone"></i>Contacto</a></li>
         </ul>
          
         <!-- icono cuenta iniciar sesion -->
         <div class="principal">
-            <a href="#" class="usuario"><i class='bx bxs-user-circle'></i><span class="cuenta-texto">Cuenta</span></a>
+            <a href="#" class="usuario"><i class="fas fa-user-circle"></i><span class="cuenta-texto">Cuenta</span></a>
             <div class="contenido-desplegable">
                 <a href="sesion.html">Usuario</a>
                 <a href="proveedor.html">Proveedor</a>
@@ -57,7 +57,7 @@
         <div class="bx bx-menu" id="menu-icon"></div>               
     </header>
 
-    <!-- sección de portada -->
+    <!-- sección de carrusel -->
     <section class="inicio" id="inicio">
         <div class="carrusel">
             <div class="carrusel-interno">
@@ -153,30 +153,88 @@
                 </div>
             </div>
             <div class="recomendacion-imagen">
-                <img src="/imgs/Collage-de-Fotos.png">
+                <img src="/gifs/recomedaciones.gif">
             </div>
         </div>
     </section>
-
-    <!-- Sección de Detalles -->
-    <section class="detalles">
-        <h2>Detalles</h2>
-        <div class="contenedor-detalles">
-            <div class="detalle">
-                <h3>Idioma</h3>
-                <p><i class="fas fa-language"></i>Español</p>
-                <p><i class="fas fa-language"></i>Inglés</p>
+    
+    <!-- Sección de itinerario -->
+    <section class="itinerario-ciruela">
+        <h2>Itinerario</h2>
+        <div class="itinerario">
+            <div class="contenedor-itinerario contenedor-izquierdo">
+                <img src="/imgs/location1.png">
+                <div class="texto-caja">
+                    <h2>Plaza Central</h2>
+                    <small>Duración: 1 hora</small>
+                    <p>Inicio del recorrido y explicación histórica del lugar.</p>
+                    <span class="contenedor-izquierdo-flecha"></span>
+                </div>
             </div>
-            <div class="detalle">
-                <h3> Duración</h3>
-                <p><i class="fas fa-clock"></i>4 horas</p>
+    
+            <div class="contenedor-itinerario contenedor-derecho">
+                <img src="/imgs/location2.png">
+                <div class="texto-caja">
+                    <h2>Parque de la Ciruela</h2>
+                    <small>Duración: 1.5 horas</small>
+                    <p>Visita guiada al parque y degustación de productos locales.</p>
+                    <span class="contenedor-derecho-flecha"></span>
+                </div>
             </div>
-            <div class="detalle">
-                <h3>Número de personas</h3>
-                <p><i class="fas fa-users"></i>30 personas</p>
+    
+            <div class="contenedor-itinerario contenedor-izquierdo">
+                <img src="/imgs/location3.png">
+                <div class="texto-caja">
+                    <h2>Casa Museo</h2>
+                    <small>Duración: 2 horas</small>
+                    <p>Recorrido por la historia de la región y sus tradiciones.</p>
+                    <span class="contenedor-izquierdo-flecha"></span>
+                </div>
+            </div>
+    
+            <div class="contenedor-itinerario contenedor-derecho">
+                <img src="/imgs/location4.png">
+                <div class="texto-caja">
+                    <h2>Mercado Artesanal</h2>
+                    <small>Duración: 1 hora</small>
+                    <p>Exploración del mercado y compra de artesanías locales.</p>
+                    <span class="contenedor-derecho-flecha"></span>
+                </div>
+            </div>
+    
+            <div class="contenedor-itinerario contenedor-izquierdo">
+                <img src="/imgs/location5.png">
+                <div class="texto-caja">
+                    <h2>Restaurante Local</h2>
+                    <small>Duración: 1.5 horas</small>
+                    <p>Almuerzo con platos típicos de la región.</p>
+                    <span class="contenedor-izquierdo-flecha"></span>
+                </div>
+            </div>
+    
+            <div class="contenedor-itinerario contenedor-derecho">
+                <img src="/imgs/location6.png">
+                <div class="texto-caja">
+                    <h2>Mirador Natural</h2>
+                    <small>Duración: 1 hora</small>
+                    <p>Vista panorámica y tiempo para fotos.</p>
+                    <span class="contenedor-derecho-flecha"></span>
+                </div>
+            </div>
+    
+            <div class="contenedor-itinerario contenedor-izquierdo">
+                <img src="/imgs/location7.png">
+                <div class="texto-caja">
+                    <h2>Centro Cultural</h2>
+                    <small>Duración: 2 horas</small>
+                    <p>Eventos y actividades culturales de la región.</p>
+                    <span class="contenedor-izquierdo-flecha"></span>
+                    <button class="btn-reservar">Reservar ahora</button>
+                </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Sección de dirección de encuentro -->
     <section class="direccion-encuentro">
@@ -247,10 +305,6 @@
             <p>&#169; RutaTur 2024, todos los derechos reservados.</p>
         </div>
     </section>
-
-
-    
-    
 
     <!-- Enlance a js -->
     <script type="text/javascript" src="/js/script.js"></script>

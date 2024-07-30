@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+
+    <!-- Estilo css-->
+    <link rel="stylesheet" type="text/css" href="/css/sesion.css"> 
+
+    <!-- Remixicons-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.ico">
+</head>
+<body>
+
+    <!-- precarga -->
+    <div id="precarga"></div>
+    
+    <!-- sección de formulario iniciar sesion -->
+    <section>
+        <div class="formulario-sesion">
+            <div class="formulario-caja cuenta">
+                <div class="formulario-detalle">
+                    <h2>Bienvenidos a Rutatur</h2>
+                    <p>Ingresa tus credenciales para acceder a tu cuenta y descubrir las mejores rutas turísticas.</p>
+                </div>
+                <div class="formulario-contenido">
+                    <h2>Iniciar Sesión</h2>
+                    <form action="http://localhost:5000/api/usuarios" method="get">
+                        <div class="casilla-input">
+                            <input type="text" name="usuario" required>
+                            <label>Usuario</label>
+                        </div>
+                        <div class="casilla-input">
+                            <input type="password" name="contraseña" required>
+                            <label>Contraseña</label>
+                        </div>
+                        <a href="#" class="contraseña-olvidada">¿Olvidaste Tu Contraseña?</a>
+                        <div class="boton">
+                            <button type="submit" class="boton-inicio">Ingresar</button>
+                        </div>
+                    </form>
+                    <div class="enlace-cuenta">
+                        ¿No Tienes Cuenta Aun?,
+                        <a href="registro.html">¡Registrarte Ahora!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- script precarga js -->
+     <script>
+        var loader = document.getElementById("precarga");
+
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+       
+</body>
+</html>
