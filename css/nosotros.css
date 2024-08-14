@@ -337,7 +337,7 @@ header.sticky {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
     transform: scale(1.1);
 }
-/* Responsivo para tabletas y móviles */
+/* responsivo para tabletas y móviles */
 @media (max-width: 768px) {
     .texto-inicio h1 {
         font-size: 3.5rem;
@@ -359,6 +359,75 @@ header.sticky {
         transform: translateX(-200%);
     }
 }
+
+/* Estilos del botón flotante WhatsApp */
+.botones-flotantes {
+    position: fixed;
+    bottom: 33px; 
+    right: 25px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    z-index: 1000;
+}
+.boton-flotante-whatsapp,
+.boton-flotante-facebook,
+.boton-flotante-instagram {
+    background: #25D366; 
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.boton-flotante-facebook {
+    background: #3b5998;
+}
+.boton-flotante-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+}
+.boton-flotante-whatsapp a,
+.boton-flotante-facebook a,
+.boton-flotante-instagram a {
+    color: #fff;
+    text-decoration: none;
+}
+.boton-flotante-whatsapp i,
+.boton-flotante-facebook i,
+.boton-flotante-instagram i {
+    font-size: 23px;
+}
+.boton-flotante-whatsapp:hover,
+.boton-flotante-facebook:hover,
+.boton-flotante-instagram:hover {
+    transform: scale(1.05);
+}
+/* responsividad de botones flotantes */
+@media (max-width: 768px) {
+    .botones-flotantes {
+        right: 15px;
+        bottom: 20px;
+        gap: 10px;
+    }
+    .boton-flotante-whatsapp,
+    .boton-flotante-facebook,
+    .boton-flotante-instagram {
+        width: 45px;
+        height: 45px;
+    }
+    .boton-flotante-whatsapp i,
+    .boton-flotante-facebook i,
+    .boton-flotante-instagram i {
+        font-size: 20px;
+    }
+}
+
 
 /* Aqui inicia la sesión de nosotros */
 .sobre-nosotros {

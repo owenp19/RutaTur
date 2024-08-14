@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Aqui inicia el codigo del contador nosotros js
 document.addEventListener("DOMContentLoaded", () => {
     const contadores = document.querySelectorAll('.contador');
-    const velocidad = 200; // Ajusta la velocidad de la animación
+    const velocidad = 200; 
 
     contadores.forEach(contador => {
         const actualizarContador = () => {
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         actualizarContador();
     });
 });
+
 
 
 

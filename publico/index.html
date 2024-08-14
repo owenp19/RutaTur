@@ -6,7 +6,7 @@
     <title>Rutatur Atlántico</title>
 
     <!-- Estilo css-->
-    <link rel="stylesheet" type="text/css" href="/css/inicio.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/rutatur-principal.css"> 
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,7 +37,7 @@
             <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
             <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
             <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
-            <li><a href="#contacto"><i class="fas fa-phone"></i>Contacto</a></li>
+            <li><a href="contacto.html"><i class="fas fa-phone"></i>Contacto</a></li>
         </ul>                           
          
         <!-- icono cuenta iniciar sesion -->
@@ -49,7 +49,7 @@
             <div class="contenido-desplegable">
                 <a href="iniciarsesion.html">Usuario</a>
                 <a href="proveedor.html">Proveedor</a>
-                <a href="admin.html">Administrador</a>
+                <a href="administradores.html">Administrador</a>
             </div>
         </div>
 
@@ -88,6 +88,16 @@
     <div class="boton-flotante" id="botonFlotante">
         <i class="fas fa-route"></i>
         <span class="insignia" id="contadorRutas">0</span>
+    </div>
+
+    <!-- Botón flotante de Clima -->
+    <div class="boton-flotante clima" id="botonClima">
+        <i class="fas fa-cloud-sun"></i>
+    </div>
+
+    <!-- Botón flotante de Calculadora -->
+    <div class="boton-flotante Calculadora" id="botonCalculadora">
+        <i class="fas fa-calculator"></i>
     </div>
     
     <!-- sección tipos de rutas turisticas -->
@@ -287,6 +297,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="contenedor-boton-ver-mas">
+        <a href="experiencias.html" class="boton-ver-mas">Ver más rutas turísticas</a>
+    </div>
     </section>
     
     <!-- sección de galería -->
@@ -386,7 +400,7 @@
     <section class="sobre-nosotros">
         <div class="contenedor">
             <div class="imagen-contenedor">
-                <img src="/imgs/bienvenidos-a-rutatur.jpg">
+                <img src="/imgs/nosotros-rutatur.gif">
             </div>
             <div class="contenido">
                 <h2>Nosotros en <span>Rutatur</span></h2>
@@ -410,8 +424,11 @@
                     <div class="destacado">
                         <h4 class="contador" data-objetivo="10">0</h4>
                         <p>Guías profesionales</p>
-                    </div>
+                    </div>                  
                 </div>
+                <div class="boton-conocenos-contenedor">
+                    <a href="nosotros.html" class="boton-conocenos">Conócenos</a>
+                </div>  
             </div>
         </div>
     </section>
@@ -476,7 +493,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="contenedor-boton-ver-mas">
+                <a href="experiencias.html" class="boton-ver-mas">Ver más rutas turísticas</a>
+            </div> 
+        </div>      
     </section>
 
     <!-- seccion de contacto -->

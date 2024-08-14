@@ -119,7 +119,7 @@ header.sticky {
     z-index: 10001;
     display: none;
 }
-/* sección de portada y menu de navegacion Breakpoint*/
+/* sección de portada y menu de navegacion breakpoint*/
 @media (max-width: 1280px) {
     header {
         padding: 14px 2%;
@@ -267,67 +267,6 @@ header.sticky {
     }
 }
 
-/* Estilos del botón flotante WhatsApp */
-.boton-flotante-whatsapp {
-    position: fixed;
-    bottom: 85px; 
-    right: 25px;  
-    background: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    cursor: pointer;
-}
-.boton-flotante-whatsapp a {
-    color: #fff;
-    text-decoration: none;
-}
-.boton-flotante-whatsapp i {
-    font-size: 23px;
-}
-
-/* Estilos del botón flotante añadir ruta */
-.boton-flotante {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: var(--secundo-color);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1000;
-    transition: 0.3s ease;
-}
-.boton-flotante:hover {
-    background: var(--secundo-color);
-}
-.boton-flotante i {
-    font-size: 23px;
-}
-.insignia {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background: #fff;
-    color: var(--secundo-color);
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
 /* Aqui inicia la sesión de portada*/
 section {
     padding: 80px 11%;
@@ -431,6 +370,132 @@ section {
     }
 }
 
+/* Estilos del botón flotante WhatsApp */
+.boton-flotante-whatsapp {
+    position: fixed;
+    bottom: 85px; 
+    right: 25px;  
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+}
+.boton-flotante-whatsapp a {
+    color: #fff;
+    text-decoration: none;
+}
+.boton-flotante-whatsapp i {
+    font-size: 23px;
+}
+.boton-flotante-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del botón flotante añadir ruta */
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--secundo-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+.boton-flotante:hover {
+    background: var(--secundo-color);
+}
+.boton-flotante i {
+    font-size: 23px;
+}
+.insignia {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #fff;
+    color: var(--secundo-color);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Estilos del botón calculadora */
+#botonClima {
+    bottom: 190px; 
+}
+#botonClima:hover {
+    transform: scale(1.05);
+}
+#botonCalculadora {
+    bottom: 260px
+}
+#botonCalculadora:hover {
+    transform: scale(1.05);
+}
+/* Responsividad de los botones flotantes */
+@media (max-width: 768px) {
+    .boton-flotante-whatsapp,
+    .boton-flotante,
+    #botonClima {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .boton-flotante-whatsapp i,
+    .boton-flotante i,
+    #botonClima i {
+        font-size: 20px;
+    }
+    .insignia {
+        font-size: 11px;
+        padding: 1px 5px;
+    }
+    #botonClima {
+        bottom: 150px; 
+    }
+}
+@media (max-width: 480px) {
+    .boton-flotante-whatsapp,
+    .boton-flotante,
+    #botonClima {
+        width: 45px;
+        height: 45px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .boton-flotante-whatsapp i,
+    .boton-flotante i,
+    #botonClima i {
+        font-size: 17px;
+    }
+    .insignia {
+        font-size: 10px;
+        padding: 1px 4px;
+    }
+    #botonClima {
+        bottom: 60px; 
+    }
+    #botonCalculadora {
+        bottom: 110px; 
+    }
+}
+
 /* Aqui inicia la sesión de tipos de rutas turisticas*/
 .rutas-tipos {
     margin-top: 55px;
@@ -505,13 +570,6 @@ section {
 }
 
 /* Aqui inicia la sesión de experiencias*/
-.experiencias {
-    align-items: center;
-    background: url(/imgs/fd-hojas.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-}
 .titulo {
     position: relative;
     text-align: center;
@@ -610,15 +668,6 @@ section {
     background: var(--secundo-color);
     transform: scale(1.1);
 }
-#carrito {
-    margin-top: 20px;
-}
-#detalles-carrito {
-    margin-top: 10px;
-}
-.item-carrito {
-    margin-bottom: 5px;
-}
 .contenedor-valoracion {
     position: absolute;
     top: 33px;
@@ -661,6 +710,36 @@ p i.fas {
 p {
     font-size: 15px;
     align-items: center;
+}
+.contenedor-boton-ver-mas {
+    text-align: center;
+    margin-top: 31px;
+    align-items: center;
+}
+.boton-ver-mas {
+    margin-left: 10px;
+    display: inline-block;
+    padding: 9px 21px;
+    margin-top: 11px;
+    background: transparent;
+    color: var(--secundo-color);
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid var(--secundo-color);
+    border-radius: 5px;
+    transition: all ease .50s;
+    cursor: pointer;
+}
+.boton-ver-mas:hover {
+    color: #fff;
+    background: var(--secundo-color);
+    transform: scale(1.05);
+}
+@media (max-width: 480px) {
+    .boton-anadir-ruta {
+        padding: 9px 15px;
+        font-size: 13px;
+    }
 }
 
 /*Aqui inicia la sesión de galería*/
@@ -827,7 +906,7 @@ p {
     }
 }
 
-/* Aqui inicia la sesión de nosotros breakpoint*/
+/* Aqui inicia la sesión de nosotros */
 .sobre-nosotros {
     display: flex;
     justify-content: center;
@@ -873,6 +952,27 @@ p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
+.boton-conocenos-contenedor {
+    text-align: left;
+    margin-top: 20px; 
+}
+.boton-conocenos {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 23px;
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    color: var(--fd-color);
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+    text-decoration: none;
+}
+.boton-conocenos:hover {
+    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
+    transform: scale(1.1);
+}
 .destacados {
     display: flex;
     justify-content: space-around;
@@ -912,6 +1012,15 @@ p {
     .destacado {
         margin-bottom: 20px;
     }
+    @media (max-width: 768px) {
+        .boton-conocenos-contenedor {
+            text-align: center;
+        }
+        .boton-conocenos {
+            width: 50%;
+            padding: 10px 0;
+        }
+    }
 }
 @media (max-width: 480px) {
     .contenedor {
@@ -928,11 +1037,14 @@ p {
 /* sección de descuentos y ofertas especiales*/
 .ofertas-especiales {
     height: 70vh;
-    background:var(--secundo-color);
+    align-items: center;
+    background: url(/imgs/fd-videojuego.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
     padding: 50px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .contenedor-ofertas {
     background: rgba(255, 255, 255, 0.8);
@@ -946,7 +1058,7 @@ p {
 .contenedor-ofertas h2 {
     font-family: 'Paytone One', sans-serif;
     font-size: 33px;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
 }
 .contenedor-ofertas p {
     font-size: 17px;
@@ -1000,13 +1112,6 @@ p {
 }
 
 /* Aqui inicia la sesión de blog*/
-.contenedor-fd-blog {
-    align-items: center;
-    background: url(/imgs/fd-hojas.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-}
 #blog {
     display: flex;
     justify-content: center;
@@ -1173,17 +1278,6 @@ h2 {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 10px;
-}
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background: var(--secundo-color);
 }
 .contacto-fila {
     width: 100%;

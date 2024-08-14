@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión Administrador</title>
+    <title>Inicio Sesión Proveedores</title>
 
     <!-- Estilo css-->
-    <link rel="stylesheet" type="text/css" href="/css/admin.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/proveedores.css"> 
 
     <!-- Remixicons-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -23,18 +23,18 @@
 
     <!-- precarga -->
     <div id="precarga"></div>
-    
-    <!-- sección de formulario iniciar sesion de admin -->
+
+    <!-- sección formulario de proeveedores -->
     <section>
-        <div class="formulario-sesion-admin">
+        <div class="formulario-proveedor">
             <div class="formulario-caja cuenta">
                 <div class="formulario-detalle">
-                    <h2>Bienvenido a Rutatur</h2>
-                    <p>Ingresa tus credenciales para acceder a tu cuenta de administrador Rutatur.</p>
+                    <h2>Bienvenidos a Rutatur</h2>
+                    <p>Ingresa tus credenciales para acceder a tu cuenta de proveedor de turismo en Rutatur.</p>
                 </div>
                 <div class="formulario-contenido">
                     <h2>Iniciar Sesión</h2>
-                    <form action="http://localhost:5000/api/admin" method="get">
+                    <form action="http://localhost:5000/api/proveedor" method="get">
                         <div class="casilla-input">
                             <input type="text" name="usuario" required>
                             <label>Usuario</label>
@@ -43,18 +43,34 @@
                             <input type="password" name="contraseña" required>
                             <label>Contraseña</label>
                         </div>
+                        <div class="casilla-input">
+                            <select name="tipoProveedor" required>
+                                <option value="" disabled selected>Selecciona tu tipo de proveedor</option>
+                                <option value="agencia">Agencia de viajes</option>
+                                <option value="guia">Guía turístico</option>
+                                <option value="transporte">Tour operadores</option>
+                            </select>
+                        </div>
+                        <div class="casilla-input">
+                            <input type="text" name="codigoProveedor" required>
+                            <label>Código de proveedor</label>
+                        </div>
                         <a href="#" class="contraseña-olvidada">¿Olvidaste Tu Contraseña?</a>
                         <div class="boton">
-                            <button type="submit" class="boton-inicio">Ingresar</button>
+                            <button type="submit" class="boton-enlace">Ingresar</button></a>
                         </div>
                     </form>
+                    <div class="enlace-cuenta">
+                        ¿No Tienes Cuenta Aun?,
+                        <a href="registroProveedor.html">¡Registrarte Ahora!</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- script precarga js -->
-     <script>
+    <!-- script precarga js -->
+    <script>
         var loader = document.getElementById("precarga");
 
         window.addEventListener("load", function() {

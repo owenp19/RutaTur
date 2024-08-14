@@ -1,6 +1,6 @@
 ![Rutatur](/imgs/rutatur-logo.png)
 
-![Portada Rutatur](/imgs/portada%20.png)
+![Portada Rutatur](/imgs/portada.png)
 
 ## <span style="font-family: 'Poppins', sans-serif; font-size:33px; color: #5B8C5A; font-weight: 700font-size:23px;">**Manual Técnico**</span>
 

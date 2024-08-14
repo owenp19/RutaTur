@@ -13,7 +13,7 @@
 body {
     display: flex;
     height: 100vh;
-    background: url(/imgs/fd-formulario-reserva.png);
+    background: url(/imgs/fd-hojas-pajaro.png);
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
@@ -36,23 +36,23 @@ html::-webkit-scrollbar {
     z-index: 100;
 }
 
-/* Estilos generales */
-.contenedor-rutaturistica {
+/* Aquí inicia el código CSS del formulario de registro */
+.contenedor-reservas {
     max-width: 700px;
     width: 100%;
-    background: var(--fd-color);
+    background: #fff;
     padding: 25px 30px;
     border-radius: 5px;
     margin: 50px auto;
     max-height: 90vh;
     overflow-y: auto;
 }
-.contenedor-rutaturistica .titulo {
+.contenedor-reservas .titulo {
     font-size: 25px;
     font-weight: 700;
     position: relative;
 }
-.contenedor-rutaturistica .titulo::before {
+.contenedor-reservas .titulo::before {
     content: '';
     position: absolute;
     left: 0;
@@ -61,13 +61,13 @@ html::-webkit-scrollbar {
     width: 30px;
     background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
 }
-form .proveedor-info {
+form .usuario-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 0 12px 0;
 }
-form .proveedor-info .input-caja {
+form .usuario-info .input-caja {
     margin-bottom: 15px;
     width: calc(100% / 2 - 20px);
 }
@@ -76,41 +76,22 @@ form .proveedor-info .input-caja {
     font-weight: 500;
     margin-bottom: 5px;
 }
+.input-caja input,
 .input-caja select {
     height: 45px;
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secundo-color);
     padding-left: 15px;
     font-size: 16px;
     transition: all 0.3s ease;
     border-bottom-width: 2px;
 }
-.input-caja select:focus {
-    border-color: var(--principal-color);
-}
-.input-caja input,
-.input-caja textarea {
-    height: 45px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border-bottom-width: 2px;
-}
-.input-caja textarea {
-    height: auto;
-    resize: none;
-    padding: 10px 15px;
-}
-.proveedor-info .input-caja input:focus,
-.proveedor-info .input-caja input:valid,
-.proveedor-info .input-caja textarea:focus,
-.proveedor-info .input-caja textarea:valid {
+.usuario-info .input-caja input:focus,
+.usuario-info .input-caja input:valid,
+.usuario-info .input-caja select:focus,
+.usuario-info .input-caja select:valid {
     border-color: var(--principal-color);
 }
 /* Estilo para el botón */
@@ -145,54 +126,42 @@ form .proveedor-info .input-caja {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
 }
 /* Responsivo para tabletas y móviles */
-@media (max-width: 584px) {
+@media (max-width: 768px) {
     body {
-        background: var(--fd-color);
+        background: var(--fd-color)
     }
-    .contenedor-rutaturistica {
-        max-width: 100%;
-        overflow-y: hidden;
+    .contenedor-reservas {
+        padding: 20px 25px;
+        margin: 30px auto;
     }
-    form .proveedor-info .input-caja {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    .boton input {
-        margin: 25px 0;
-        display: block; 
-        width: 100%;
-    }
-    .contenedor-rutaturistica form .proveedor-info {
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-    .proveedor-info::-webkit-scrollbar {
-        width: 0;
-    }
-    .categoria {
-        display: flex;
-        flex-direction: column;
-    }
-    .categoria label {
-        margin-bottom: 10px;
+    form .usuario-info .input-caja {
+        width: calc(100% / 2 - 10px);
     }
 }
-@media (max-width: 400px) {
-    form .proveedor-info .input-caja {
-        margin-bottom: 10px;
+@media (max-width: 480px) {
+    body {
+        background: var(--fd-color)
+    }
+    .contenedor-reservas {
+        padding: 15px 20px;
+        margin: 20px auto;
+        overflow-y: auto;
+    }
+    form .usuario-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    form .usuario-info .input-caja {
         width: 100%;
     }
-    .boton input {
-        margin: 10px 0 20px;
-        padding: 8px;
-        font-size: 14px;
-        border-radius: 5px;
+    .boton {
+        margin: 25px 0;
     }
-    .contenedor-rutaturistica form .proveedor-info {
-        max-height: 250px;
-        overflow-y: scroll;
+    .boton .boton-enlace{
+        font-size: 15px;
+        font-weight: 600;
     }
-    .proveedor-info::-webkit-scrollbar {
+    .usuario-info::-webkit-scrollbar {
         width: 0;
     }
 }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto rutatur</title>
+
+    <!-- Estilo css-->
+    <link rel="stylesheet" type="text/css" href="/css/contacto.css"> 
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.ico">
+</head>
+<body>
+
+    <!-- precarga -->
+    <div id="precarga"></div>
+
+    <!-- sección barra de navegación -->
+    <header>
+        <a href="rutatur-inicio.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
+
+        <ul class="menuNav">
+            <li><a href="rutatur-inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
+            <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
+            <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
+            <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
+            <li><a href="#" class="activo"><i class="fas fa-phone"></i>Contacto</a></li>
+        </ul>                           
+         
+        <!-- icono cuenta iniciar sesion -->
+        <div class="principal">
+            <a href="#" class="usuario">
+                <i class="fas fa-user-circle"></i>
+                <span class="cuenta-texto">Cuenta</span>
+            </a>              
+            <div class="contenido-desplegable">
+                <a href="iniciarsesion.html">Usuario</a>
+                <a href="proveedores.html">Proveedor</a>
+                <a href="administradores.html">Administrador</a>
+            </div>
+        </div>
+
+        <!-- icono menu de hamburgesa -->
+        <div class="bx bx-menu" id="menu-icon"></div>             
+    </header>
+
+    <!-- sección de carrusel nosotros -->
+    <section class="inicio" id="inicio">
+        <div class="carrusel">
+            <div class="carrusel-interno">
+                <div class="carrusel-item activo">
+                    <img src="/imgs/ruta-de-la-ciruela-1.png">
+                </div>
+                <div class="carrusel-item">
+                    <img src="/imgs/ruta-de-la-ciruela-2.png">
+                </div>
+                <div class="carrusel-item">
+                    <img src="/imgs/ruta-de-la-ciruela-3.png">
+                </div>
+            </div>
+        </div>
+        <div class="superposicion"></div>
+        <div class="texto-inicio">
+            <h1>Conecta con Rutatur</h1>
+            <p>Contáctanos para resolver tus dudas sobre rutas turísticas. Tu satisfacción es nuestra prioridad, esperamos tu mensaje.</p>
+        </div>
+    </section>
+
+    <!-- Sección pie de informacion de contacto-->
+    <div class="info-contacto">
+        <div class="contacto-item">
+            <div class="icono">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Correo electrónico</h4>
+            <p>rutatur@contacto.com</p>
+        </div>
+        <div class="contacto-item">
+            <div class="icono">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4>Llámanos</h4>
+            <p>+57 3016048654</p>
+        </div>
+        <div class="contacto-item">
+            <div class="icono">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h4>Horario de apertura</h4>
+            <p>8 a.m. a 4 p.m.</p>
+        </div>
+        <div class="contacto-item">
+            <div class="icono">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Dirección</h4>
+            <p>Sabanalarga, Atlantico</p>
+        </div>
+    </div>    
+
+    <section class="rutatur">
+        <div class="ubicacion-rutatur">
+            <h2>Ubicación RutaTur</h2>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62742.070369892004!2d-74.99495666420029!3d10.627605246990678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5dfcab9b9670b%3A0x3eb4eb264c9fee44!2sSabanalarga%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1722361231292!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>        
+    </section>
+
+    <!-- seccion de contacto -->
+    <section class="contenedor-fd-contacto" id="contacto">
+        <div class="contenedor-contacto">
+            <div class="contacto-caja">
+                <div class="izquierdo">
+                    <img src="/imgs/bienvenidos-a-rutatur.jpg">
+                </div>
+                <div class="derecho">
+                    <h2>Contáctanos</h2>
+                    <form action="http://localhost:5000/api/contacto" method="post">
+                        <input type="text" class="contacto-fila" name="nombre" placeholder="Introduce tu nombre" required>
+                        <input type="email" class="contacto-fila" name="correo" placeholder="Introduce tu correo" required>
+                        <input type="text" class="contacto-fila" name="telefono" placeholder="Introduce tu número" required>
+                        <textarea class="contacto-fila area" name="mensaje" placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="contacto-boton">Enviar</button>
+                    </form>
+                </div>                
+            </div>
+        </div>
+     </section>
+
+    <!-- Sección pie de página -->
+    <section id="contactonos">
+        <div class="pie-pag">
+            <div class="lista">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Experiencias</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h3>Idioma</h3>
+                <select id="idioma-select" onchange="cambiarIdioma()">
+                    <option value="es">Español (LAT)</option>
+                    <option value="en">English (US)</option>
+                </select>
+                <h3>Moneda</h3>
+                <select id="moneda-select" onchange="cambiarMoneda()">
+                    <option value="usd">(COP)</option>
+                    <option value="eur">(USD)</option>
+                </select>
+            </div>
+    
+            <div class="lista">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:rutatur@gmail.com"><i class="fas fa-envelope"></i>rutatur@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Sabanalarga, Atlántico</a></li>
+                    <li><a href="tel:+573026485497"><i class="fas fa-phone"></i>(57) + 3026485497</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h4>Síguenos en</h4>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="texto-final">
+            <p>&#169; RutaTur 2024, todos los derechos reservados. Diseñado por Owen Pusey</p>
+        </div>
+    </section>
+    
+    <!-- Enlance a js -->
+    <script type="text/javascript" src="/js/script.js"></script>
+
+    <!-- script precarga js -->
+    <script>
+        var loader = document.getElementById("precarga");
+
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+    
+</body>
+</html>

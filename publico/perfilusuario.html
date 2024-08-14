@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+
+    <!-- Estilo css-->
+    <link rel="stylesheet" type="text/css" href="/css/perfilusuario.css"> 
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.ico">
+</head>
+<body>
+
+    <!-- precarga -->
+    <div id="precarga"></div>
+
+    <!-- sección barra de navegación -->
+    <header>
+        <a href="rutatur-inicio.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
+
+        <ul class="menuNav">
+            <li><a href="rutatur-inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
+            <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
+            <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
+            <li><a href="#"><i class="fas fa-newspaper"></i>Blog</a></li>
+            <li><a href="contacto.html"><i class="fas fa-phone"></i>Contacto</a></li>
+        </ul>                           
+         
+        <!-- icono cuenta iniciar sesion -->
+        <div class="principal">
+            <a href="#" class="usuario">
+                <i class="fas fa-user-circle"></i>
+                <span class="cuenta-texto">Cuenta</span>
+            </a>              
+            <div class="contenido-desplegable">
+                <a href="iniciarsesion.html">Usuario</a>
+                <a href="proveedor.html">Proveedor</a>
+                <a href="admin.html">Administrador</a>
+            </div>
+        </div>
+
+        <!-- icono menu de hamburgesa -->
+        <div class="bx bx-menu" id="menu-icon"></div>             
+    </header>
+
+    <section class="perfil">
+        <div class="perfil-usuario">
+            <div class="sidebar">
+                <div class="perfil-info">
+                    <img src="https://via.placeholder.com/100" alt="Foto de perfil" class="foto-perfil">
+                    <h2 class="nombre-usuario">Owen Pusey</h2>
+                    <p class="ubicacion"><i class="fas fa-map-marker-alt"></i> Barranquilla</p>
+                    <p class="cumpleaños"><i class="fas fa-birthday-cake"></i> 15 de Febrero</p>
+                </div>
+                <ul class="menu-perfil">
+                    <li><a href="#" class="activo">Información del Perfil</a></li>
+                    <li><a href="#">Historial de Reservas</a></li>
+                    <li><a href="#">Suscripción al Boletín</a></li>
+                    <li><a href="#">Gestionar Notificaciones</a></li>
+                </ul>
+            </div>
+    
+            <div class="contenido-principal">
+                <div class="informacion-personal">
+                    <h3>Información Personal</h3>
+                    <form>
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" value="Owen Pusey">
+                        </div>
+                        <div class="campo">
+                            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" id="fecha-nacimiento" value="1989-03-15">
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" id="telefono" value="+46-7644 394 68">
+                        </div>
+                        <div class="campo">
+                            <label for="ubicacion">Ubicación:</label>
+                            <input type="text" id="ubicacion" value="Barranquilla">
+                        </div>
+                        <button type="submit" class="boton-guardar">Guardar</button>
+                    </form>
+                </div>
+    
+                <div class="seguridad">
+                    <h3>Seguridad</h3>
+                    <form>
+                        <div class="campo">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" value="owenp89@gmail.com">
+                        </div>
+                        <div class="campo">
+                            <label for="contraseña">Contraseña:</label>
+                            <input type="password" id="contraseña" value="********">
+                        </div>
+                        <div class="campo">
+                            <label for="confirmar-contraseña">Confirmar Contraseña:</label>
+                            <input type="password" id="confirmar-contraseña" value="********">
+                        </div>
+                        <button type="submit" class="boton-guardar">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección pie de página -->
+    <section id="contactonos">
+        <div class="pie-pag">
+            <div class="lista">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Experiencias</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h3>Idioma</h3>
+                <select id="idioma-select" onchange="cambiarIdioma()">
+                    <option value="es">Español (LAT)</option>
+                    <option value="en">English (US)</option>
+                </select>
+                <h3>Moneda</h3>
+                <select id="moneda-select" onchange="cambiarMoneda()">
+                    <option value="usd">(COP)</option>
+                    <option value="eur">(USD)</option>
+                </select>
+            </div>
+    
+            <div class="lista">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:rutatur@gmail.com"><i class="fas fa-envelope"></i>rutatur@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Sabanalarga, Atlántico</a></li>
+                    <li><a href="tel:+573026485497"><i class="fas fa-phone"></i>(57) + 3026485497</a></li>
+                </ul>
+            </div>
+    
+            <div class="lista">
+                <h4>Síguenos en</h4>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="texto-final">
+            <p>&#169; RutaTur 2024, todos los derechos reservados. Diseñado por Owen Pusey</p>
+        </div>
+    </section>
+
+    <!-- Enlance a js -->
+    <script type="text/javascript" src="/js/script.js"></script>
+
+    <!-- script precarga js -->
+    <script>
+        var loader = document.getElementById("precarga");
+
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+       
+</body>
+</html>

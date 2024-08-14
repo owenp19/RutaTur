@@ -307,7 +307,7 @@ header.sticky {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 .texto-inicio h1 {
@@ -322,7 +322,7 @@ header.sticky {
     font-size: var(--p-fuente);
     margin-bottom: 33px;
 }
-/* responsivo carrusel portada */
+/* Responsivo para tabletas y móviles */
 @media (max-width: 768px) {
     .texto-inicio h1 {
         font-size: 3.5rem;
@@ -330,7 +330,7 @@ header.sticky {
 }
 @media (max-width: 480px) {
     .texto-inicio h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 }
 @keyframes deslizamiento {
@@ -345,519 +345,184 @@ header.sticky {
     }
 }
 
-/* Estilos del botón flotante WhatsApp */
-.boton-flotante-whatsapp {
-    position: fixed;
-    bottom: 85px; 
-    right: 25px;  
-    background: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+/* Aqui inicia la sesión informacion de contacto*/
+.info-contacto {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    cursor: pointer;
-}
-.boton-flotante-whatsapp a {
-    color: #fff;
-    text-decoration: none;
-}
-.boton-flotante-whatsapp i {
-    font-size: 23px;
-}
-.boton-flotante-whatsapp:hover {
-    transform: scale(1.05);
-}
-
-/* Estilos del botón flotante añadir ruta */
-.boton-flotante {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: var(--secundo-color);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1000;
-    transition: 0.3s ease;
-}
-.boton-flotante:hover {
-    background: var(--secundo-color);
-}
-.boton-flotante i {
-    font-size: 23px;
-}
-.insignia {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background: #fff;
-    color: var(--secundo-color);
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-/* Estilos del botón calculadora */
-#botonClima {
-    bottom: 190px; 
-}
-#botonClima:hover {
-    transform: scale(1.05);
-}
-#botonCalculadora {
-    bottom: 260px
-}
-#botonCalculadora:hover {
-    transform: scale(1.05);
-}
-/* Responsividad de los botones flotantes */
-@media (max-width: 768px) {
-    .boton-flotante-whatsapp,
-    .boton-flotante,
-    #botonClima {
-        width: 50px;
-        height: 50px;
-        bottom: 15px;
-        right: 15px;
-    }
-    .boton-flotante-whatsapp i,
-    .boton-flotante i,
-    #botonClima i {
-        font-size: 20px;
-    }
-    .insignia {
-        font-size: 11px;
-        padding: 1px 5px;
-    }
-    #botonClima {
-        bottom: 150px; 
-    }
-}
-@media (max-width: 480px) {
-    .boton-flotante-whatsapp,
-    .boton-flotante,
-    #botonClima {
-        width: 45px;
-        height: 45px;
-        bottom: 10px;
-        right: 10px;
-    }
-    .boton-flotante-whatsapp i,
-    .boton-flotante i,
-    #botonClima i {
-        font-size: 17px;
-    }
-    .insignia {
-        font-size: 10px;
-        padding: 1px 4px;
-    }
-    #botonClima {
-        bottom: 60px; 
-    }
-    #botonCalculadora {
-        bottom: 110px; 
-    }
-}
-
-/* Aqui inicia la sesión de experiencias*/
-.experiencias {
-    padding: 1.5rem; 
-}
-.titulo {
-    position: relative;
+    justify-content: space-around;
     text-align: center;
-    margin-bottom: 35px;
+    margin: 100px 0;
 }
-.titulo h2 {
-    margin-top: 55px;
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    line-height: 1.2;
+.contacto-item {
+    flex: 1;
+    padding: 0 23px;
 }
-.titulo span {
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    color: var(--secundo-color);
-}
-.contenido-experiencias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 2rem;
-    margin-top: 3.5rem;
-    padding: 0 4.5rem; 
-}
-.caja-experiencia {
-    position: relative;
-    padding: 20px;
-    border-radius: 11px;
-    transition: all ease .50s;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.caja-experiencia img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-.caja-experiencia h3 {
-    font-size: 21px;
-    font-weight: 700;
+.contacto-item .icono {
+    font-size: 40px;
+    background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    color: #fff;
+    padding: 21px ;
+    margin: 55px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
-.caja-experiencia h3:hover {
-    color: var(--secundo-color);
-    cursor: pointer;
-}
-.caja-experiencia h6 {
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-.caja-principal {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-.caja-texto h5 {
-    margin-top: 11px;
-    font-size: 19px;
-    font-weight: 600;
-}
-.bxx-btn {
-    display: inline-block;
-    padding: 9px 21px;
-    margin-top: 11px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
-    color: var(--fd-color);
-    font-size: 13px;
-    font-weight: 500;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all ease .50s;
-}
-.bxx-btn:hover {
-    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
-    transform: scale(1.1);
-}
-.boton-anadir-ruta {
-    margin-left: 10px;
-    display: inline-block;
-    padding: 9px 21px;
-    margin-top: 11px;
-    background: transparent;
-    color: var(--secundo-color);
-    font-size: 13px;
-    font-weight: 500;
-    border: 1px solid var(--secundo-color);
-    border-radius: 5px;
-    transition: all ease .50s;
-    cursor: pointer;
-}
-.boton-anadir-ruta:hover {
-    color: #fff;
-    background: var(--secundo-color);
-    transform: scale(1.1);
-}
-#carrito {
-    margin-top: 20px;
-}
-#detalles-carrito {
-    margin-top: 10px;
-}
-.item-carrito {
-    margin-bottom: 5px;
-}
-.contenedor-valoracion {
-    position: absolute;
-    top: 33px;
-    left: 33px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 11px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    color: var(--fd-color);
-}
-.estrella {
-    color: yellow;
+.contacto-item h4 {
     font-size: 18px;
-    margin-right: 5px;
-}
-.valoracion {
-    font-size: 16px;
-}
-.contenedor-corazon {
-    position: absolute;
-    top: 33px;
-    right: 33px;
-}
-.corazon {
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-.corazon.rojo {
-    color: red;
-}
-p i.fas {
+    margin: 10px 0;
     color: var(--secundo-color);
+}
+.contacto-item p {
     font-size: 17px;
-    margin-right: 5px;
-    margin-bottom: 9px;
-}
-p {
-    font-size: 15px;
-    align-items: center;
-}
-/* resposivo tablets y móviles */
-@media (max-width: 1024px) { 
-    .contenido-experiencias {
-        grid-template-columns: repeat(2, 1fr); 
-        padding: 0 1rem;
-    }
-}
-@media (max-width: 768px) { 
-    .contenido-experiencias {
-        grid-template-columns: 1fr; 
-        padding: 0 0.5rem; 
-    }
-}
-@media (max-width: 480px) {
-    .boton-anadir-ruta {
-        padding: 9px 15px;
-        font-size: 13px;
-    }
+    margin: 0;
 }
 
-/* Aqui inicia la sesión de testimonios*/
-.testimonio {
-    align-items: center;
-    background: url(/imgs/fd-hojas-pajaro.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 0 20px; 
-}
-.contenedor-testimonio {
-    width: 100%;
-    text-align: center;
-    padding: 0 20px; 
-}
-.sub-contenedor {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px; 
-}
-.titulo {
-    position: relative;
-    text-align: center;
-    margin-top: 55px;
-    margin-bottom: 35px;
-}
-.titulo h2 {
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    line-height: 1.2;
-}
-.titulo span {
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    color: var(--secundo-color);
-}
-.testimonios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; 
-}
-.persona {
-    max-width: calc(30% - 20px); 
-    margin: 10px;
-    background: #fff;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 5px gray;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-.persona:hover {
-    box-shadow: 2px 2px 10px gray;
-}
-.persona img {
-    width: 100px;
-    height: 100px;
-    margin: 20px 0;
-    border: 2px solid var(--secundo-color);
-    border-radius: 50%;
-}
-.persona .nombre {
-    text-transform: uppercase;
-    font-size: 19px;
-    color: var(--secundo-color);
-    margin: 10px 0;
-}
-.persona .valoracion i {
-    margin: 10px 0;
-    color: yellow;
-    font-size: 21px;
-}
-.persona .descripcion p {
-    text-align: center;
-    padding: 23px;
-    color: var(--texto-color);
-    font-size: 17px;
-    line-height: 30px;
-}
-/* Sección de testimonios breakpoint */
-@media screen and (max-width: 980px) {
-    .persona {
-        max-width: calc(45% - 20px); 
-    }
-}
-@media screen and (max-width: 660px) {
-    .persona {
-        max-width: calc(100% - 20px); 
-    }
-}
-
-/* Aqui inicia la sesión de blog*/
-.blog {
+/* Aqui inicia la sesión mapa de rutatur*/
+.rutatur {
     align-items: center;
     background: url(/imgs/fd-hojas.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    padding: 0 20px; 
+    background-position:center;
 }
-#blog {
+.ubicacion-rutatur {
+    text-align: center;
+    padding: 20px;
+}
+.ubicacion-rutatur h2 {
+    font-size: var(--h2-fuente);
+    font-family: 'Paytone One', sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 23px;
+}
+.mapa {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 55px;
-    padding: 40px;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.05);
+}
+.mapa iframe {
+    border: none;
+    width: 80%;
+    max-width: 1000px;
+    height: 450px;
+}
+/* resposivo mapa */
+@media (max-width: 768px) {
+    .ubicacion-rutatur h2 {
+        font-size: 22px;
+    }
+    .mapa iframe {
+        width: 90%;
+        height: 350px;
+    }
+}
+@media (max-width: 480px) {
+    .ubicacion-rutatur h2 {
+        font-size: 20px;
+    }
+    .mapa iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
 
+/* Aqui inicia la sesión de contacto*/
+.contenedor-fd-contacto {
+    align-items: center;
+    background: url(/imgs/fd-hojas-pajaro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
 }
-.blog-encabezado {
+.contenedor-contacto {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-.gif-blog {
-    position: absolute;
-    top: -70px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-}
-.titulo h3 {
-    font-size: 23px;
-    font-weight: 500;
-}
-.titulo h3 span {
-    font-size: 25px;
-    font-weight: 800;
-    color: var(--secundo-color);
-}
-.blog-contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
-}
-.blog-caja {
-    width: 350px;
-    background: #fff;
-    border: 1px solid #fff;
-    margin: 20px;
-}
-.blog-img {
-    width: 100%;
-    height: auto;
-}
-.blog-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    padding: 20px 100px;
 }
-.blog-texto {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-}
-.blog-texto span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--secundo-color);
-}
-.blog-texto .blog-titulo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 21px;
-    font-weight: 500;
-    color: var(--texto-color);
-}
-.blog-texto .blog-titulo:hover {
-    color: var(--secundo-color);
-    transition: all ease 0.3s;
-}
-.blog-texto p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    text-align: left;
-    color: var(--texto-color);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 20px 0px;
-}
-.blog-texto a {
-    font-weight: 500;
-    color: var(--fd-color);
-}
-.blog-boton {
-    display: inline-block;
-    width: 50%; 
-    font-size: 15px;
+.contacto-caja {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-weight: 600;
-    padding: 15px 25px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
-    color: var(--fd-color); 
     border-radius: 5px;
-    cursor: pointer;
-    transition: ease .4s;
+    background: var(--fd-color);
+    box-shadow: 0px 0px 19px 5px rgb(0, 0, 0, 0.19);
 }
-.blog-boton:hover {
+.izquierdo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0px 5px 0px;
+    overflow: hidden;
+}
+.izquierdo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.derecho {
+    padding: 25px 40px;
+}
+h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.contacto-fila {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid var(--secundo-color);
+    background: rgb(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+.contacto-fila:hover {
+    background: rgb(0, 0, 0, 0.1);
+}
+.contacto-fila:focus {
+    background: var(--fd-color);
+    border: 1px solid var(--principal-color)
+}
+.area {
+    min-height: 150px;
+}
+.contacto-boton {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
     color: var(--fd-color);
+    border-radius: 5px;
+    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    cursor: pointer;
+    outline: none;
+    border: none;  
+    transition: .3s;
+    text-decoration: none;
+}
+.contacto-boton:hover {
     background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
     transform: scale(1.1);
 }
-.blog-texto i {
-    margin-right: 15px;
-    font-size: 15px;
-    align-items: center;
+/* sección de contacto breakpoint*/
+@media screen and (max-width:880px) {
+    .contacto-caja {
+        grid-template-columns: 1fr;
+    }
+    .izquierdo {
+        height: 200px;
+        border-radius: 5px;
+    }
 }
 
 /* Aquí inicia la sesión footer */
@@ -961,3 +626,4 @@ p {
         width: 100%;
     }
 }
+

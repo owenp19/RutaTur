@@ -11,8 +11,8 @@
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Remixicons-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+     <!-- Font-awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,260 +27,260 @@
     <!-- precarga -->
     <div id="precarga"></div>
 
-     <!--menu Lateral-->
-     <div class="barra-lateral">
+    <!--menu Lateral-->
+    <div class="barra-lateral">
         <div class="logo">
             <img src="/imgs/logo.png" alt="Logo">
         </div>
-            <ul class="menu">
-                <li  class="activo">
-                    <a href="#">
-                        <i class="ri-verified-badge-fill"></i>
-                        <span>Resumen</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="ri-user-3-fill"></i>
-                        <span>Estadistica</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="ri-pie-chart-fill"></i>
-                        <span>Notificación</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="ri-calendar-todo-fill"></i>
-                        <span>Calendario</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="rutaturistica.html">
-                        <i class="ri-add-large-line"></i>
-                        <span>Añadir Ruta</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="ri-emotion-laugh-line"></i>
-                        <span>Valoración</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="ri-settings-2-fill"></i>
-                        <span>Configuración</span>
-                    </a>
-                </li>
-                <li class="cerrar-sesión">
-                    <a href="inicio.html">
-                        <i class="ri-logout-box-line"></i>
-                        <span>Cerrar sesión</span>
-                    </a>
-                </li>
-            </ul>
+        <ul class="menu">
+            <li class="activo">
+                <a href="#">
+                    <i class="fa-solid fa-tachometer-alt"></i>
+                    <span>Resumen</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Estadística</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Notificación</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Calendario</span>
+                </a>
+            </li>
+            <li>
+                <a href="rutaturistica.html">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Añadir Ruta</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <span>Valoración</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configuración</span>
+                </a>
+            </li>
+            <li class="cerrar-sesión">
+                <a href="inicio.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!--titulos-->
+    <div class="contenedor-principal">
+        <div class="encabezado-alineacion">
+            <div class="encabezado-titulo">
+                <span>Estadisticas y Finanzas</span>
+                <h2>Panel De Control Proveedor RutaTur</h2>
+            </div>
+
+            <!--imagen cuenta admin-->
+            <div class="usuario-info">
+                <div class="caja-busqueda">
+                <i class="ri-search-line"></i>
+                <input type="text" placeholder="Buscar Elemento">
+            </div>
+            <div class="imagen-container">
+                <img src="/imgs/owen.jpg">
+                <img src="/gifs/noti.gif" class="gif-notificacion">
+            </div>
+
         </div>
 
-        <!--titulos-->
-        <div class="contenedor-principal">
-            <div class="encabezado-alineacion">
-                <div class="encabezado-titulo">
-                    <span>Estadisticas y Finanzas</span>
-                    <h2>Panel De Control Proveedor RutaTur</h2>
+        <!--tarjetas de estadisticas-->
+        <div class="contenedor-tarjeta">
+            <h3 class="titulo-principal">Datos De Hoy</h3>
+            <div class="tarjeta-alineacion">
+
+                <!--tarjeta 1-->
+                <div class="tarjeta-pago">
+                    <div class="tarjeta-encabezado">
+                        <div class="monto">
+                            <span class="titulo">Promedio por reservas</span>
+                            <span class="valor-monto">$700,000 COP</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/gifs/exito.gif">
+                        </div>
+                    </div>
+                    <span class="tarjeta-detalle">Promedio diario</span>
                 </div>
 
-                <!--imagen cuenta admin-->
-                <div class="usuario-info">
-                    <div class="caja-busqueda">
-                    <i class="ri-search-line"></i>
-                    <input type="text" placeholder="Buscar Elemento">
+                <!--tarjeta 2-->
+                <div class="tarjeta-pago">
+                    <div class="tarjeta-encabezado">
+                        <div class="monto">
+                            <span class="titulo">Ingresos totales</span>
+                            <span class="valor-monto">$2,500,000 COP</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/gifs/exito.gif">
+                        </div>
+                    </div>
+                    <span class="tarjeta-detalle">**** **** **** 8451</span>
                 </div>
-                <div class="imagen-container">
-                    <img src="/imgs/owen.jpg">
-                    <img src="/gifs/noti.gif" class="gif-notificacion">
+
+                <!--tarjeta 3-->
+                <div class="tarjeta-pago">
+                    <div class="tarjeta-encabezado">
+                        <div class="monto">
+                            <span class="titulo">Reservas canceladas</span>
+                            <span class="valor-monto">25 (15% del total)</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/gifs/cancelar.gif">
+                        </div>
+                    </div>
+                    <span class="tarjeta-detalle">Porcentaje total</span>
                 </div>
 
-            </div>
-
-            <!--tarjetas de estadisticas-->
-            <div class="contenedor-tarjeta">
-                <h3 class="titulo-principal">Datos De Hoy</h3>
-                <div class="tarjeta-alineacion">
-
-                    <!--tarjeta 1-->
-                    <div class="tarjeta-pago">
-                        <div class="tarjeta-encabezado">
-                            <div class="monto">
-                                <span class="titulo">Promedio por reservas</span>
-                                <span class="valor-monto">$700,000 COP</span>
-                            </div>
-                            <div class="icon">
-                                <img src="/gifs/exito.gif">
-                            </div>
+                <!--tarjeta 4-->
+                <div class="tarjeta-pago">
+                    <div class="tarjeta-encabezado">
+                        <div class="monto">
+                            <span class="titulo">Tasa de ocupación</span>
+                            <span class="valor-monto">85%</span>
                         </div>
-                        <span class="tarjeta-detalle">Promedio diario</span>
-                    </div>
-
-                    <!--tarjeta 2-->
-                    <div class="tarjeta-pago">
-                        <div class="tarjeta-encabezado">
-                            <div class="monto">
-                                <span class="titulo">Ingresos totales</span>
-                                <span class="valor-monto">$2,500,000 COP</span>
-                            </div>
-                            <div class="icon">
-                                <img src="/gifs/exito.gif">
-                            </div>
+                        <div class="icon">
+                            <img src="/gifs/estadisticas.gif">
                         </div>
-                        <span class="tarjeta-detalle">**** **** **** 8451</span>
                     </div>
+                    <span class="tarjeta-detalle">Tasa de ocupación rutas</span>
+                </div>
 
-                    <!--tarjeta 3-->
-                    <div class="tarjeta-pago">
-                        <div class="tarjeta-encabezado">
-                            <div class="monto">
-                                <span class="titulo">Reservas canceladas</span>
-                                <span class="valor-monto">25 (15% del total)</span>
-                            </div>
-                            <div class="icon">
-                                <img src="/gifs/cancelar.gif">
-                            </div>
+                <!--tarjeta 5-->
+                <div class="tarjeta-pago">
+                    <div class="tarjeta-encabezado">
+                        <div class="monto">
+                            <span class="titulo">Costos operativos</span>
+                            <span class="valor-monto">$500,000 COP</span>
                         </div>
-                        <span class="tarjeta-detalle">Porcentaje total</span>
+                        <div class="icon">
+                            <img src="/gifs/costos-operativos.gif">
+                        </div>
                     </div>
+                    <span class="tarjeta-detalle">**** **** **** 8451</span>
+                </div>
 
-                    <!--tarjeta 4-->
-                    <div class="tarjeta-pago">
-                        <div class="tarjeta-encabezado">
-                            <div class="monto">
-                                <span class="titulo">Tasa de ocupación</span>
-                                <span class="valor-monto">85%</span>
-                            </div>
-                            <div class="icon">
-                                <img src="/gifs/estadisticas.gif">
-                            </div>
+                <!--tarjeta 6-->
+                <div class="tarjeta-pago">
+                    <div class="tarjeta-encabezado">
+                        <div class="monto">
+                            <span class="titulo">Feedback</span>
+                            <span class="valor-monto">4.5 / 5</span>
                         </div>
-                        <span class="tarjeta-detalle">Tasa de ocupación rutas</span>
-                    </div>
-
-                    <!--tarjeta 5-->
-                    <div class="tarjeta-pago">
-                        <div class="tarjeta-encabezado">
-                            <div class="monto">
-                                <span class="titulo">Costos operativos</span>
-                                <span class="valor-monto">$500,000 COP</span>
-                            </div>
-                            <div class="icon">
-                                <img src="/gifs/costos-operativos.gif">
-                            </div>
+                        <div class="icon">
+                            <img src="/gifs/feedback.gif">
                         </div>
-                        <span class="tarjeta-detalle">**** **** **** 8451</span>
                     </div>
-
-                    <!--tarjeta 6-->
-                    <div class="tarjeta-pago">
-                        <div class="tarjeta-encabezado">
-                            <div class="monto">
-                                <span class="titulo">Feedback</span>
-                                <span class="valor-monto">4.5 / 5</span>
-                            </div>
-                            <div class="icon">
-                                <img src="/gifs/feedback.gif">
-                            </div>
-                        </div>
-                        <span class="tarjeta-detalle">Valoraciones recibidas</span>
-                    </div>
+                    <span class="tarjeta-detalle">Valoraciones recibidas</span>
                 </div>
             </div>
+        </div>
 
-            <!--informacion detallada de transaciones-->
-            <div class="alineacion-tabular">
-                <h3 class="titulo-principal">Datos Financieros</h3>
-                <div class="contenedor-tabla">
-                    <table>
-                        <thead>
+        <!--informacion detallada de transaciones-->
+        <div class="alineacion-tabular">
+            <h3 class="titulo-principal">Datos Financieros</h3>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Datos</th>
+                            <th>Tipo de transacción</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Categoria</th>
+                            <th>Estado</th>
+                            <th>Monto</th>
+                            <th>Nombre</th>
+                            <th>Acción</th>
+                        </tr>
+                        <tbody>
+
+                            <!--transaccion 1-->
                             <tr>
-                                <th>Datos</th>
-                                <th>Tipo de transacción</th>
-                                <th>Descripción</th>
-                                <th>Cantidad</th>
-                                <th>Categoria</th>
-                                <th>Estado</th>
-                                <th>Monto</th>
-                                <th>Nombre</th>
-                                <th>Acción</th>
+                                <td>
+                                    2024-06-26
+                                </td>
+                                <td>Nequi</td>
+                                <td>Ruta de la ciruela</td>
+                                <td>3 personas</td>
+                                <td>Gastronomía</td>
+                                <td>Pendiente</td>
+                                <td>$230,000</td>
+                                <td>Juan Gonzales</td>
+                                <td><button>Editar</button></td>
                             </tr>
-                            <tbody>
 
-                                <!--transaccion 1-->
-                                <tr>
-                                    <td>
-                                        2024-06-26
-                                    </td>
-                                    <td>Nequi</td>
-                                    <td>Ruta de la ciruela</td>
-                                    <td>3 personas</td>
-                                    <td>Gastronomía</td>
-                                    <td>Pendiente</td>
-                                    <td>$230,000</td>
-                                    <td>Juan Gonzales</td>
-                                    <td><button>Editar</button></td>
-                                </tr>
+                            <!--transaccion 2-->
+                            <tr>
+                                <td>
+                                    2024-06-29
+                                </td>
+                                <td>Tajeta de Debito</td>
+                                <td>Ruta de la yuca</td>
+                                <td>1 persona</td>
+                                <td>Aventura</td>
+                                <td>Pendiente</td>
+                                <td>$105,000</td>
+                                <td>Lucía Fernández</td>
+                                <td><button>Editar</button></td>
+                            </tr>
 
-                                <!--transaccion 2-->
-                                <tr>
-                                    <td>
-                                        2024-06-29
-                                    </td>
-                                    <td>Tajeta de Debito</td>
-                                    <td>Ruta de la yuca</td>
-                                    <td>1 persona</td>
-                                    <td>Aventura</td>
-                                    <td>Pendiente</td>
-                                    <td>$105,000</td>
-                                    <td>Lucía Fernández</td>
-                                    <td><button>Editar</button></td>
-                                </tr>
+                            <!--transaccion 3-->
+                            <tr>
+                                <td>
+                                    2024-07-05
+                                </td>
+                                <td>Tajeta de credito</td>
+                                <td>Ruta de la mazamorra</td>
+                                <td>2 personas</td>
+                                <td>Gastronomía</td>
+                                <td>Pagado</td>
+                                <td>$140,000</td>
+                                <td>Ana Martínez</td>
+                                <td><button>Editar</button></td>
+                            </tr>
 
-                                <!--transaccion 3-->
-                                <tr>
-                                    <td>
-                                        2024-07-05
-                                    </td>
-                                    <td>Tajeta de credito</td>
-                                    <td>Ruta de la mazamorra</td>
-                                    <td>2 personas</td>
-                                    <td>Gastronomía</td>
-                                    <td>Pagado</td>
-                                    <td>$140,000</td>
-                                    <td>Ana Martínez</td>
-                                    <td><button>Editar</button></td>
-                                </tr>
-
-                                <!--transaccion 4-->
-                                <tr>
-                                    <td>
-                                        2024-06-26
-                                    </td>
-                                    <td>Transferencia</td>
-                                    <td>Ruta juan jose nieto</td>
-                                    <td>2 personas</td>
-                                    <td>Historia</td>
-                                    <td>Pagado</td>
-                                    <td>$2240,000</td>
-                                    <td>Carlos Ramírez</td>
-                                    <td><button>Editar</button></td>
-                                </tr>
-                            </tbody>
-                        </thead>
-                    </table>
-                </div>
+                            <!--transaccion 4-->
+                            <tr>
+                                <td>
+                                    2024-06-26
+                                </td>
+                                <td>Transferencia</td>
+                                <td>Ruta juan jose nieto</td>
+                                <td>2 personas</td>
+                                <td>Historia</td>
+                                <td>Pagado</td>
+                                <td>$2240,000</td>
+                                <td>Carlos Ramírez</td>
+                                <td><button>Editar</button></td>
+                            </tr>
+                        </tbody>
+                    </thead>
+                </table>
             </div>
         </div>
-
+    </div>
+        
     <!-- script precarga js -->
     <script>
         var loader = document.getElementById("precarga");

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Iniciar Sesión Administrador</title>
 
     <!-- Estilo css-->
-    <link rel="stylesheet" type="text/css" href="/css/iniciarsesion.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/administradores.css"> 
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -32,11 +32,11 @@
         <a href="rutatur-inicio.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
 
         <ul class="menuNav">
-            <li><a href="rutatur-inicio.html" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="rutatur-inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
             <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
             <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
             <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
-            <li><a href="#"><i class="fas fa-newspaper"></i>Blog</a></li>
+            <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
             <li><a href="contacto.html"><i class="fas fa-phone"></i>Contacto</a></li>
         </ul>                           
          
@@ -48,8 +48,8 @@
             </a>              
             <div class="contenido-desplegable">
                 <a href="iniciarsesion.html">Usuario</a>
-                <a href="proveedores.html">Proveedor</a>
-                <a href="administradores.html">Administrador</a>
+                <a href="proveedor.html">Proveedor</a>
+                <a href="admin.html">Administrador</a>
             </div>
         </div>
 
@@ -57,17 +57,17 @@
         <div class="bx bx-menu" id="menu-icon"></div>             
     </header>
     
-    <!-- sección de formulario iniciar sesion -->
+    <!-- sección de formulario iniciar sesion de admin -->
     <section>
-        <div class="formulario-sesion">
+        <div class="formulario-sesion-admin">
             <div class="formulario-caja cuenta">
                 <div class="formulario-detalle">
-                    <h2>Bienvenidos a Rutatur</h2>
-                    <p>Ingresa tus credenciales para acceder a tu cuenta y descubrir las mejores rutas turísticas.</p>
+                    <h2>Bienvenido a Rutatur</h2>
+                    <p>Ingresa tus credenciales para acceder a tu cuenta de administrador Rutatur.</p>
                 </div>
                 <div class="formulario-contenido">
                     <h2>Iniciar Sesión</h2>
-                    <form action="http://localhost:5000/api/usuarios" method="get">
+                    <form action="http://localhost:5000/api/admin" method="get">
                         <div class="casilla-input">
                             <input type="text" name="usuario" required>
                             <label>Usuario</label>
@@ -81,15 +81,11 @@
                             <button type="submit" class="boton-inicio">Ingresar</button>
                         </div>
                     </form>
-                    <div class="enlace-cuenta">
-                        ¿No Tienes Cuenta Aun?,
-                        <a href="registros.html">¡Registrarte Ahora!</a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Enlance a js -->
     <script type="text/javascript" src="/js/script.js"></script>
 
@@ -103,6 +99,5 @@
             }, 1500);
         });
     </script>
-       
 </body>
 </html>

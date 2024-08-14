@@ -13,7 +13,7 @@
 body {
     display: flex;
     height: 100vh;
-    background: url(/imgs/fd-formulario-registro.png);
+    background: url(/imgs/fd-hojas-pajaro.png);
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@ html::-webkit-scrollbar {
 .contenedor-registro-proveedor {
     max-width: 700px; 
     width: 100%;
-    background: var(--fd-color); 
+    background: #fff; 
     padding: 25px 30px;
     border-radius: 5px;
     margin: 50px auto; 
@@ -81,7 +81,7 @@ form .usuario-info .input-caja {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secundo-color);
     padding-left: 15px;
     font-size: 16px;
     transition: all 0.3s ease;
