@@ -6,7 +6,7 @@
     <title>Rutatur Atlántico</title>
 
     <!-- Estilo css-->
-    <link rel="stylesheet" type="text/css" href="/css/rutatur-principal.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/rutatur.css"> 
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,10 +29,10 @@
 
     <!-- sección barra de navegación -->
     <header>
-        <a href="#inicio" class="logo"><img src="/imgs/rutatur-logo.png"></a>
+        <a href="rutatur.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
 
         <ul class="menuNav">
-            <li><a href="#inicio" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="#" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
             <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
             <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
             <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
@@ -42,11 +42,11 @@
          
         <!-- icono cuenta iniciar sesion -->
         <div class="principal">
-            <a href="#" class="usuario">
+            <a href="#" class="usuario" id="usuarioIcono">
                 <i class="fas fa-user-circle"></i>
                 <span class="cuenta-texto">Cuenta</span>
-            </a>              
-            <div class="contenido-desplegable">
+            </a>
+            <div class="contenido-desplegable" id="menuDesplegable">
                 <a href="iniciarsesion.html">Usuario</a>
                 <a href="proveedor.html">Proveedor</a>
                 <a href="administradores.html">Administrador</a>
@@ -65,7 +65,7 @@
         <div class="video-superposicion"></div>
         <div class="inicio-texto">
             <h1>Explora y<br>Disfruta</h1>
-            <p>Rutatur te invita a descubrir paisajes,<br>cultura y aventuras únicas en el Atlántico</p>
+            <p>Rutatur te invita a descubrir paisajes,<br>cultura y aventuras únicas en el <br> Departamento del Atlántico</p>
         </div>
         <div class="contenedor-busqueda">
             <form id="form-busqueda" action="http://localhost:5000/api/rutasTuristicas" method="get">
@@ -112,7 +112,7 @@
                     <img src="/gifs/gastronomia.gif">
                 </div>
                 <h4>Rutas Gastronómicas</h4>
-                <p>9 Rutas</p>
+                <p>+9 Rutas</p>
             </div>
 
             <div class="contenedor-caj">
@@ -120,7 +120,7 @@
                     <img src="/gifs/naturaleza.gif">
                 </div>
                 <h4>Rutas Ecoturisticas</h4>
-                <p>13 Rutas</p>
+                <p>+13 Rutas</p>
             </div>
 
             <div class="contenedor-caj">
@@ -128,15 +128,15 @@
                     <img src="/gifs/rural.gif">
                 </div>
                 <h4>Rutas Rurales</h4>
-                <p> 12 Rutas</p>
+                <p>+12 Rutas</p>
             </div>
 
             <div class="contenedor-caj">
                 <div class="contenedor-gif">
                     <img src="/gifs/aventura.gif">
                 </div>
-                <h4>Rutas De Aventura</h4>
-                <p>15 Rutas</p>
+                <h4>Rutas Aventura</h4>
+                <p>+15 Rutas</p>
             </div>
         </div>
     </section>
@@ -299,7 +299,7 @@
         </div>
     </div>
     <div class="contenedor-boton-ver-mas">
-        <a href="experiencias.html" class="boton-ver-mas">Ver más rutas turísticas</a>
+        <a href="experiencias.html" class="boton-ver-mas">Ver más experiencias</a>
     </div>
     </section>
     

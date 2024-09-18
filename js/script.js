@@ -18,6 +18,28 @@ window.onscroll = () => {
     navbar.classList.remove('open');
 }
 
+// Esperar a que el DOM se cargue
+document.addEventListener('DOMContentLoaded', function() {
+    const usuarioIcono = document.getElementById('usuarioIcono');
+    const menuDesplegable = document.getElementById('menuDesplegable');
+
+    // Añadir un evento de clic al ícono de usuario
+    usuarioIcono.addEventListener('click', function(event) {
+        event.preventDefault();  // Evitar el comportamiento predeterminado del enlace
+
+        // Alternar la visibilidad del menú
+        menuDesplegable.style.display = (menuDesplegable.style.display === 'block') ? 'none' : 'block';
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!usuarioIcono.contains(event.target) && !menuDesplegable.contains(event.target)) {
+            menuDesplegable.style.display = 'none';
+        }
+    });
+});
+
+
 // Aqui inicia el codigo del icono del corazon js
 function toggleHeart(element) {
     element.classList.toggle('rojo');
