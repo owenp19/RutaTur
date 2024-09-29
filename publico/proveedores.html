@@ -8,8 +8,8 @@
     <!-- Estilo css-->
     <link rel="stylesheet" type="text/css" href="/css/proveedores.css"> 
 
-    <!-- Remixicons-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Favicon-->
-    <link rel="icon" href="/imgs/favicon.ico">
+    <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
 
@@ -38,26 +38,25 @@
                         <div class="casilla-input">
                             <input type="text" name="usuario" required>
                             <label>Usuario</label>
+                            <i class="fas fa-user"></i>
                         </div>
                         <div class="casilla-input">
                             <input type="password" name="contraseña" required>
                             <label>Contraseña</label>
-                        </div>
-                        <div class="casilla-input">
-                            <select name="tipoProveedor" required>
-                                <option value="" disabled selected>Selecciona tu tipo de proveedor</option>
-                                <option value="agencia">Agencia de viajes</option>
-                                <option value="guia">Guía turístico</option>
-                                <option value="transporte">Tour operadores</option>
-                            </select>
+                            <i class="fas fa-lock"></i>
                         </div>
                         <div class="casilla-input">
                             <input type="text" name="codigoProveedor" required>
                             <label>Código de proveedor</label>
+                            <i class="fas fa-id-badge"></i>
                         </div>
-                        <a href="#" class="contraseña-olvidada">¿Olvidaste Tu Contraseña?</a>
+                        <a href="#" class="contraseña-olvidada">
+                            ¿Olvidaste Tu Contraseña? <i class="fas fa-question-circle"></i>
+                        </a>
                         <div class="boton">
-                            <button type="submit" class="boton-enlace">Ingresar</button></a>
+                            <button type="submit" class="boton-enlace">
+                                Ingresar <i class="fas fa-sign-in-alt"></i>
+                            </button>
                         </div>
                     </form>
                     <div class="enlace-cuenta">
@@ -67,7 +66,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
 
     <!-- script precarga js -->
     <script>

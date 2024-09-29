@@ -10,8 +10,8 @@
 :root {
     --fd-color:#F2F2F2;
     --texto-color:#202030;
-    --secundo-color:#5B8C5A;
-    --principal-color:#596157;
+    --principal-color:#379634;
+    --secundo-color:#F1D302;
     --grande-fuente: 6rem;
     --h2-fuente:3rem;
     --p-fuente: 1.1rem;
@@ -32,7 +32,7 @@ html::-webkit-scrollbar-track {
     background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     border-radius: 5rem;
 }
 
@@ -74,10 +74,10 @@ header.sticky {
     transition: all .50s ease;
 }
 .sticky .menuNav a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .sticky .cuenta-texto  {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 0.9rem;
 }
 .sticky .registro  {
@@ -107,19 +107,19 @@ header.sticky {
     transition: all .50s ease;
 }
 .menuNav a.activo {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .menuNav a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 #menu-icon {
     font-size: 35px;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     cursor: pointer;
     z-index: 10001;
     display: none;
 }
-/* sección de portada y menu de navegacion Breakpoint*/
+/* sección de navegacion breakpoint*/
 @media (max-width: 1280px) {
     header {
         padding: 14px 2%;
@@ -143,7 +143,7 @@ header.sticky {
         right: -100%;
         width: 270px;
         height: 45vh;
-        background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+        background: var(--principal-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -190,7 +190,7 @@ header.sticky {
     }
 }
 
-/* Aqui inicia la sesión de opcion desplegable*/
+/* Estilos de la sección de opcion desplegable */
 .principal {
     position: relative;
     display: inline-block;
@@ -204,7 +204,7 @@ header.sticky {
     transition: all .50s ease;
 }
 .principal a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .usuario {
     display: flex;
@@ -214,7 +214,7 @@ header.sticky {
     cursor: pointer;
 }
 .usuario i {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 25px;
     margin-right: 7px;
 }
@@ -238,10 +238,8 @@ header.sticky {
 .contenido-desplegable a:hover {
     background-color: var(--fd-color);
 }
-.principal:hover .contenido-desplegable {
-    display: block;
-}
-/* sección de cuenta breakpoint*/
+
+/* sección de cuenta breakpoint */
 @media (max-width: 600px) {
     .principal .usuario a {
         font-size: 5px;
@@ -259,7 +257,6 @@ header.sticky {
         left: -100%;
         width: 100%;
         box-shadow: none;
-        
     }
     .contenido-desplegable a {
         padding: 10px;
@@ -267,7 +264,7 @@ header.sticky {
     }
 }
 
-/* Aqui inicia la sesión experiencia rutatur*/
+/* Aqui inicia la sesión contacto*/
 .inicio {
     position: relative;
     height: 100vh;
@@ -358,7 +355,7 @@ header.sticky {
 }
 .contacto-item .icono {
     font-size: 40px;
-    background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     color: #fff;
     padding: 21px ;
     margin: 55px;
@@ -368,7 +365,7 @@ header.sticky {
 .contacto-item h4 {
     font-size: 18px;
     margin: 10px 0;
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .contacto-item p {
     font-size: 17px;
@@ -376,13 +373,6 @@ header.sticky {
 }
 
 /* Aqui inicia la sesión mapa de rutatur*/
-.rutatur {
-    align-items: center;
-    background: url(/imgs/fd-hojas.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-}
 .ubicacion-rutatur {
     text-align: center;
     padding: 20px;
@@ -426,7 +416,7 @@ header.sticky {
 /* Aqui inicia la sesión de contacto*/
 .contenedor-fd-contacto {
     align-items: center;
-    background: url(/imgs/fd-hojas-pajaro.png);
+    background: url(/imgs/fd-hojas-contacto.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -458,7 +448,7 @@ header.sticky {
     border-radius: 5px 0px 5px 0px;
     overflow: hidden;
 }
-.izquierdo img {
+.izquierdo iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -478,7 +468,7 @@ h2 {
     width: 100%;
     padding: 0.5rem 1rem;
     outline: none;
-    border: 1px solid var(--secundo-color);
+    border: 1px solid var(--principal-color);
     background: rgb(230, 230, 230, 0.6);
     font-size: 1.1rem;
     margin-bottom: 22px;
@@ -497,22 +487,22 @@ h2 {
 .contacto-boton {
     display: inline-block;
     width: 100%;
-    padding: 15px 25px;
+    padding: 13px 25px;
     font-weight: 600;
     font-size: 1.1rem;
     text-align: center;
     color: var(--fd-color);
-    border-radius: 5px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    border-radius: 50px;
+    background: var(--principal-color);
     cursor: pointer;
     outline: none;
     border: none;  
-    transition: .3s;
+    transition: transform 0.3s, filter 0.3s;
     text-decoration: none;
 }
 .contacto-boton:hover {
-    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
-    transform: scale(1.1);
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 /* sección de contacto breakpoint*/
 @media screen and (max-width:880px) {
@@ -527,7 +517,11 @@ h2 {
 
 /* Aquí inicia la sesión footer */
 #contactonos {
-    background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    align-items: center;
+    background: url(/imgs/footer-fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
     padding: 40px 80px;
     margin-top: 40px;
 }

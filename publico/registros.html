@@ -7,6 +7,8 @@
 
     <!-- Estilo css-->
     <link rel="stylesheet" type="text/css" href="/css/registros.css"> 
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Favicon-->
-    <link rel="icon" href="/imgs/favicon.ico">
+    <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
 
@@ -30,61 +32,67 @@
                     <div class="input-caja">
                         <span class="detalles">Nombre Completo</span>
                         <input type="text" name="nombreCompleto" placeholder="nombre completo" required>
+                        <i class="fas fa-user"></i>
                     </div>
-
+    
                     <div class="input-caja">
                         <span class="detalles">Nombre de Usuario</span>
                         <input type="text" name="nombreUsuario" placeholder="N° usuario" required>
+                        <i class="fas fa-user-circle"></i>
                     </div>
-
+    
                     <div class="input-caja">
-                        <span class="detalles">Correo Electronico</span>
+                        <span class="detalles">Correo Electrónico</span>
                         <input type="email" name="correoElectronico" placeholder="Correo" required>
+                        <i class="fas fa-envelope"></i>
                     </div>
-
+    
                     <div class="input-caja">
-                        <span class="detalles">Telefono Celular</span>
+                        <span class="detalles">Teléfono Celular</span>
                         <input type="text" name="telefonoCelular" placeholder="Celular" required>
+                        <i class="fas fa-phone"></i>
                     </div>
-
+    
                     <div class="input-caja">
                         <span class="detalles">Contraseña</span>
                         <input type="password" name="contraseña" placeholder="Contraseña" required>
+                        <i class="fas fa-lock"></i>
                     </div>
-
+    
                     <div class="input-caja">
                         <span class="detalles">Confirmar Contraseña</span>
                         <input type="password" name="confirmarContraseña" placeholder="Confirmar" required>
+                        <i class="fas fa-lock"></i>
                     </div>
                 </div>
+    
                 <div class="genero-detalles">
                     <input type="radio" name="genero" value="Hombre" id="punto-1">
                     <input type="radio" name="genero" value="Mujer" id="punto-2">
                     <input type="radio" name="genero" value="Prefiero no decirlo" id="punto-3">
-                    <span class="genero-titulo">Selecciona Genero</span>
+                    <span class="genero-titulo">Selecciona Género</span>
                     <div class="categoria">
                         <label for="punto-1">
                             <span class="punto uno"></span>
                             <span class="genero">Hombre</span>
                         </label>
-
                         <label for="punto-2">
                             <span class="punto dos"></span>
                             <span class="genero">Mujer</span>
                         </label>
-
                         <label for="punto-3">
                             <span class="punto tres"></span>
                             <span class="genero">Prefiero no decirlo</span>
                         </label>
                     </div>
                 </div>
+    
                 <div class="boton">
-                    <button type="submit" class="boton-registro">Registrarse</button>
+                    <button type="submit" class="boton-registro">Registrarse <i class="fas fa-plus-circle"></i></button>
                 </div>
             </form>
         </div>
-    </section>
+    </section>      
     
     <!-- script precarga js -->
     <script>

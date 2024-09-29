@@ -8,9 +8,6 @@
     <!-- Estilo css-->
     <link rel="stylesheet" type="text/css" href="/css/administradores.css"> 
 
-    <!-- Boxicons CSS -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <!-- Font-awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -20,43 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Favicon-->
-    <link rel="icon" href="/imgs/favicon.ico">
+    <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
 
     <!-- precarga -->
     <div id="precarga"></div>
-
-    <!-- sección barra de navegación -->
-    <header>
-        <a href="rutatur-inicio.html" class="logo"><img src="/imgs/rutatur-logo.png"></a>
-
-        <ul class="menuNav">
-            <li><a href="rutatur-inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
-            <li><a href="experiencias.html"><i class="fas fa-map"></i>Experiencias</a></li>
-            <li><a href="#testimonios"><i class="far fa-comments"></i>Testimonios</a></li>
-            <li><a href="nosotros.html"><i class="fas fa-address-card"></i>Nosotros</a></li>
-            <li><a href="#blog"><i class="fas fa-newspaper"></i>Blog</a></li>
-            <li><a href="contacto.html"><i class="fas fa-phone"></i>Contacto</a></li>
-        </ul>                           
-         
-        <!-- icono cuenta iniciar sesion -->
-        <div class="principal">
-            <a href="#" class="usuario">
-                <i class="fas fa-user-circle"></i>
-                <span class="cuenta-texto">Cuenta</span>
-            </a>              
-            <div class="contenido-desplegable">
-                <a href="iniciarsesion.html">Usuario</a>
-                <a href="proveedor.html">Proveedor</a>
-                <a href="admin.html">Administrador</a>
-            </div>
-        </div>
-
-        <!-- icono menu de hamburgesa -->
-        <div class="bx bx-menu" id="menu-icon"></div>             
-    </header>
-    
+ 
     <!-- sección de formulario iniciar sesion de admin -->
     <section>
         <div class="formulario-sesion-admin">
@@ -71,20 +38,22 @@
                         <div class="casilla-input">
                             <input type="text" name="usuario" required>
                             <label>Usuario</label>
+                            <i class="fas fa-user icon"></i>
                         </div>
                         <div class="casilla-input">
                             <input type="password" name="contraseña" required>
                             <label>Contraseña</label>
+                            <i class="fas fa-lock icon"></i>
                         </div>
-                        <a href="#" class="contraseña-olvidada">¿Olvidaste Tu Contraseña?</a>
+                        <a href="#" class="contraseña-olvidada"> ¿Olvidaste Tu Contraseña? <i class="fas fa-question-circle"></i></a>
                         <div class="boton">
-                            <button type="submit" class="boton-inicio">Ingresar</button>
+                            <button type="submit" class="boton-inicio">Ingresar <i class="fas fa-sign-in-alt"></i></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+    </section>         
 
     <!-- Enlance a js -->
     <script type="text/javascript" src="/js/script.js"></script>

@@ -7,17 +7,18 @@
 :root {
     --fd-color:#F2F2F2;
     --texto-color:#202030;
-    --secundo-color:#5B8C5A;
-    --principal-color:#596157;
+    --principal-color:#379634;
+    --secundo-color:#F1D302;
+    --grande-fuente: 6rem;
+    --h2-fuente:3rem;
+    --p-fuente: 1.1rem;
 }
 body {
     display: flex;
     height: 100vh;
-    background: url(/imgs/fd-hojas-pajaro.png);
-    background-repeat: no-repeat;
+    background: var(--fd-color);
     justify-content: center;
     align-items: center;
-    background-size: cover;
     overflow-x: hidden;
 }
 
@@ -59,7 +60,7 @@ html::-webkit-scrollbar {
     bottom: 0;
     height: 3px;
     width: 30px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
 }
 form .usuario-info {
     display: flex;
@@ -81,7 +82,7 @@ form .usuario-info .input-caja {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid var(--secundo-color);
+    border: 1px solid var(--principal-color);
     padding-left: 15px;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -90,6 +91,20 @@ form .usuario-info .input-caja {
 .usuario-info .input-caja input:focus,
 .usuario-info .input-caja input:valid {
     border-color: var(--principal-color);
+}
+.input-con-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-con-icono input {
+    padding-right: 40px; 
+}
+.input-con-icono i {
+    position: absolute;
+    right: 15px;
+    color: #747474;
+    font-size: 18px;
 }
 form .genero-detalles .genero-titulo {
     font-size: 21px;
@@ -118,12 +133,12 @@ form .genero-detalles .categoria {
 #punto-2:checked ~ .categoria label .dos,
 #punto-3:checked ~ .categoria label .tres {
     border-color: #d9d9d9;
-    background: var(--secundo-color);
+    background: var(--principal-color);
 }
 form input[type="radio"] {
     display: none;
 }
-/* Estilo para el botón */
+/* estilo para el botón */
 .boton {
     height: 45px;
     margin: 35px 0;
@@ -131,8 +146,7 @@ form input[type="radio"] {
     justify-content: center;
     align-items: center;
 }
-
-.boton .boton-enlace {
+.boton .boton-registro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,20 +155,24 @@ form input[type="radio"] {
     text-align: center;
     color: var(--fd-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 19px;
     font-weight: 500;
     letter-spacing: 1px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: transform 0.3s, filter 0.3s;
     text-decoration: none;
     box-sizing: border-box;
 }
-.boton .boton-enlace:hover {
-    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
+.boton .boton-registro:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
-/* Responsivo para tabletas y móviles */
+.boton-registro i {
+    margin-left: 5px; 
+}
+/* responsivo para tabletas y móviles */
 @media (max-width: 584px) {
     body {
         background: var(--fd-color)
@@ -167,7 +185,7 @@ form input[type="radio"] {
         margin-bottom: 15px;
         width: 100%;
     }
-    .boton .boton-enlace {
+    .boton .boton-registro {
         margin: 25px 0;
         display: block; 
         width: 100%;
@@ -205,7 +223,7 @@ form input[type="radio"] {
         margin-bottom: 10px; 
         width: 100%;
     }
-    .boton .boton-enlace {
+    .boton .boton-registro {
         margin: -10px 0; 
         padding: 8px; 
         font-weight: 600;

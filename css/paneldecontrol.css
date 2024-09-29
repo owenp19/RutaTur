@@ -9,8 +9,8 @@
 :root {
     --fd-color:#F2F2F2;
     --texto-color:#202030;
-    --secundo-color:#5B8C5A;
-    --principal-color:#596157;
+    --principal-color:#379634;
+    --secundo-color:#F1D302;
     --grande-fuente: 6rem;
     --h2-fuente:3rem;
     --p-fuente: 1.1rem;
@@ -42,7 +42,7 @@ body {
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
 }
 .barra-lateral:hover {
     width: 280px;

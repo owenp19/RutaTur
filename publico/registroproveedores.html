@@ -6,7 +6,10 @@
     <title>Registro Rutatur</title>
 
     <!-- Estilo css-->
-    <link rel="stylesheet" type="text/css" href="/css/registroProveedor.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/registroproveedores.css"> 
+
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Favicon-->
-    <link rel="icon" href="/imgs/favicon.ico">
+    <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
 
@@ -29,32 +32,50 @@
                 <div class="usuario-info">
                     <div class="input-caja">
                         <span class="detalles">Nombre de Empresa</span>
-                        <input type="text" name="nombreEmpresa" placeholder="Nombre de Empresa" required>
+                        <div class="input-con-icono">
+                            <input type="text" name="nombreEmpresa" placeholder="Nombre de Empresa" required>
+                            <i class="fas fa-building"></i>
+                        </div>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Nombre de Usuario</span>
-                        <input type="text" name="usuario" placeholder="Nombre de Usuario" required>
+                        <div class="input-con-icono">
+                            <input type="text" name="usuario" placeholder="Nombre de Usuario" required>
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Correo Electrónico</span>
-                        <input type="email" name="correoElectronico" placeholder="Correo Electrónico" required>
+                        <div class="input-con-icono">
+                            <input type="email" name="correoElectronico" placeholder="Correo Electrónico" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Teléfono Celular</span>
-                        <input type="text" name="telefonoCelular" placeholder="Teléfono Celular" required>
+                        <div class="input-con-icono">
+                            <input type="text" name="telefonoCelular" placeholder="Teléfono Celular" required>
+                            <i class="fas fa-phone"></i>
+                        </div>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Contraseña</span>
-                        <input type="password" name="contraseña" placeholder="Contraseña" required>
+                        <div class="input-con-icono">
+                            <input type="password" name="contraseña" placeholder="Contraseña" required>
+                            <i class="fas fa-lock"></i>
+                        </div>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Confirmar Contraseña</span>
-                        <input type="password" name="confirmaContraseña" placeholder="Confirmar Contraseña" required>
+                        <div class="input-con-icono">
+                            <input type="password" name="confirmaContraseña" placeholder="Confirmar Contraseña" required>
+                            <i class="fas fa-lock"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="genero-detalles">
@@ -81,11 +102,11 @@
                 </div>
     
                 <div class="boton">
-                    <button type="submit" class="boton-enlace">Ingresar</button></a>
+                    <button type="submit" class="boton-registro">Registrarse <i class="fas fa-plus-circle"></i></button>
                 </div>
             </form>
         </div>
-    </section>
+    </section>    
 
     <!-- script precarga js -->
     <script>

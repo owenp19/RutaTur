@@ -2,7 +2,7 @@
 
 ![Portada Rutatur](/imgs/portada.png)
 
-## <span style="font-family: 'Poppins', sans-serif; font-size:33px; color: #5B8C5A; font-weight: 700font-size:23px;">**Manual Técnico**</span>
+## <span style="font-family: 'Poppins', sans-serif; font-size:33px; color: #379634; font-weight: 700font-size:23px;">**Manual Técnico**</span>
 
 ## Tabla de contenido
 1. [Introducción](#introducción)

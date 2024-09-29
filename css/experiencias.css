@@ -10,8 +10,8 @@
 :root {
     --fd-color:#F2F2F2;
     --texto-color:#202030;
-    --secundo-color:#5B8C5A;
-    --principal-color:#596157;
+    --principal-color:#379634;
+    --secundo-color:#F1D302;
     --grande-fuente: 6rem;
     --h2-fuente:3rem;
     --p-fuente: 1.1rem;
@@ -32,7 +32,7 @@ html::-webkit-scrollbar-track {
     background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     border-radius: 5rem;
 }
 
@@ -74,10 +74,10 @@ header.sticky {
     transition: all .50s ease;
 }
 .sticky .menuNav a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .sticky .cuenta-texto  {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 0.9rem;
 }
 .sticky .registro  {
@@ -107,19 +107,19 @@ header.sticky {
     transition: all .50s ease;
 }
 .menuNav a.activo {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .menuNav a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 #menu-icon {
     font-size: 35px;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     cursor: pointer;
     z-index: 10001;
     display: none;
 }
-/* sección de portada y menu de navegacion Breakpoint*/
+/* sección de navegacion breakpoint*/
 @media (max-width: 1280px) {
     header {
         padding: 14px 2%;
@@ -143,7 +143,7 @@ header.sticky {
         right: -100%;
         width: 270px;
         height: 45vh;
-        background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+        background: var(--principal-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -190,7 +190,7 @@ header.sticky {
     }
 }
 
-/* Aqui inicia la sesión de opcion desplegable*/
+/* Estilos de la sección de opcion desplegable */
 .principal {
     position: relative;
     display: inline-block;
@@ -204,7 +204,7 @@ header.sticky {
     transition: all .50s ease;
 }
 .principal a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .usuario {
     display: flex;
@@ -214,7 +214,7 @@ header.sticky {
     cursor: pointer;
 }
 .usuario i {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 25px;
     margin-right: 7px;
 }
@@ -238,10 +238,8 @@ header.sticky {
 .contenido-desplegable a:hover {
     background-color: var(--fd-color);
 }
-.principal:hover .contenido-desplegable {
-    display: block;
-}
-/* sección de cuenta breakpoint*/
+
+/* sección de cuenta breakpoint */
 @media (max-width: 600px) {
     .principal .usuario a {
         font-size: 5px;
@@ -259,7 +257,6 @@ header.sticky {
         left: -100%;
         width: 100%;
         box-shadow: none;
-        
     }
     .contenido-desplegable a {
         padding: 10px;
@@ -267,7 +264,7 @@ header.sticky {
     }
 }
 
-/* Aqui inicia la sesión experiencia rutatur*/
+/* Aqui inicia la sesión carrusel deslizable*/
 .inicio {
     position: relative;
     height: 100vh;
@@ -348,7 +345,7 @@ header.sticky {
 /* Estilos del botón flotante WhatsApp */
 .boton-flotante-whatsapp {
     position: fixed;
-    bottom: 85px; 
+    bottom: 333px; 
     right: 25px;  
     background: #25D366;
     color: #fff;
@@ -361,6 +358,7 @@ header.sticky {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
 }
 .boton-flotante-whatsapp a {
     color: #fff;
@@ -370,17 +368,17 @@ header.sticky {
     font-size: 23px;
 }
 .boton-flotante-whatsapp:hover {
+    filter: brightness(1.1);
     transform: scale(1.05);
 }
-
 /* Estilos del botón flotante añadir ruta */
 .boton-flotante {
     position: fixed;
-    bottom: 20px;
+    bottom: 100px;
     right: 20px;
     width: 60px;
     height: 60px;
-    background: var(--secundo-color);
+    background: var(--principal-color);
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -390,9 +388,7 @@ header.sticky {
     cursor: pointer;
     z-index: 1000;
     transition: 0.3s ease;
-}
-.boton-flotante:hover {
-    background: var(--secundo-color);
+    transition: transform 0.3s, filter 0.3s;
 }
 .boton-flotante i {
     font-size: 23px;
@@ -402,27 +398,62 @@ header.sticky {
     top: 5px;
     left: 5px;
     background: #fff;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     border-radius: 50%;
     padding: 2px 6px;
     font-size: 12px;
     font-weight: bold;
 }
-
-/* Estilos del botón calculadora */
+/* Estilos del botón contador de reservas en tiempo real */
+.boton-flotante.contador-reservas {
+    position: fixed;
+    bottom: 30px; 
+    right: 20px;
+    width: 190px;
+    height: 60px;
+    background: var(--principal-color);
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s, filter 0.3s;
+}
+.boton-flotante.contador-reservas #textoReservas {
+    font-size: 14px;
+    font-weight: bold;
+}
+.boton-flotante.contador-reservas #contadorReservas {
+    background: #fff;
+    color: var(--principal-color);
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Estilos del botón del clima */
 #botonClima {
     bottom: 190px; 
+    transition: transform 0.3s, filter 0.3s;
 }
 #botonClima:hover {
+    filter: brightness(1.1);
     transform: scale(1.05);
 }
-#botonCalculadora {
-    bottom: 260px
+/* Estilos del botón del clima */
+#botonVideojuego {
+    bottom: 260px;
+    transition: transform 0.3s, filter 0.3s;
 }
-#botonCalculadora:hover {
+#botonVideojuego:hover {
+    filter: brightness(1.1);
     transform: scale(1.05);
 }
-/* Responsividad de los botones flotantes */
+/* responsividad de los botones flotantes */
 @media (max-width: 768px) {
     .boton-flotante-whatsapp,
     .boton-flotante,
@@ -444,14 +475,25 @@ header.sticky {
     #botonClima {
         bottom: 150px; 
     }
+    .boton-flotante.contador-reservas {
+        bottom: 10px;
+        right: 15px;
+        width: 170px; 
+        height: 50px;
+    }
 }
 @media (max-width: 480px) {
     .boton-flotante-whatsapp,
-    .boton-flotante,
     #botonClima {
         width: 45px;
         height: 45px;
-        bottom: 10px;
+        bottom: 170px;
+        right: 10px;
+    }
+    .boton-flotante{
+        width: 45px;
+        height: 45px;
+        bottom: 221px;
         right: 10px;
     }
     .boton-flotante-whatsapp i,
@@ -466,8 +508,20 @@ header.sticky {
     #botonClima {
         bottom: 60px; 
     }
-    #botonCalculadora {
+    #botonVideojuego {
         bottom: 110px; 
+    }
+    @media (max-width: 480px) {
+        .boton-flotante.contador-reservas {
+            bottom: 10px;
+            right: 10px;
+            width: 170px;
+            height: 45px;
+            padding: 0 10px;
+        }
+        .boton-flotante.contador-reservas #textoReservas {
+            font-size: 12px;
+        }
     }
 }
 
@@ -480,23 +534,19 @@ header.sticky {
     text-align: center;
     margin-bottom: 35px;
 }
-.titulo h2 {
-    margin-top: 55px;
+.titulo h2 span {
     font-family: 'Paytone One', sans-serif;
     font-size: var(--h2-fuente);
     line-height: 1.2;
-}
-.titulo span {
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .contenido-experiencias {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: center;
     margin-top: 3.5rem;
-    padding: 0 4.5rem; 
+    padding: 0 5rem;
 }
 .caja-experiencia {
     position: relative;
@@ -505,6 +555,7 @@ header.sticky {
     transition: all ease .50s;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 .caja-experiencia img {
     width: 100%;
@@ -512,13 +563,26 @@ header.sticky {
     margin-bottom: 20px;
     cursor: pointer;
 }
+.icono-medalla {
+    position: absolute;
+    top: 170px;
+    right: 29px;
+    background: #FFD700;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.icono-medalla i {
+    font-size: 19px;
+}
 .caja-experiencia h3 {
     font-size: 21px;
     font-weight: 700;
+    color: var(--principal-color);
     margin-bottom: 10px;
-}
-.caja-experiencia h3:hover {
-    color: var(--secundo-color);
     cursor: pointer;
 }
 .caja-experiencia h6 {
@@ -542,17 +606,17 @@ header.sticky {
     display: inline-block;
     padding: 9px 21px;
     margin-top: 11px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     color: var(--fd-color);
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all ease .50s;
+    border-radius: 50px;
+    transition: transform 0.3s, filter 0.3s;
 }
 .bxx-btn:hover {
-    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
-    transform: scale(1.1);
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 .boton-anadir-ruta {
     margin-left: 10px;
@@ -560,27 +624,19 @@ header.sticky {
     padding: 9px 21px;
     margin-top: 11px;
     background: transparent;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 13px;
     font-weight: 500;
-    border: 1px solid var(--secundo-color);
-    border-radius: 5px;
-    transition: all ease .50s;
+    border: 1px solid var(--principal-color);
+    border-radius: 50px;
+    transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
 }
 .boton-anadir-ruta:hover {
     color: #fff;
-    background: var(--secundo-color);
-    transform: scale(1.1);
-}
-#carrito {
-    margin-top: 20px;
-}
-#detalles-carrito {
-    margin-top: 10px;
-}
-.item-carrito {
-    margin-bottom: 5px;
+    background: var(--principal-color);
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 .contenedor-valoracion {
     position: absolute;
@@ -594,7 +650,7 @@ header.sticky {
     color: var(--fd-color);
 }
 .estrella {
-    color: yellow;
+    color: var(--secundo-color);
     font-size: 18px;
     margin-right: 5px;
 }
@@ -616,7 +672,7 @@ header.sticky {
     color: red;
 }
 p i.fas {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 17px;
     margin-right: 5px;
     margin-bottom: 9px;
@@ -625,30 +681,44 @@ p {
     font-size: 15px;
     align-items: center;
 }
-/* resposivo tablets y móviles */
-@media (max-width: 1024px) { 
-    .contenido-experiencias {
-        grid-template-columns: repeat(2, 1fr); 
-        padding: 0 1rem;
-    }
+.contenedor-boton-ver-mas {
+    text-align: center;
+    margin-top: 31px;
+    align-items: center;
 }
-@media (max-width: 768px) { 
-    .contenido-experiencias {
-        grid-template-columns: 1fr; 
-        padding: 0 0.5rem; 
-    }
+.boton-ver-mas {
+    margin-left: 10px;
+    display: inline-block;
+    padding: 13px 21px;
+    margin-top: 11px;
+    background: var(--principal-color);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
 }
+.boton-ver-mas:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+/* responsividad de experiencias*/
 @media (max-width: 480px) {
     .boton-anadir-ruta {
         padding: 9px 15px;
         font-size: 13px;
+    }
+    .contenido-experiencias {
+        grid-template-columns: 1fr; 
+        padding: 0 0.5rem;
     }
 }
 
 /* Aqui inicia la sesión de testimonios*/
 .testimonio {
     align-items: center;
-    background: url(/imgs/fd-hojas-pajaro.png);
+    background: url(/imgs/fd-hojas-contacto.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -678,7 +748,7 @@ p {
 .titulo span {
     font-family: 'Paytone One', sans-serif;
     font-size: var(--h2-fuente);
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .testimonios {
     display: flex;
@@ -702,13 +772,13 @@ p {
     width: 100px;
     height: 100px;
     margin: 20px 0;
-    border: 2px solid var(--secundo-color);
+    border: 2px solid var(--principal-color);
     border-radius: 50%;
 }
 .persona .nombre {
     text-transform: uppercase;
     font-size: 19px;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     margin: 10px 0;
 }
 .persona .valoracion i {
@@ -736,14 +806,6 @@ p {
 }
 
 /* Aqui inicia la sesión de blog*/
-.blog {
-    align-items: center;
-    background: url(/imgs/fd-hojas.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 0 20px; 
-}
 #blog {
     display: flex;
     justify-content: center;
@@ -774,7 +836,7 @@ p {
 .titulo h3 span {
     font-size: 25px;
     font-weight: 800;
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .blog-contenedor {
     display: flex;
@@ -786,8 +848,12 @@ p {
 .blog-caja {
     width: 350px;
     background: #fff;
-    border: 1px solid #fff;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 11px;
     margin: 20px;
+}
+.blog-caja:hover {
+    box-shadow: 2px 2px 10px gray;
 }
 .blog-img {
     width: 100%;
@@ -808,17 +874,13 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
     font-weight: 800;
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .blog-texto .blog-titulo {
     font-family: 'Poppins', sans-serif;
     font-size: 21px;
     font-weight: 500;
     color: var(--texto-color);
-}
-.blog-texto .blog-titulo:hover {
-    color: var(--secundo-color);
-    transition: all ease 0.3s;
 }
 .blog-texto p {
     font-family: 'Poppins', sans-serif;
@@ -842,17 +904,16 @@ p {
     font-size: 15px;
     text-align: center;
     font-weight: 600;
-    padding: 15px 25px;
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    padding: 13px 21px;
+    background: var(--principal-color);
     color: var(--fd-color); 
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: ease .4s;
+    transition: transform 0.3s, filter 0.3s;
 }
 .blog-boton:hover {
-    color: var(--fd-color);
-    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
-    transform: scale(1.1);
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 .blog-texto i {
     margin-right: 15px;
@@ -862,7 +923,11 @@ p {
 
 /* Aquí inicia la sesión footer */
 #contactonos {
-    background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    align-items: center;
+    background: url(/imgs/footer-fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
     padding: 40px 80px;
     margin-top: 40px;
 }

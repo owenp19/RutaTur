@@ -10,8 +10,8 @@
 :root {
     --fd-color:#F2F2F2;
     --texto-color:#202030;
-    --secundo-color:#5B8C5A;
-    --principal-color:#596157;
+    --principal-color:#379634;
+    --secundo-color:#F1D302;
     --grande-fuente: 6rem;
     --h2-fuente:3rem;
     --p-fuente: 1.1rem;
@@ -32,7 +32,7 @@ html::-webkit-scrollbar-track {
     background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     border-radius: 5rem;
 }
 
@@ -74,10 +74,10 @@ header.sticky {
     transition: all .50s ease;
 }
 .sticky .menuNav a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .sticky .cuenta-texto  {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 0.9rem;
 }
 .sticky .registro  {
@@ -107,19 +107,19 @@ header.sticky {
     transition: all .50s ease;
 }
 .menuNav a.activo {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .menuNav a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 #menu-icon {
     font-size: 35px;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     cursor: pointer;
     z-index: 10001;
     display: none;
 }
-/* sección de portada y menu de navegacion Breakpoint*/
+/* sección de navegacion breakpoint*/
 @media (max-width: 1280px) {
     header {
         padding: 14px 2%;
@@ -143,7 +143,7 @@ header.sticky {
         right: -100%;
         width: 270px;
         height: 45vh;
-        background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+        background: var(--principal-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -190,7 +190,7 @@ header.sticky {
     }
 }
 
-/* Aqui inicia la sesión de opcion desplegable*/
+/* Estilos de la sección de opcion desplegable */
 .principal {
     position: relative;
     display: inline-block;
@@ -204,7 +204,7 @@ header.sticky {
     transition: all .50s ease;
 }
 .principal a:hover {
-    color: var(--secundo-color);
+    color: var(--principal-color);
 }
 .usuario {
     display: flex;
@@ -214,7 +214,7 @@ header.sticky {
     cursor: pointer;
 }
 .usuario i {
-    color: var(--secundo-color);
+    color: var(--principal-color);
     font-size: 25px;
     margin-right: 7px;
 }
@@ -238,10 +238,8 @@ header.sticky {
 .contenido-desplegable a:hover {
     background-color: var(--fd-color);
 }
-.principal:hover .contenido-desplegable {
-    display: block;
-}
-/* sección de cuenta breakpoint*/
+
+/* sección de cuenta breakpoint */
 @media (max-width: 600px) {
     .principal .usuario a {
         font-size: 5px;
@@ -259,7 +257,6 @@ header.sticky {
         left: -100%;
         width: 100%;
         box-shadow: none;
-        
     }
     .contenido-desplegable a {
         padding: 10px;
@@ -267,7 +264,7 @@ header.sticky {
     }
 }
 
-/* Aqui inicia la sesión experiencia rutatur*/
+/* Aqui inicia la sesión portada nosotros*/
 .inicio {
     position: relative;
     height: 100vh;
@@ -323,19 +320,19 @@ header.sticky {
     margin-bottom: 33px;
 }
 .texto-inicio .btn {
-    background: linear-gradient(to right, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     color: var(--fd-color);
     font-weight: 600;
     padding: 13px 33px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s ease;
+    transition: transform 0.3s, filter 0.3s;
 }
-.texto-inicio .btn:hover {
-    background: linear-gradient(to right, #596157, #5b6c58, #5c7658, #5c8159, #5b8c5a);
-    transform: scale(1.1);
+.btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 /* responsivo para tabletas y móviles */
 @media (max-width: 768px) {
@@ -461,8 +458,8 @@ header.sticky {
 .contenido span {
     font-family: 'Paytone One', sans-serif;
     font-size: var(--h2-fuente);
-    color: var(--secundo-color);
     margin-bottom: 10px;
+    color: var(--principal-color);
 }
 .contenido h3 {
     font-size: 21px;
@@ -474,6 +471,27 @@ header.sticky {
     line-height: 1.6;
     margin-bottom: 20px;
 }
+.boton-conocenos-contenedor {
+    text-align: left;
+    margin-top: 20px; 
+}
+.boton-conocenos {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 23px;
+    background: var(--principal-color);
+    color: var(--fd-color);
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: transform 0.3s, filter 0.3s;
+    text-decoration: none;
+}
+.boton-conocenos:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
 .destacados {
     display: flex;
     justify-content: space-around;
@@ -484,7 +502,7 @@ header.sticky {
 .destacado h4 {
     font-size: 24px;
     font-weight: bold;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     margin-bottom: 5px;
 }
 .destacado p {
@@ -512,6 +530,15 @@ header.sticky {
     }
     .destacado {
         margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        .boton-conocenos-contenedor {
+            text-align: center;
+        }
+        .boton-conocenos {
+            width: 50%;
+            padding: 10px 0;
+        }
     }
 }
 @media (max-width: 480px) {
@@ -543,7 +570,7 @@ header.sticky {
     padding: 0 20px;
 }
 .ventaja {
-    background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    background: var(--principal-color);
     border-radius: 15px;
     padding: 21px;
     text-align: center;
@@ -577,48 +604,27 @@ header.sticky {
 }
 
 /* Aqui inicia la sesión de testimonios*/
-.testimonio {
-    align-items: center;
-    background: url(/imgs/fd-hojas-pajaro.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 0 20px; 
-}
 .contenedor-testimonio {
     width: 100%;
     text-align: center;
-    padding: 0 20px; 
 }
 .sub-contenedor {
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px; 
 }
 .titulo {
-    position: relative;
+    font-family: 'Paytone One', sans-serif;
     text-align: center;
-    margin-top: 55px;
-    margin-bottom: 35px;
-}
-.titulo h2 {
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    line-height: 1.2;
-}
-.titulo span {
-    font-family: 'Paytone One', sans-serif;
-    font-size: var(--h2-fuente);
-    color: var(--secundo-color);
+    font-size: 23px;
+    line-height: 1.1;
 }
 .testimonios {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; 
 }
 .persona {
-    max-width: calc(30% - 20px); 
+    max-width: 30%;
     margin: 10px;
     background: #fff;
     box-sizing: border-box;
@@ -633,18 +639,18 @@ header.sticky {
     width: 100px;
     height: 100px;
     margin: 20px 0;
-    border: 2px solid var(--secundo-color);
+    border: 2px solid var(--principal-color);
     border-radius: 50%;
 }
 .persona .nombre {
     text-transform: uppercase;
     font-size: 19px;
-    color: var(--secundo-color);
+    color: var(--principal-color);
     margin: 10px 0;
 }
 .persona .valoracion i {
     margin: 10px 0;
-    color: yellow;
+    color: var(--secundo-color);
     font-size: 21px;
 }
 .persona .descripcion p {
@@ -654,22 +660,25 @@ header.sticky {
     font-size: 17px;
     line-height: 30px;
 }
-/* Sección de testimonios breakpoint */
-@media screen and (max-width: 980px) {
+/* sección de testimonios breakpoint*/
+@media screen and (max-width:980px) {
     .persona {
-        max-width: calc(45% - 20px); 
+        max-width: 45%;
     }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width:660px) {
     .persona {
-        max-width: calc(100% - 20px); 
+        max-width: 100%;
     }
 }
-
 
 /* Aquí inicia la sesión footer */
 #contactonos {
-    background: radial-gradient(circle, #5b8c5a, #5c8159, #5c7658, #5b6c58, #596157);
+    align-items: center;
+    background: url(/imgs/footer-fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
     padding: 40px 80px;
     margin-top: 40px;
 }

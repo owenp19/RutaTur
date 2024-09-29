@@ -7,6 +7,9 @@
 
     <!-- Estilo css-->
     <link rel="stylesheet" type="text/css" href="/css/añadirruta.css"> 
+
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
  
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
  
     <!-- Favicon-->
-    <link rel="icon" href="/imgs/favicon.ico">
+    <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
 
@@ -27,33 +30,40 @@
             <div class="titulo">Registro de Nueva Ruta Turística</div>
             <form action="http://localhost:5000/api/rutasTuristicas" method="post" enctype="multipart/form-data">
                 <div class="proveedor-info">
+    
                     <div class="input-caja">
                         <span class="detalles">Nombre de la Ruta Turística</span>
+                        <i class="fas fa-route"></i>
                         <input type="text" name="nombre" placeholder="Nombre de la ruta" required>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Precio</span>
+                        <i class="fas fa-dollar-sign"></i>
                         <input type="text" name="precio" placeholder="Precio" required>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Duración (horas)</span>
+                        <i class="fas fa-clock"></i>
                         <input type="text" name="duracion" placeholder="Duración en horas" required>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Ubicación</span>
+                        <i class="fas fa-map-marker-alt"></i>
                         <input type="text" name="ubicacion" placeholder="Ubicación" required>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Imagen de la Ruta</span>
+                        <i class="fas fa-image"></i>
                         <input type="file" name="imagenRuta" accept="image/*" required>
                     </div>
     
                     <div class="input-caja">
                         <span class="detalles">Documento del Itinerario</span>
+                        <i class="fas fa-file-alt"></i>
                         <input type="file" name="documento" accept=".pdf,.doc,.docx" required>
                     </div>
     
@@ -76,11 +86,13 @@
                 </div>
     
                 <div class="boton">
-                    <button type="submit" class="boton-enlace">Registrar ruta</button></a>
+                    <button type="submit" class="registro-ruta">
+                       Registrar ruta <i class="fas fa-save"></i> 
+                    </button>
                 </div>
             </form>
         </div>
-    </section>
+    </section>    
     
     <!-- script precarga js -->
     <script>

@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Favicon-->
-    <link rel="icon" href="/imgs/favicon.ico">
+    <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
             </a>
             <div class="contenido-desplegable" id="menuDesplegable">
                 <a href="iniciarsesion.html">Usuario</a>
-                <a href="proveedor.html">Proveedor</a>
+                <a href="proveedores.html">Proveedor</a>
                 <a href="administradores.html">Administrador</a>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <div class="contenedor-busqueda">
             <form id="form-busqueda" action="http://localhost:5000/api/rutasTuristicas" method="get">
                 <input type="text" name="nombre" class="barra-busqueda" placeholder="Buscar ruta turística">
-                <button type="submit" class="boton-buscar">Buscar</button>
+                <button type="submit" class="boton-buscar">Buscar <i class="fas fa-search"></i></button>
             </form>
         </div>
         
@@ -84,6 +84,12 @@
         </a>
     </div>
 
+    <!-- Botón flotante de contador de reservas en tiempo real -->
+    <div class="boton-flotante contador-reservas" id="botonFlotanteReservas">
+        <span id="textoReservas">Reservas activas</span>
+        <span id="contadorReservas">0</span>
+    </div>
+
     <!-- Botón flotante de reserva -->
     <div class="boton-flotante" id="botonFlotante">
         <i class="fas fa-route"></i>
@@ -95,10 +101,10 @@
         <i class="fas fa-cloud-sun"></i>
     </div>
 
-    <!-- Botón flotante de Calculadora -->
-    <div class="boton-flotante Calculadora" id="botonCalculadora">
-        <i class="fas fa-calculator"></i>
-    </div>
+    <!-- Botón flotante de videojuego -->
+    <div class="boton-flotante videojuego-rutatur" id="botonVideojuego">
+        <i class="fas fa-gamepad"></i>
+    </div>    
     
     <!-- sección tipos de rutas turisticas -->
     <section class="rutas-tipos">
@@ -156,6 +162,9 @@
                 <div class="contenedor-corazon">
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
+                <div class="icono-medalla">
+                    <i class="fas fa-medal"></i>
+                </div>
                 <h3>Ruta de la ciruela</h3>
                 <h6>Descubre el sabor tradicional de la ciruela en paisajes pintorescos del Atlántico, una experiencia única.</h6>
                 <p><i class="fas fa-clock"></i>4h a 6h</p>
@@ -166,8 +175,8 @@
                         <h5>$90.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="rutadelacieruela.html" class="bxx-btn">Ver detalles</a>
-                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)"><i class="fas fa-route"></i> Añadir ruta</button>
+                        <a href="rutadelacieruela.html" class="bxx-btn">Ver detalles <i class="fas fa-info-circle"></i></a>
+                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)">Añadir ruta <i class="fas fa-route"></i></button>
                     </div>
                 </div>
             </div>
@@ -191,8 +200,8 @@
                         <h5>$155.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Ver detalles</a>
-                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)"><i class="fas fa-route"></i> Añadir ruta</button>
+                        <a href="#" class="bxx-btn">Ver detalles <i class="fas fa-info-circle"></i></a>
+                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)">Añadir ruta <i class="fas fa-route"></i></button>
                     </div>
                 </div>
             </div>
@@ -206,6 +215,9 @@
                 <div class="contenedor-corazon">
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
+                <div class="icono-medalla">
+                    <i class="fas fa-medal"></i>
+                </div>
                 <h3>Ruta de la mazamorra</h3>
                 <h6>Saborea la auténtica mazamorra mientras recorres hermosos paisajes rurales y tradiciones del Atlántico.</h6>
                 <p><i class="fas fa-clock"></i>4h a 6h</p>
@@ -216,8 +228,8 @@
                         <h5>$70.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Ver detalles</a>
-                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)"><i class="fas fa-route"></i> Añadir ruta</button>
+                        <a href="#" class="bxx-btn">Ver detalles <i class="fas fa-info-circle"></i></a>
+                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)">Añadir ruta <i class="fas fa-route"></i></button>
                     </div>
                 </div>
             </div>
@@ -241,8 +253,8 @@
                         <h5>$112.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Ver detalles</a>
-                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)"><i class="fas fa-route"></i> Añadir ruta</button>
+                        <a href="#" class="bxx-btn">Ver detalles <i class="fas fa-info-circle"></i></a>
+                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)">Añadir ruta <i class="fas fa-route"></i></button>
                     </div>
                 </div>
             </div>
@@ -256,6 +268,9 @@
                 <div class="contenedor-corazon">
                     <span class="corazon" onclick="toggleHeart(this)">❤</span>
                 </div>
+                <div class="icono-medalla">
+                    <i class="fas fa-medal"></i>
+                </div>
                 <h3>Ruta sabores de mi pueblo</h3>
                 <h6>Vive la Ruta Sabores de Pueblo en Campeche Atlántico Experiencia culinaria en el corazón rural.</h6>
                 <p><i class="fas fa-clock"></i>5h a 6h</p>
@@ -266,8 +281,8 @@
                         <h5>$115.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Ver detalles</a>
-                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)"><i class="fas fa-route"></i> Añadir ruta</button>
+                        <a href="#" class="bxx-btn">Ver detalles <i class="fas fa-info-circle"></i></a>
+                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)">Añadir ruta <i class="fas fa-route"></i></button>
                     </div>
                 </div>
             </div>
@@ -291,15 +306,15 @@
                         <h5>$155.000</h5>
                     </div>
                     <div class="caja-btn">
-                        <a href="#" class="bxx-btn">Ver detalles</a>
-                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)"><i class="fas fa-route"></i> Añadir ruta</button>
+                        <a href="#" class="bxx-btn">Ver detalles <i class="fas fa-info-circle"></i></a>
+                        <button class="boton-anadir-ruta" onclick="anadirAlCarrito(this)">Añadir ruta <i class="fas fa-route"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="contenedor-boton-ver-mas">
-        <a href="experiencias.html" class="boton-ver-mas">Ver más experiencias</a>
+        <a href="experiencias.html" class="boton-ver-mas">Ver más experiencias <i class="fas fa-arrow-right"></i></a>
     </div>
     </section>
     
@@ -400,7 +415,7 @@
     <section class="sobre-nosotros">
         <div class="contenedor">
             <div class="imagen-contenedor">
-                <img src="/imgs/nosotros-rutatur.gif">
+                <img src="/gifs/nosotros-rutatur.gif">
             </div>
             <div class="contenido">
                 <h2>Nosotros en <span>Rutatur</span></h2>
@@ -427,22 +442,24 @@
                     </div>                  
                 </div>
                 <div class="boton-conocenos-contenedor">
-                    <a href="nosotros.html" class="boton-conocenos">Conócenos</a>
+                    <a href="nosotros.html" class="boton-conocenos">Conócenos <i class="fas fa-arrow-right"></i></a>
                 </div>  
             </div>
         </div>
     </section>
 
-    <!--Desiño de sesión de descuentos-->
-    <section class="ofertas-especiales">
-        <div class="contenedor-ofertas">
+    <!--Desiño de sesión de videojuego-->
+    <section class="videojuego">
+        <div class="contenedor-videojuegos">
             <h2>Gana con Nosotros</h2>
             <p>¡Aprovecha descuentos especiales respondiendo preguntas de turismo! Sumérgete en nuestras experiencias únicas con precios reducidos. ¡No te lo pierdas!</p>
-            <button class="btn-contacto">Jugar Ahora</button>
+            <a href="#" class="btn-videojuego">
+                Jugar Ahora <i class="fas fa-joystick"></i>
+            </a>            
         </div>
     </section>
 
-    <!--Desiño de sesión de blog-->
+    <!--Desiño de sesión de articulos-->
     <section class="contenedor-fd-blog" id="blog">
         <div class="titulo">
             <img src="/gifs/pajaro.gif" class="gif-blog">
@@ -453,7 +470,7 @@
         <!--Blog contenedor-->
         <div class="blog-contenedor">
 
-             <!--Blog 1-->
+             <!--articulo 1-->
             <div class="blog-caja">
                 <div class="blog-img">
                     <img src="/imgs/reserva-natural.png">
@@ -461,12 +478,12 @@
                         <a href="postecoaventrua.html" class="blog-titulo">Ecoaventura</a>
                         <span>14 Julio 2024 / Rutatur</span>
                         <p>Embárcate en emocionantes excursiones por la naturaleza salvaje del departamento y descubre su biodiversidad...</p>
-                        <a href="postecoaventrua.html" class="blog-boton">Leer Más</a>
+                        <a href="postecoaventrua.html" class="blog-boton">Leer Más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
-               <!--Blog 2-->
+               <!--articulo 2-->
             <div class="blog-caja">
                 <div class="blog-img">
                     <img src="/imgs/festival-del-dulce.png">
@@ -475,12 +492,12 @@
                         <a href="postgastronomíacosteña.html" class="blog-titulo">Gastronomía Costeña</a>
                         <span>14 Julio 2024 / Rutatur</span>
                         <p>Descubre los sabores auténticos de la región, desde platos tradicionales hasta creaciones innovadoras...</p>
-                        <a href="postgastronomíacosteña.html" class="blog-boton">Leer Más</a>
+                        <a href="postgastronomíacosteña.html" class="blog-boton">Leer Más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!--Blog 3-->
+            <!--articulo 3-->
             <div class="blog-caja">
                 <div class="blog-img">
                     <img src="/imgs/arte-en-murales.png">
@@ -489,16 +506,41 @@
                         <a href="#" class="blog-titulo">Arte y Cultura</a>
                         <span>2 Mayo 2024 / Rutatur</span>
                         <p>Adéntrate en el mundo artístico y cultural del departamento, donde cada obra es una expresión única.</p>
-                        <a href="#" class="blog-boton">Leer Más</a>
+                        <a href="#" class="blog-boton">Leer Más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="contenedor-boton-ver-mas">
-                <a href="experiencias.html" class="boton-ver-mas">Ver más rutas turísticas</a>
+                <a href="experiencias.html" class="boton-ver-mas">Ver más articulos <i class="fas fa-arrow-right"></i></a>
             </div> 
         </div>      
     </section>
 
+    <!-- Sección de Socios RutaTur -->
+    <section id="socios-rutatur" class="socios-rutatur">
+        <h2 class="titulo-seccion">Nuestros <span>Socios</span></h2>
+        <div class="carrusel-contenedor">
+            <div class="carrusel">
+                <img src="/imgs/campechetour.png">
+                <img src="/imgs/RAICES.jpg">
+                <img src="/imgs/sensasit.png">
+                <img src="/imgs/usiacuritours.png">
+                <img src="/imgs/negocios-verde.png">
+                <img src="/imgs/pctours.png">
+                <img src="/imgs/turismo-naturaleza.png">
+                <img src="/imgs/Logo-Campechetour.png">
+                <img src="/imgs/Logo-Campechetour.png">
+                <img src="/imgs/Logo-Campechetour.png">
+            </div>
+        </div>
+        <!-- Dots de navegación -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+    
     <!-- seccion de contacto -->
     <section class="contenedor-fd-contacto" id="contacto">
         <div class="contenedor-contacto">
@@ -513,7 +555,7 @@
                         <input type="email" class="contacto-fila" name="correo" placeholder="Introduce tu correo" required>
                         <input type="text" class="contacto-fila" name="telefono" placeholder="Introduce tu número" required>
                         <textarea class="contacto-fila area" name="mensaje" placeholder="Mensaje" required></textarea>
-                        <button type="submit" class="contacto-boton">Enviar</button>
+                        <button type="submit" class="contacto-boton">Enviar <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>                
             </div>
@@ -521,7 +563,7 @@
      </section>
 
     <!-- seccion pie de página  -->
-    <section id="contactonos">
+    <section class="footer">
         <div class="pie-pag">
             <div class="principal">
                 <div class="lista">
@@ -564,15 +606,16 @@
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
+    
             <div class="texto-final">
                 <p>&#169; RutaTur 2024, todos los derechos reservados. Diseñado por Owen Pusey.</p>
             </div>
         </div>
-    </section>
+    </section>    
     
     <!-- Enlance a js -->
     <script type="text/javascript" src="/js/script.js"></script>

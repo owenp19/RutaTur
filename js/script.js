@@ -39,25 +39,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Inicializar contador de reservas
+let contadorReservas = 0;
+
+function incrementarReservas() {
+    contadorReservas++;
+    document.getElementById('contadorReservas').innerText = contadorReservas;
+}
+
+// Iniciar el incremento cada 9 segundos
+setInterval(incrementarReservas, 10000);
 
 // Aqui inicia el codigo del icono del corazon js
 function toggleHeart(element) {
     element.classList.toggle('rojo');
 }
 
-// Aqui inicia el codigo del carrusel automatico js
+
 document.addEventListener("DOMContentLoaded", function() {
+    const carruselInterno = document.querySelector('.carrusel-interno');
     const items = document.querySelectorAll('.carrusel-item');
     let currentIndex = 0;
+    const totalItems = items.length;
 
     function mostrarSiguienteImagen() {
-        items[currentIndex].classList.remove('activo');
-        currentIndex = (currentIndex + 1) % items.length;
-        items[currentIndex].classList.add('activo');
+        // Actualizar el índice
+        currentIndex = (currentIndex + 1) % totalItems;
+
+        // Deslizar el carrusel a la siguiente imagen
+        const translateX = -currentIndex * 100; 
+        carruselInterno.style.transform = `translateX(${translateX}%)`;
     }
 
+    // Intervalo para cambiar las imágenes cada 5 segundos
     setInterval(mostrarSiguienteImagen, 5000);
 });
+
 
 // Aqui inicia el codigo del contador nosotros js
 document.addEventListener("DOMContentLoaded", () => {
